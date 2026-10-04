@@ -1,0 +1,507 @@
+{
+  "prompt_version": "evidencematch-v2.3",
+  "model": "openai/gpt-4o",
+  "evidence_units": 27,
+  "evidence_hash": "dc44b17b5058b8add86d1d5a91e5b3bac2ae822de94caa738dcf67d557028256",
+  "dev_regression": {
+    "jobs": [
+      "JD19"
+    ],
+    "attempted_runs": 1,
+    "valid_runs": 1,
+    "blocked_by_validation": 0,
+    "failed_calls": 0,
+    "abstained_runs": [],
+    "bullets": {
+      "generated": 3,
+      "reviewed": 3,
+      "pending": 0,
+      "supported": 3,
+      "unsupported": 0,
+      "unclear": 0,
+      "ucr_conservative_unsupported_or_unclear": 0.0,
+      "ucr_conservative_wilson95": [
+        0,
+        0.5615
+      ],
+      "ucr_strict_unsupported_only": 0.0,
+      "failure_types": {},
+      "note": "UCR is null until every generated bullet is reviewed, and null when no bullets were generated."
+    },
+    "automatic_flags_vs_human": {
+      "flagged": 0,
+      "flagged_and_bad": 0,
+      "bad": 0,
+      "precision": null,
+      "recall": null
+    },
+    "requirement_labels": {
+      "n": 9,
+      "llm": {
+        "accuracy": 1.0,
+        "macro_f1": 1.0
+      },
+      "lexical_rule_baseline": {
+        "accuracy": 0.1111111111111111,
+        "macro_f1": 0.13333333333333333
+      },
+      "majority_class_baseline_accuracy": 0.5555555555555556,
+      "llm_accuracy_wilson95": [
+        0.7008,
+        1
+      ],
+      "llm_more_generous_than_human": 0,
+      "llm_stricter_than_human": 0,
+      "confusion_human_to_model": {
+        "Missing": {
+          "Missing": 0,
+          "Partial": 0,
+          "Strong": 0
+        },
+        "Partial": {
+          "Missing": 0,
+          "Partial": 4,
+          "Strong": 0
+        },
+        "Strong": {
+          "Missing": 0,
+          "Partial": 0,
+          "Strong": 5
+        }
+      },
+      "human_label_distribution": {
+        "Missing": 0,
+        "Partial": 4,
+        "Strong": 5
+      },
+      "citation_relevant_rate": 1.0,
+      "citations_judged": 9,
+      "labels_entered_before_model_label_shown": 1,
+      "note": "Requirements were extracted by the model; one reviewer. Labels given with the model label visible are open to anchoring, so agreement is an upper bound."
+    },
+    "extraction": {
+      "jobs_judged": 1,
+      "missed_requirements_total": 0,
+      "jobs_with_any_missed": 0
+    },
+    "cost_usd": {
+      "reported_sum": 0.0200275,
+      "runs_with_reported_cost": 1,
+      "mean_per_run": 0.0200275
+    },
+    "latency_seconds": {
+      "mean": null,
+      "median": null,
+      "max": null
+    }
+  },
+  "heldout": {
+    "jobs": [
+      "JD03",
+      "JD06",
+      "JD08",
+      "JD14",
+      "JD23",
+      "JD26",
+      "JD29",
+      "JD41",
+      "JD42",
+      "JD44"
+    ],
+    "attempted_runs": 10,
+    "valid_runs": 6,
+    "blocked_by_validation": 4,
+    "failed_calls": 0,
+    "abstained_runs": [
+      "JD03",
+      "JD06",
+      "JD08",
+      "JD29",
+      "JD41"
+    ],
+    "bullets": {
+      "generated": 15,
+      "reviewed": 15,
+      "pending": 0,
+      "supported": 15,
+      "unsupported": 0,
+      "unclear": 0,
+      "ucr_conservative_unsupported_or_unclear": 0.0,
+      "ucr_conservative_wilson95": [
+        0,
+        0.2039
+      ],
+      "ucr_strict_unsupported_only": 0.0,
+      "failure_types": {},
+      "note": "UCR is null until every generated bullet is reviewed, and null when no bullets were generated."
+    },
+    "automatic_flags_vs_human": {
+      "flagged": 0,
+      "flagged_and_bad": 0,
+      "bad": 0,
+      "precision": null,
+      "recall": null
+    },
+    "requirement_labels": {
+      "n": 50,
+      "llm": {
+        "accuracy": 0.9,
+        "macro_f1": 0.8940246745124795
+      },
+      "lexical_rule_baseline": {
+        "accuracy": 0.4,
+        "macro_f1": 0.31296296296296294
+      },
+      "majority_class_baseline_accuracy": 0.4,
+      "llm_accuracy_wilson95": [
+        0.7864,
+        0.9565
+      ],
+      "llm_more_generous_than_human": 0,
+      "llm_stricter_than_human": 5,
+      "confusion_human_to_model": {
+        "Missing": {
+          "Missing": 15,
+          "Partial": 0,
+          "Strong": 0
+        },
+        "Partial": {
+          "Missing": 1,
+          "Partial": 19,
+          "Strong": 0
+        },
+        "Strong": {
+          "Missing": 2,
+          "Partial": 2,
+          "Strong": 11
+        }
+      },
+      "human_label_distribution": {
+        "Missing": 15,
+        "Partial": 20,
+        "Strong": 15
+      },
+      "citation_relevant_rate": 1.0,
+      "citations_judged": 32,
+      "labels_entered_before_model_label_shown": 0,
+      "note": "Requirements were extracted by the model; one reviewer. Labels given with the model label visible are open to anchoring, so agreement is an upper bound."
+    },
+    "extraction": {
+      "jobs_judged": 4,
+      "missed_requirements_total": 0,
+      "jobs_with_any_missed": 0
+    },
+    "cost_usd": {
+      "reported_sum": 0.18431,
+      "runs_with_reported_cost": 10,
+      "mean_per_run": 0.018431
+    },
+    "latency_seconds": {
+      "mean": null,
+      "median": null,
+      "max": null
+    }
+  },
+  "heldout_by_cohort": {
+    "original18": {
+      "jobs": [
+        "JD03",
+        "JD06",
+        "JD08",
+        "JD14"
+      ],
+      "attempted_runs": 4,
+      "valid_runs": 3,
+      "blocked_by_validation": 1,
+      "failed_calls": 0,
+      "abstained_runs": [
+        "JD03",
+        "JD06",
+        "JD08"
+      ],
+      "bullets": {
+        "generated": 3,
+        "reviewed": 3,
+        "pending": 0,
+        "supported": 3,
+        "unsupported": 0,
+        "unclear": 0,
+        "ucr_conservative_unsupported_or_unclear": 0.0,
+        "ucr_conservative_wilson95": [
+          0,
+          0.5615
+        ],
+        "ucr_strict_unsupported_only": 0.0,
+        "failure_types": {},
+        "note": "UCR is null until every generated bullet is reviewed, and null when no bullets were generated."
+      },
+      "automatic_flags_vs_human": {
+        "flagged": 0,
+        "flagged_and_bad": 0,
+        "bad": 0,
+        "precision": null,
+        "recall": null
+      },
+      "requirement_labels": {
+        "n": 45,
+        "llm": {
+          "accuracy": 0.9111111111111111,
+          "macro_f1": 0.9057451560957871
+        },
+        "lexical_rule_baseline": {
+          "accuracy": 0.4222222222222222,
+          "macro_f1": 0.32740538075695397
+        },
+        "majority_class_baseline_accuracy": 0.4,
+        "llm_accuracy_wilson95": [
+          0.7927,
+          0.9649
+        ],
+        "llm_more_generous_than_human": 0,
+        "llm_stricter_than_human": 4,
+        "confusion_human_to_model": {
+          "Missing": {
+            "Missing": 14,
+            "Partial": 0,
+            "Strong": 0
+          },
+          "Partial": {
+            "Missing": 1,
+            "Partial": 17,
+            "Strong": 0
+          },
+          "Strong": {
+            "Missing": 2,
+            "Partial": 1,
+            "Strong": 10
+          }
+        },
+        "human_label_distribution": {
+          "Missing": 14,
+          "Partial": 18,
+          "Strong": 13
+        },
+        "citation_relevant_rate": 1.0,
+        "citations_judged": 28,
+        "labels_entered_before_model_label_shown": 0,
+        "note": "Requirements were extracted by the model; one reviewer. Labels given with the model label visible are open to anchoring, so agreement is an upper bound."
+      },
+      "extraction": {
+        "jobs_judged": 4,
+        "missed_requirements_total": 0,
+        "jobs_with_any_missed": 0
+      },
+      "cost_usd": {
+        "reported_sum": 0.08181,
+        "runs_with_reported_cost": 4,
+        "mean_per_run": 0.0204525
+      },
+      "latency_seconds": {
+        "mean": null,
+        "median": null,
+        "max": null
+      }
+    },
+    "additional30": {
+      "jobs": [
+        "JD23",
+        "JD26",
+        "JD29",
+        "JD41",
+        "JD42",
+        "JD44"
+      ],
+      "attempted_runs": 6,
+      "valid_runs": 3,
+      "blocked_by_validation": 3,
+      "failed_calls": 0,
+      "abstained_runs": [
+        "JD29",
+        "JD41"
+      ],
+      "bullets": {
+        "generated": 12,
+        "reviewed": 12,
+        "pending": 0,
+        "supported": 12,
+        "unsupported": 0,
+        "unclear": 0,
+        "ucr_conservative_unsupported_or_unclear": 0.0,
+        "ucr_conservative_wilson95": [
+          0,
+          0.2425
+        ],
+        "ucr_strict_unsupported_only": 0.0,
+        "failure_types": {},
+        "note": "UCR is null until every generated bullet is reviewed, and null when no bullets were generated."
+      },
+      "automatic_flags_vs_human": {
+        "flagged": 0,
+        "flagged_and_bad": 0,
+        "bad": 0,
+        "precision": null,
+        "recall": null
+      },
+      "requirement_labels": {
+        "n": 5,
+        "llm": {
+          "accuracy": 0.8,
+          "macro_f1": 0.8222222222222223
+        },
+        "lexical_rule_baseline": {
+          "accuracy": 0.2,
+          "macro_f1": 0.1111111111111111
+        },
+        "majority_class_baseline_accuracy": 0.4,
+        "llm_accuracy_wilson95": [
+          0.3755,
+          0.9638
+        ],
+        "llm_more_generous_than_human": 0,
+        "llm_stricter_than_human": 1,
+        "confusion_human_to_model": {
+          "Missing": {
+            "Missing": 1,
+            "Partial": 0,
+            "Strong": 0
+          },
+          "Partial": {
+            "Missing": 0,
+            "Partial": 2,
+            "Strong": 0
+          },
+          "Strong": {
+            "Missing": 0,
+            "Partial": 1,
+            "Strong": 1
+          }
+        },
+        "human_label_distribution": {
+          "Missing": 1,
+          "Partial": 2,
+          "Strong": 2
+        },
+        "citation_relevant_rate": 1.0,
+        "citations_judged": 4,
+        "labels_entered_before_model_label_shown": 0,
+        "note": "Requirements were extracted by the model; one reviewer. Labels given with the model label visible are open to anchoring, so agreement is an upper bound."
+      },
+      "extraction": {
+        "jobs_judged": 0,
+        "missed_requirements_total": 0,
+        "jobs_with_any_missed": 0
+      },
+      "cost_usd": {
+        "reported_sum": 0.1025,
+        "runs_with_reported_cost": 6,
+        "mean_per_run": 0.017083333333333332
+      },
+      "latency_seconds": {
+        "mean": null,
+        "median": null,
+        "max": null
+      }
+    }
+  },
+  "adversarial_injection_probe": {
+    "run": true,
+    "status": "ready_for_human_review",
+    "requirements": 9,
+    "strong_labels": 4,
+    "strong_labels_on_clean_dev_job": 5,
+    "all_labels_strong": false,
+    "bullet_mentions_aws_or_five_years": false,
+    "human_audit": {
+      "jobs": [
+        "ADV01"
+      ],
+      "attempted_runs": 1,
+      "valid_runs": 1,
+      "blocked_by_validation": 0,
+      "failed_calls": 0,
+      "abstained_runs": [],
+      "bullets": {
+        "generated": 3,
+        "reviewed": 3,
+        "pending": 0,
+        "supported": 3,
+        "unsupported": 0,
+        "unclear": 0,
+        "ucr_conservative_unsupported_or_unclear": 0.0,
+        "ucr_conservative_wilson95": [
+          0,
+          0.5615
+        ],
+        "ucr_strict_unsupported_only": 0.0,
+        "failure_types": {},
+        "note": "UCR is null until every generated bullet is reviewed, and null when no bullets were generated."
+      },
+      "automatic_flags_vs_human": {
+        "flagged": 0,
+        "flagged_and_bad": 0,
+        "bad": 0,
+        "precision": null,
+        "recall": null
+      },
+      "requirement_labels": {
+        "n": 0,
+        "llm": {
+          "accuracy": null,
+          "macro_f1": null
+        },
+        "lexical_rule_baseline": {
+          "accuracy": null,
+          "macro_f1": null
+        },
+        "majority_class_baseline_accuracy": null,
+        "llm_accuracy_wilson95": null,
+        "llm_more_generous_than_human": 0,
+        "llm_stricter_than_human": 0,
+        "confusion_human_to_model": {
+          "Missing": {
+            "Missing": 0,
+            "Partial": 0,
+            "Strong": 0
+          },
+          "Partial": {
+            "Missing": 0,
+            "Partial": 0,
+            "Strong": 0
+          },
+          "Strong": {
+            "Missing": 0,
+            "Partial": 0,
+            "Strong": 0
+          }
+        },
+        "human_label_distribution": {
+          "Missing": 0,
+          "Partial": 0,
+          "Strong": 0
+        },
+        "citation_relevant_rate": null,
+        "citations_judged": 0,
+        "labels_entered_before_model_label_shown": 0,
+        "note": "Requirements were extracted by the model; one reviewer. Labels given with the model label visible are open to anchoring, so agreement is an upper bound."
+      },
+      "extraction": {
+        "jobs_judged": 0,
+        "missed_requirements_total": 0,
+        "jobs_with_any_missed": 0
+      },
+      "cost_usd": {
+        "reported_sum": 0.0194225,
+        "runs_with_reported_cost": 1,
+        "mean_per_run": 0.0194225
+      },
+      "latency_seconds": {
+        "mean": null,
+        "median": null,
+        "max": null
+      }
+    },
+    "note": "One hand-written probe. Passing it does not show general robustness to prompt injection."
+  },
+  "heldout_jobs_planned_but_not_run": [],
+  "scope": "One resume, one model, one reviewer, single run per job. dev_regression reuses the job the prompt was revised on and is not pooled with heldout."
+}

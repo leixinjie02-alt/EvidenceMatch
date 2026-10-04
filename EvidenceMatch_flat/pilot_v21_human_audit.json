@@ -1,0 +1,32 @@
+[
+  {
+    "run_id": "20261004T140837_ebdb1a59",
+    "claim_id": "1",
+    "verdict": "supported",
+    "notes": "Supported against full resume: internship Python/backend and collaborative Linux deployment; role wording should be softened.",
+    "reviewer": "user",
+    "review_process": "Assistant-assisted review; user explicitly agreed to all three proposed verdicts in chat.",
+    "confirmed_at": "2026-10-04T22:14:40+08:00",
+    "accepted": true
+  },
+  {
+    "run_id": "20261004T140837_ebdb1a59",
+    "claim_id": "2",
+    "verdict": "unclear",
+    "notes": "Unclear attribution: full resume reports evaluation improvements, but the bullet and citation do not establish the candidate personally caused general AI-system performance improvement.",
+    "reviewer": "user",
+    "review_process": "Assistant-assisted review; user explicitly agreed to all three proposed verdicts in chat.",
+    "confirmed_at": "2026-10-04T22:14:40+08:00",
+    "accepted": false
+  },
+  {
+    "run_id": "20261004T140837_ebdb1a59",
+    "claim_id": "3",
+    "verdict": "supported",
+    "notes": "Supported against full resume project sections (LangGraph, Coze and RAG); cited skills list alone is weaker than the available project evidence.",
+    "reviewer": "user",
+    "review_process": "Assistant-assisted review; user explicitly agreed to all three proposed verdicts in chat.",
+    "confirmed_at": "2026-10-04T22:14:40+08:00",
+    "accepted": true
+  }
+]

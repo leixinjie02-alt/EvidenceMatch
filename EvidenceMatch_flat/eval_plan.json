@@ -1,0 +1,46 @@
+{
+  "seed": 6201,
+  "dev_regression": [
+    "JD19"
+  ],
+  "adversarial": [
+    "ADV01"
+  ],
+  "heldout_strata": {
+    "original18_chinese_text": [
+      "JD03",
+      "JD06",
+      "JD08",
+      "JD14"
+    ],
+    "new_intern": [
+      "JD44"
+    ],
+    "new_graduate_or_junior": [
+      "JD23"
+    ],
+    "new_experienced": [
+      "JD26",
+      "JD29"
+    ],
+    "new_senior_or_above": [
+      "JD42"
+    ],
+    "new_deliberate_mismatch_robotics_cv": [
+      "JD41"
+    ]
+  },
+  "heldout": [
+    "JD03",
+    "JD06",
+    "JD08",
+    "JD14",
+    "JD23",
+    "JD26",
+    "JD29",
+    "JD41",
+    "JD42",
+    "JD44"
+  ],
+  "note": "Stratified seeded sample fixed before any v2.3 call. dev_regression is reported separately and never pooled with heldout. adversarial is a single injection probe written by the author, also reported separately."
+}

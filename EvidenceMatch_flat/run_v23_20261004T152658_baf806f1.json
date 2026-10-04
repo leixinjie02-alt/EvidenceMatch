@@ -1,0 +1,192 @@
+{
+  "run_id": "20261004T152658_baf806f1",
+  "run_label": "heldout",
+  "runner": "browser",
+  "jd_id": "JD03",
+  "cohort": "original18",
+  "representation": "student_supplied_jd_text",
+  "job_hash": "fc35a9dbb9cd4ddef71765df6ea186b8fa20da250c8a102d5d66a2fe47f284ac",
+  "evidence_hash": "dc44b17b5058b8add86d1d5a91e5b3bac2ae822de94caa738dcf67d557028256",
+  "prompt_version": "evidencematch-v2.3",
+  "prompt_hash": "e2ab2d2593987f1fc353154c02f92e933fad69af9496967efa42dc2b9591e9fa",
+  "requested_model": "openai/gpt-4o",
+  "baseline": {
+    "label": "Partial",
+    "lexical_coverage": 0.22764227642276422,
+    "retrieved_ids": [
+      "E024",
+      "E009",
+      "E022",
+      "E021",
+      "E023"
+    ],
+    "note": "Lexical baseline; cross-language mismatch and negation are known weaknesses."
+  },
+  "context_strategy": "full_confirmed_resume_small_corpus",
+  "started_at_utc": "2026-10-04T14:59:27.836Z",
+  "status": "ready_for_human_review",
+  "requires_human_review": true,
+  "latency_seconds": null,
+  "time_to_response_headers_seconds": 2.2956999999999534,
+  "response_id": "gen-1791125969-41WQCi9ijBpInfzp1pJg",
+  "actual_model": "openai/gpt-4o",
+  "usage": {
+    "prompt_tokens": 3339,
+    "completion_tokens": 1070,
+    "total_tokens": 4409,
+    "cost": 0.0190475,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0190475,
+      "upstream_inference_prompt_cost": 0.0083475,
+      "upstream_inference_completions_cost": 0.0107
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "pricing": {
+    "prompt": "0.0000025",
+    "completion": "0.00001"
+  },
+  "cost_reported_usd": 0.0190475,
+  "cost_estimate_usd": 0.019047500000000002,
+  "raw_response": "{\n  \"requirements\": [\n    {\n      \"requirement_id\": \"1\",\n      \"requirement_text\": \"负责智能座舱的CV模型和LLM部署\",\n      \"label\": \"Partial\",\n      \"citations\": [\n        {\n          \"evidence_id\": \"E005\",\n          \"quote\": \"dataAnalyzeAgent2：多智能体自主数据分析系统 LangGraph · FastAPI · Next.js · OpenAI API\"\n        },\n        {\n          \"evidence_id\": \"E010\",\n          \"quote\": \"LiveStream-AI-Copilot：直播电商智能复盘 Agent Coze Workflow · Prompt Engineering\"\n        }\n      ],\n      \"gap\": \"Specific deployment in intelligent cockpit environment not evidenced.\"\n    },\n    {\n      \"requirement_id\": \"2\",\n      \"requirement_text\": \"确保算法在车载环境下稳定运行\",\n      \"label\": \"Missing\",\n      \"citations\": [],\n      \"gap\": \"No evidence of work in vehicle environments.\"\n    },\n    {\n      \"requirement_id\": \"3\",\n      \"requirement_text\": \"分析优化算法Pipeline性能(推理速度、内存占用)\",\n      \"label\": \"Partial\",\n      \"citations\": [\n        {\n          \"evidence_id\": \"E009\",\n          \"quote\": \"意图识别准确率提升约 30%；FastAPI + Next.js 全栈部署，异步 token 流式输出，推理过程实时可见\"\n        }\n      ],\n      \"gap\": \"Specific focus on inference speed and memory usage not evidenced.\"\n    },\n    {\n      \"requirement_id\": \"4\",\n      \"requirement_text\": \"与算法团队紧密合作完成部署移植\",\n      \"label\": \"Missing\",\n      \"citations\": [],\n      \"gap\": \"No evidence of collaboration with algorithm teams for deployment.\"\n    },\n    {\n      \"requirement_id\": \"5\",\n      \"requirement_text\": \"解决部署过程中的精度损失、兼容性、稳定性等技术难题\",\n      \"label\": \"Partial\",\n      \"citations\": [\n        {\n          \"evidence_id\": \"E022\",\n          \"quote\": \"设计并集成异常检测工作流与自动化处理逻辑，应对复杂工业场景\"\n        }\n      ],\n      \"gap\": \"Specific issues of precision loss, compatibility, and stability in deployment not evidenced.\"\n    },\n    {\n      \"requirement_id\": \"6\",\n      \"requirement_text\": \"计算机/软件工程/自动化/电子信息本科以上\",\n      \"label\": \"Missing\",\n      \"citations\": [],\n      \"gap\": \"No evidence of a relevant undergraduate degree.\"\n    },\n    {\n      \"requirement_id\": \"7\",\n      \"requirement_text\": \"3年以上C++开发经验\",\n      \"label\": \"Missing\",\n      \"citations\": [],\n      \"gap\": \"No evidence of C++ development experience.\"\n    },\n    {\n      \"requirement_id\": \"8\",\n      \"requirement_text\": \"深入理解操作系统原理、线程调度、内存管理\",\n      \"label\": \"Missing\",\n      \"citations\": [],\n      \"gap\": \"No evidence of understanding OS principles, thread scheduling, or memory management.\"\n    },\n    {\n      \"requirement_id\": \"9\",\n      \"requirement_text\": \"熟练掌握C++11/14标准及Python\",\n      \"label\": \"Partial\",\n      \"citations\": [\n        {\n          \"evidence_id\": \"E023\",\n          \"quote\": \"用 Python 实现传感器数据实时处理、任务调度与通信服务\"\n        }\n      ],\n      \"gap\": \"No evidence of C++11/14 proficiency.\"\n    },\n    {\n      \"requirement_id\": \"10\",\n      \"requirement_text\": \"了解LLM和CV算法工程化落地\",\n      \"label\": \"Partial\",\n      \"citations\": [\n        {\n          \"evidence_id\": \"E025\",\n          \"quote\": \"Agent / LLM：LangGraph、Coze Workflow、Prompt Engineering、RAG、Few-shot 调优、评测集构建\"\n        }\n      ],\n      \"gap\": \"Specific engineering application of CV algorithms not evidenced.\"\n    },\n    {\n      \"requirement_id\": \"11\",\n      \"requirement_text\": \"熟练Git、CMake、GDB\",\n      \"label\": \"Partial\",\n      \"citations\": [\n        {\n          \"evidence_id\": \"E024\",\n          \"quote\": \"在 Linux 环境下基于 Git 协作完成部署、调试与性能调优\"\n        }\n      ],\n      \"gap\": \"No evidence of CMake or GDB proficiency.\"\n    }\n  ],\n  \"bullets\": [],\n  \"abstain\": true,\n  \"abstention_reason\": \"Insufficient evidence to create defensible resume bullets.\",\n  \"scope_note\": \"Requirements related to specific vehicle environment experience, C++ development, and certain technical proficiencies are missing or partially supported. No evidence of a relevant undergraduate degree or specific collaboration with algorithm teams.\"\n}",
+  "finish_reason": "stop",
+  "output": {
+    "requirements": [
+      {
+        "requirement_id": "1",
+        "requirement_text": "负责智能座舱的CV模型和LLM部署",
+        "label": "Partial",
+        "citations": [
+          {
+            "evidence_id": "E005",
+            "quote": "dataAnalyzeAgent2：多智能体自主数据分析系统 LangGraph · FastAPI · Next.js · OpenAI API"
+          },
+          {
+            "evidence_id": "E010",
+            "quote": "LiveStream-AI-Copilot：直播电商智能复盘 Agent Coze Workflow · Prompt Engineering"
+          }
+        ],
+        "gap": "Specific deployment in intelligent cockpit environment not evidenced."
+      },
+      {
+        "requirement_id": "2",
+        "requirement_text": "确保算法在车载环境下稳定运行",
+        "label": "Missing",
+        "citations": [],
+        "gap": "No evidence of work in vehicle environments."
+      },
+      {
+        "requirement_id": "3",
+        "requirement_text": "分析优化算法Pipeline性能(推理速度、内存占用)",
+        "label": "Partial",
+        "citations": [
+          {
+            "evidence_id": "E009",
+            "quote": "意图识别准确率提升约 30%；FastAPI + Next.js 全栈部署，异步 token 流式输出，推理过程实时可见"
+          }
+        ],
+        "gap": "Specific focus on inference speed and memory usage not evidenced."
+      },
+      {
+        "requirement_id": "4",
+        "requirement_text": "与算法团队紧密合作完成部署移植",
+        "label": "Missing",
+        "citations": [],
+        "gap": "No evidence of collaboration with algorithm teams for deployment."
+      },
+      {
+        "requirement_id": "5",
+        "requirement_text": "解决部署过程中的精度损失、兼容性、稳定性等技术难题",
+        "label": "Partial",
+        "citations": [
+          {
+            "evidence_id": "E022",
+            "quote": "设计并集成异常检测工作流与自动化处理逻辑，应对复杂工业场景"
+          }
+        ],
+        "gap": "Specific issues of precision loss, compatibility, and stability in deployment not evidenced."
+      },
+      {
+        "requirement_id": "6",
+        "requirement_text": "计算机/软件工程/自动化/电子信息本科以上",
+        "label": "Missing",
+        "citations": [],
+        "gap": "No evidence of a relevant undergraduate degree."
+      },
+      {
+        "requirement_id": "7",
+        "requirement_text": "3年以上C++开发经验",
+        "label": "Missing",
+        "citations": [],
+        "gap": "No evidence of C++ development experience."
+      },
+      {
+        "requirement_id": "8",
+        "requirement_text": "深入理解操作系统原理、线程调度、内存管理",
+        "label": "Missing",
+        "citations": [],
+        "gap": "No evidence of understanding OS principles, thread scheduling, or memory management."
+      },
+      {
+        "requirement_id": "9",
+        "requirement_text": "熟练掌握C++11/14标准及Python",
+        "label": "Partial",
+        "citations": [
+          {
+            "evidence_id": "E023",
+            "quote": "用 Python 实现传感器数据实时处理、任务调度与通信服务"
+          }
+        ],
+        "gap": "No evidence of C++11/14 proficiency."
+      },
+      {
+        "requirement_id": "10",
+        "requirement_text": "了解LLM和CV算法工程化落地",
+        "label": "Partial",
+        "citations": [
+          {
+            "evidence_id": "E025",
+            "quote": "Agent / LLM：LangGraph、Coze Workflow、Prompt Engineering、RAG、Few-shot 调优、评测集构建"
+          }
+        ],
+        "gap": "Specific engineering application of CV algorithms not evidenced."
+      },
+      {
+        "requirement_id": "11",
+        "requirement_text": "熟练Git、CMake、GDB",
+        "label": "Partial",
+        "citations": [
+          {
+            "evidence_id": "E024",
+            "quote": "在 Linux 环境下基于 Git 协作完成部署、调试与性能调优"
+          }
+        ],
+        "gap": "No evidence of CMake or GDB proficiency."
+      }
+    ],
+    "bullets": [],
+    "abstain": true,
+    "abstention_reason": "Insufficient evidence to create defensible resume bullets.",
+    "scope_note": "Requirements related to specific vehicle environment experience, C++ development, and certain technical proficiencies are missing or partially supported. No evidence of a relevant undergraduate degree or specific collaboration with algorithm teams."
+  },
+  "validation": {
+    "ok": true,
+    "issues": [],
+    "bullet_errors": {},
+    "bullet_warnings": {},
+    "requirement_warnings": {}
+  },
+  "llm_coverage_label": "Partial",
+  "model_disagreement": false
+}

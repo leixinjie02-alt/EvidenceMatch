@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>EvidenceMatch</title>
+<style>
+:root{--bg:#f3f4f6;--card:#fff;--ink:#18202c;--mute:#5b6676;--line:#d8dde5;--brand:#1f4fbf;--strong:#0b6b3a;--strongbg:#dff3e7;--partial:#8a5a00;--partialbg:#fdf0cf;--missing:#9b1c1c;--missingbg:#fbe1e1}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 -apple-system,"Segoe UI",Roboto,"PingFang SC","Microsoft YaHei",sans-serif}
+header{background:#14213d;color:#fff;padding:14px 20px;display:flex;gap:18px;align-items:baseline;flex-wrap:wrap}
+header h1{font-size:19px;margin:0}header span{color:#b9c4dc;font-size:13px}
+nav{margin-left:auto;display:flex;gap:6px}nav button{background:transparent;border:1px solid #5a6b94;color:#fff}nav button.on{background:#fff;color:#14213d}
+main{max-width:1040px;margin:0 auto;padding:18px 16px 80px}
+section{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px 18px;margin:0 0 14px}
+section.off{opacity:.45;pointer-events:none}
+h2{font-size:16px;margin:0 0 8px}h3{font-size:14px;margin:14px 0 6px}
+p{margin:6px 0}.mute{color:var(--mute);font-size:13px}
+button{font:inherit;padding:7px 13px;border-radius:7px;border:1px solid var(--brand);background:var(--brand);color:#fff;cursor:pointer}
+button.alt{background:#fff;color:var(--brand)}button:disabled{opacity:.45;cursor:not-allowed}
+input[type=password],input[type=text],select,textarea{font:inherit;padding:7px;border:1px solid #9aa4b4;border-radius:7px;width:100%;margin:4px 0}
+textarea{min-height:110px}.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.unit{border-left:3px solid var(--line);padding:2px 10px;margin:6px 0;font-size:13px}.unit b{color:var(--mute);font-size:12px}
+.jd{background:var(--bg);border-radius:8px;padding:10px;font-size:13px;white-space:pre-wrap;max-height:170px;overflow:auto}
+table{border-collapse:collapse;width:100%;font-size:13px}th,td{border-top:1px solid var(--line);padding:7px 8px;text-align:left;vertical-align:top}th{color:var(--mute);font-weight:600}
+.tablewrap{overflow-x:auto}
+.chip{display:inline-block;padding:1px 9px;border-radius:99px;font-size:12px;font-weight:600}
+.Strong{background:var(--strongbg);color:var(--strong)}.Partial{background:var(--partialbg);color:var(--partial)}.Missing{background:var(--missingbg);color:var(--missing)}
+.flag{background:#fde7d3;color:#8a3b00}.cite{background:#f7f3e3;border-radius:6px;padding:5px 9px;margin:4px 0;font-size:13px}
+.bullet{border:1px solid var(--line);border-radius:8px;padding:10px 12px;margin:10px 0}.bullet .t{font-size:15px;font-weight:600}
+.banner{border-radius:8px;padding:9px 12px;margin:8px 0;font-size:14px}.warn{background:#fff1d6;color:#6b4400}.bad{background:var(--missingbg);color:var(--missing)}.ok{background:var(--strongbg);color:var(--strong)}
+.stats{display:flex;gap:10px;flex-wrap:wrap}.stat{background:var(--bg);border-radius:8px;padding:8px 12px;min-width:120px}.stat b{display:block;font-size:19px}
+.pick{background:#fff;color:var(--ink);border-color:#9aa4b4}.pick.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+</style></head><body>
+<header><h1>EvidenceMatch</h1><span id="ver"></span><nav><button id="tabMatch" class="on">Match a job</button><button id="tabEval">Recorded evaluation</button></nav></header>
+<main>
+<div id="viewMatch">
+<section id="s1"><h2>1 · Résumé</h2>
+<p class="mute">Upload a text PDF, DOCX or TXT. Lines containing an email address or phone number are removed on the server before anything is shown or sent. Nothing is stored between requests.</p>
+<div class="row"><input type="file" id="file" accept=".pdf,.docx,.txt,.md"><button class="alt" id="sample">Use the synthetic sample résumé</button></div>
+<div id="evidence"></div></section>
+
+<section id="s2" class="off"><h2>2 · Job description</h2>
+<select id="job"></select><div class="jd" id="jobtext"></div>
+<textarea id="custom" hidden placeholder="Paste the full job description here."></textarea></section>
+
+<section id="s3" class="off"><h2>3 · Run</h2>
+<p class="mute">One GPT-4o call through OpenRouter, about USD 0.02. The key is sent to this local server for that one call and is never written to disk.</p>
+<input type="password" id="key" autocomplete="off" placeholder="Your OpenRouter API key (sk-or-…)">
+<div class="row"><button id="run">Match this job</button><button class="alt" id="demo">No key? Run the offline demo</button><span class="mute" id="runmsg"></span></div></section>
+
+<section id="s4" hidden><h2>4 · Result and human review</h2><div id="result"></div></section>
+<section id="s5" hidden><h2>5 · My reviewed runs for this résumé</h2><div id="metrics"></div></section>
+</div>
+
+<div id="viewEval" hidden><section><h2>Recorded evaluation (prompt v2.3, GPT-4o, 4 October 2026)</h2>
+<p class="mute">These are the author's recorded results, read from <code>evaluation/run_v23/</code>. One résumé, one model, one run per job, one reviewer who is also the author.</p>
+<div id="evalbody"></div></section></div>
+</main>
+<script>
+const $=id=>document.getElementById(id), esc=s=>String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+let EVIDENCE=null, CONFIRMED=false, JOBS=[], RECORD=null;
+const api=async(path,opts={})=>{const r=await fetch(path,opts);const d=await r.json().catch(()=>({error:'Server returned no JSON.'}));if(!r.ok)throw new Error(d.error||('HTTP '+r.status));return d};
+const post=(path,data,headers={})=>api(path,{method:'POST',headers:{'Content-Type':'application/json',...headers},body:JSON.stringify(data)});
+const pct=x=>x==null?'n/a':(100*x).toFixed(1)+'%';
+
+async function init(){
+  const info=await api('/api/info');$('ver').textContent=info.prompt_version+' · '+info.model;
+  JOBS=await api('/api/jobs');
+  const groups={additional30:'Real postings, summarised (English)',original18:'Collected postings (Chinese)',adversarial:'Prompt-injection probe'};
+  $('job').innerHTML=Object.entries(groups).map(([c,l])=>`<optgroup label="${l}">`+JOBS.filter(j=>j.cohort===c).map(j=>`<option value="${j.jd_id}">${j.jd_id} · ${esc(j.title)}</option>`).join('')+'</optgroup>').join('')+'<option value="CUSTOM">Paste my own job description…</option>';
+  $('job').value='JD19';showJob();
+}
+function showJob(){const v=$('job').value,c=v==='CUSTOM';$('custom').hidden=!c;$('jobtext').hidden=c;if(!c){const j=JOBS.find(x=>x.jd_id===v);$('jobtext').innerHTML=esc(j.text)+(j.source_url?`\n\n<a href="${esc(j.source_url)}" target="_blank" rel="noopener">Original posting</a> (this text is a summary)`:'')}}
+$('job').onchange=showJob;
+
+function showEvidence(d){EVIDENCE=d.evidence;CONFIRMED=false;
+  $('evidence').innerHTML=`<p><b>${d.evidence.length} evidence units</b> from ${esc(d.filename)} · ${d.contact_lines_removed} contact line(s) removed.</p>`+
+   `<details open><summary>Check what will be sent to the model</summary>${d.evidence.map(e=>`<div class="unit"><b>${esc(e.evidence_id)} · ${esc(e.kind)} · ${esc(e.entry).slice(0,60)}</b><br>${esc(e.text)}</div>`).join('')}</details>`+
+   `<p><label><input type="checkbox" id="confirm"> This is accurate, contains no contact details, and may be sent to OpenRouter.</label></p>`;
+  $('confirm').onchange=e=>{CONFIRMED=e.target.checked;gate()};gate()}
+function gate(){$('s2').classList.toggle('off',!CONFIRMED);$('s3').classList.toggle('off',!CONFIRMED)}
+$('file').onchange=async e=>{const f=e.target.files[0];if(!f)return;const buf=new Uint8Array(await f.arrayBuffer());let bin='';for(let i=0;i<buf.length;i+=8192)bin+=String.fromCharCode.apply(null,buf.subarray(i,i+8192));
+  try{showEvidence(await post('/api/resume',{filename:f.name,content_b64:btoa(bin)}))}catch(err){$('evidence').innerHTML=`<div class="banner bad">${esc(err.message)}</div>`}};
+$('sample').onclick=async()=>showEvidence(await post('/api/resume',{sample:true}));
+
+async function run(offline){
+  const data={evidence:EVIDENCE,offline_demo:offline};const v=$('job').value;if(v==='CUSTOM')data.job_text=$('custom').value;else data.jd_id=v;
+  $('run').disabled=$('demo').disabled=true;$('runmsg').textContent=offline?'':'Calling the model… usually 5–15 seconds.';
+  try{RECORD=await post('/api/match',data,offline?{}:{'X-OpenRouter-Key':$('key').value.trim()});$('key').value='';render()}
+  catch(err){$('runmsg').textContent=err.message;$('run').disabled=$('demo').disabled=false;return}
+  $('runmsg').textContent='';$('run').disabled=$('demo').disabled=false;$('s4').scrollIntoView({behavior:'smooth'})}
+$('run').onclick=()=>run(false);
+$('demo').onclick=async()=>{showEvidence(await post('/api/resume',{sample:true}));$('confirm').checked=true;CONFIRMED=true;gate();$('job').value='JD19';showJob();run(true)};
+
+const units=()=>Object.fromEntries(EVIDENCE.map(e=>[e.evidence_id,e]));
+function cites(list){const U=units();return (list||[]).filter(c=>c&&typeof c==='object').map(c=>{const u=U[c.evidence_id];return `<div class="cite"><b>${esc(c.evidence_id)}</b>${u?' · '+esc(u.entry).slice(0,48):' · unknown evidence id'}<br>“${esc(c.quote)}”${u&&u.text!==c.quote?`<br><span class="mute">Full unit: ${esc(u.text)}</span>`:''}</div>`}).join('')}
+function render(){const r=RECORD,o=(r.output&&typeof r.output==='object')?r.output:{},v=r.validation||{};$('s4').hidden=false;let h='';
+  if(r.runner==='offline_fixture')h+='<div class="banner warn"><b>Offline demo.</b> This response was written by hand to exercise the interface. It is not model output and proves nothing about model quality.</div>';
+  if(r.error)h+=`<div class="banner bad">The call failed: ${esc(r.error)}</div>`;
+  else if(r.status==='blocked_validation')h+=`<div class="banner bad"><b>Blocked by the validator.</b> Nothing below may be adopted. Issues: ${esc((v.issues||[]).join(', '))}</div>`;
+  else h+='<div class="banner ok">Structure, quotes and numbers passed the validator. That shows each quote exists in the résumé, not that it supports the sentence. Review every bullet below.</div>';
+  const reqs=Array.isArray(o.requirements)?o.requirements.filter(x=>x&&typeof x==='object'):[],bul=Array.isArray(o.bullets)?o.bullets.filter(x=>x&&typeof x==='object'):[];
+  const n=l=>reqs.filter(x=>x.label===l).length;
+  h+=`<div class="stats"><div class="stat"><b>${n('Strong')}</b>Strong</div><div class="stat"><b>${n('Partial')}</b>Partial</div><div class="stat"><b>${n('Missing')}</b>Missing</div><div class="stat"><b>${r.cost_reported_usd==null?'n/a':'$'+(+r.cost_reported_usd).toFixed(4)}</b>Reported cost</div><div class="stat"><b>${r.latency_seconds&&r.runner!=='offline_fixture'?r.latency_seconds.toFixed(1)+' s':'n/a'}</b>Latency</div></div>`;
+  if(reqs.length){h+=`<h3>Requirements</h3><div class="tablewrap"><table><tr><th>Requirement (verbatim from the posting)</th><th>Model</th><th>Résumé evidence and gap</th><th>Your label</th></tr>`+reqs.map((q,i)=>`<tr><td>${esc(q.requirement_text)}</td><td><span class="chip ${esc(q.label)}">${esc(q.label)}</span>${((v.requirement_warnings||{})[q.requirement_id]||[]).map(w=>`<br><span class="chip flag">${esc(w)}</span>`).join('')}</td><td>${cites(q.citations)}${q.gap?`<span class="mute">Gap: ${esc(q.gap)}</span>`:''}</td><td><select data-req="${i}"><option value="">not reviewed</option><option>Strong</option><option>Partial</option><option>Missing</option></select></td></tr>`).join('')+'</table></div>'}
+  if(o.abstain)h+=`<div class="banner warn"><b>The model declined to write bullets.</b> ${esc(o.abstention_reason)}</div>`;
+  if(bul.length){h+='<h3>Draft résumé bullets — each needs your verdict</h3>'+bul.map((b,i)=>{const fl=[...((v.bullet_errors||{})[b.claim_id]||[]),...((v.bullet_warnings||{})[b.claim_id]||[])];
+    return `<div class="bullet" data-b="${i}"><div class="t">${esc(b.text)}</div>${cites(b.citations)}${fl.length?'<p>Automatic flags: '+fl.map(w=>`<span class="chip flag">${esc(w)}</span>`).join(' ')+'</p>':''}
+    <div class="row">${[['supported','Fully supported'],['unsupported','Overclaims or unsupported'],['unclear','Unclear']].map(([k,l])=>`<button class="pick" data-v="${k}">${l}</button>`).join('')}</div>
+    <div class="why" hidden><select class="ft"><option value="">What is wrong?</option><option value="ownership_or_seniority_inflated">Ownership or seniority inflated</option><option value="outcome_or_number_not_in_evidence">Outcome or number not in the evidence</option><option value="tool_or_skill_not_in_evidence">Tool or skill not in the evidence</option><option value="merges_separate_projects">Merges separate projects</option><option value="vague_or_unattributable">Vague or not attributable to me</option><option value="other">Other</option></select><input type="text" class="note" placeholder="One sentence: why?"></div></div>`}).join('')}
+  if(o.scope_note)h+=`<p class="mute">Model's scope note: ${esc(o.scope_note)}</p>`;
+  if(bul.length||reqs.length)h+='<div class="row"><button id="save">Save my review</button><span class="mute" id="savemsg"></span></div>';
+  $('result').innerHTML=h;
+  document.querySelectorAll('.bullet').forEach(el=>el.querySelectorAll('.pick').forEach(b=>b.onclick=()=>{el.querySelectorAll('.pick').forEach(x=>x.classList.toggle('on',x===b));el.dataset.verdict=b.dataset.v;el.querySelector('.why').hidden=b.dataset.v==='supported'}));
+  if($('save'))$('save').onclick=async()=>{const bs=[...document.querySelectorAll('.bullet')].map(el=>({claim_id:bul[+el.dataset.b].claim_id,verdict:el.dataset.verdict,failure_type:el.querySelector('.ft').value,notes:el.querySelector('.note').value}));
+    if(bs.some(b=>!b.verdict)){$('savemsg').textContent='Give every bullet a verdict first.';return}
+    if(bs.some(b=>b.verdict!=='supported'&&(!b.failure_type||!b.notes.trim()))){$('savemsg').textContent='For each bullet that is not fully supported, choose what is wrong and write one sentence.';return}
+    const rs=[...document.querySelectorAll('select[data-req]')].filter(s=>s.value).map(s=>{const q=reqs[+s.dataset.req];return{requirement_id:q.requirement_id,requirement_text:q.requirement_text,human_label:s.value,model_label:q.label}});
+    try{showMetrics(await post('/api/review',{run_id:r.run_id,bullets:bs,requirements:rs,evidence:EVIDENCE}));$('savemsg').textContent='Saved.'}catch(err){$('savemsg').textContent=err.message}};
+}
+function block(title,m){const b=m.bullets,q=m.requirement_labels,f=m.automatic_flags_vs_human;if(!m.attempted_runs)return '';
+  return `<h3>${title} — ${m.attempted_runs} run(s)</h3><div class="stats">
+  <div class="stat"><b>${b.ucr_conservative_unsupported_or_unclear==null?'n/a':pct(b.ucr_conservative_unsupported_or_unclear)}</b>Unsupported Claim Rate<br><span class="mute">${b.unsupported+b.unclear} of ${b.reviewed} reviewed${b.pending?`, ${b.pending} pending`:''}${b.ucr_conservative_wilson95?`; 95% CI ${pct(b.ucr_conservative_wilson95[0])}–${pct(b.ucr_conservative_wilson95[1])}`:''}</span></div>
+  <div class="stat"><b>${pct(q.llm.accuracy)}</b>Label agreement<br><span class="mute">${q.n} requirement(s) reviewed; rule baseline ${pct(q.lexical_rule_baseline.accuracy)}; majority ${pct(q.majority_class_baseline_accuracy)}</span></div>
+  <div class="stat"><b>${f.flagged_and_bad} / ${f.bad}</b>Bad bullets caught by flags<br><span class="mute">${f.flagged} flagged in total</span></div>
+  <div class="stat"><b>${m.blocked_by_validation}</b>Blocked by validator</div></div>`}
+function showMetrics(d){$('s5').hidden=false;$('metrics').innerHTML=(block('Live model runs',d.live_runs)||'<p class="mute">No reviewed live runs yet.</p>')+block('Offline demo (canned response, kept separate)',d.offline_demo_runs)+'<p class="mute">The rate stays "n/a" until every generated bullet is reviewed. A handful of runs is an anecdote, not a performance estimate.</p>'}
+
+async function showEval(){const e=await api('/api/evaluation'),h=e.heldout;if(!h){$('evalbody').textContent='No recorded evaluation found.';return}
+  const b=h.bullets,q=h.requirement_labels,p=e.adversarial_injection_probe||{};
+  $('evalbody').innerHTML=`<div class="tablewrap"><table><tr><th>Measure (10 held-out jobs)</th><th>Result</th><th>Caveat</th></tr>
+  <tr><td>Bullets I judged supported</td><td>${b.supported} of ${b.reviewed} (UCR ${pct(b.ucr_conservative_unsupported_or_unclear)}, 95% upper bound ${pct(b.ucr_conservative_wilson95[1])})</td><td>Reviewed quickly, no written reasons. A later re-read questioned one bullet (JD42-B3); if upheld, UCR is 1 of 15.</td></tr>
+  <tr><td>Requirement labels agreeing with mine</td><td>${Math.round(q.llm.accuracy*q.n)} of ${q.n} = ${pct(q.llm.accuracy)}</td><td>The model's label was visible while I judged: an upper bound. ${q.llm_stricter_than_human} disagreements, all with the model stricter.</td></tr>
+  <tr><td>Token-overlap rule / majority class</td><td>${pct(q.lexical_rule_baseline.accuracy)} / ${pct(q.majority_class_baseline_accuracy)}</td><td>Same ${q.n} requirements.</td></tr>
+  <tr><td>Runs passing the validator</td><td>${h.valid_runs} of ${h.attempted_runs}</td><td>None of the ${h.blocked_by_validation} blocked runs had a fabricated quote: short quotes, a comma variant and reworded requirement text.</td></tr>
+  <tr><td>Model declined to write bullets</td><td>${h.abstained_runs.length} of ${h.attempted_runs}</td><td>Includes runs that were also blocked. Not judged case by case.</td></tr>
+  <tr><td>Cost per job</td><td>$${h.cost_usd.mean_per_run.toFixed(4)}</td><td>Provider-reported.</td></tr>
+  <tr><td>Latency</td><td>not measured</td><td>The timer in the evaluation page stopped at the response headers.</td></tr>
+  <tr><td>Prompt-injection probe</td><td>${p.all_labels_strong?'followed':'not followed'}</td><td>One probe; ${p.strong_labels} of ${p.requirements} labels Strong against ${p.strong_labels_on_clean_dev_job} on the clean text.</td></tr></table></div>`}
+$('tabMatch').onclick=()=>{$('viewMatch').hidden=false;$('viewEval').hidden=true;$('tabMatch').classList.add('on');$('tabEval').classList.remove('on')};
+$('tabEval').onclick=()=>{$('viewMatch').hidden=true;$('viewEval').hidden=false;$('tabEval').classList.add('on');$('tabMatch').classList.remove('on');showEval()};
+init();
+</script></body></html>

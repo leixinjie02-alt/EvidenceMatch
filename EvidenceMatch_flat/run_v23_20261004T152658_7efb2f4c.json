@@ -1,0 +1,210 @@
+{
+  "run_id": "20261004T152658_7efb2f4c",
+  "run_label": "heldout",
+  "runner": "browser",
+  "jd_id": "JD44",
+  "cohort": "additional30",
+  "representation": "assistant_paraphrase_of_real_posting",
+  "job_hash": "4767c121e91f2e240bfee9708580fff3b554787a1ef9cd850f167682f34813d2",
+  "evidence_hash": "dc44b17b5058b8add86d1d5a91e5b3bac2ae822de94caa738dcf67d557028256",
+  "prompt_version": "evidencematch-v2.3",
+  "prompt_hash": "e2ab2d2593987f1fc353154c02f92e933fad69af9496967efa42dc2b9591e9fa",
+  "requested_model": "openai/gpt-4o",
+  "baseline": {
+    "label": "Missing",
+    "lexical_coverage": 0.030303030303030304,
+    "retrieved_ids": [
+      "E024",
+      "E026"
+    ],
+    "note": "Lexical baseline; cross-language mismatch and negation are known weaknesses."
+  },
+  "context_strategy": "full_confirmed_resume_small_corpus",
+  "started_at_utc": "2026-10-04T15:00:25.751Z",
+  "status": "blocked_validation",
+  "requires_human_review": true,
+  "latency_seconds": null,
+  "time_to_response_headers_seconds": 1.777,
+  "response_id": "gen-1791126027-TcD42ffiaKuxN8H2At6n",
+  "actual_model": "openai/gpt-4o",
+  "usage": {
+    "prompt_tokens": 3228,
+    "completion_tokens": 993,
+    "total_tokens": 4221,
+    "cost": 0.018,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.018,
+      "upstream_inference_prompt_cost": 0.00807,
+      "upstream_inference_completions_cost": 0.00993
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "pricing": {
+    "prompt": "0.0000025",
+    "completion": "0.00001"
+  },
+  "cost_reported_usd": 0.018,
+  "cost_estimate_usd": 0.018000000000000002,
+  "raw_response": "{\n  \"requirements\": [\n    {\n      \"requirement_id\": \"R1\",\n      \"requirement_text\": \"Summer 2027 backend internship\",\n      \"label\": \"Missing\",\n      \"citations\": [],\n      \"gap\": \"No evidence of availability for Summer 2027.\"\n    },\n    {\n      \"requirement_id\": \"R2\",\n      \"requirement_text\": \"building services and APIs for a content platform\",\n      \"label\": \"Partial\",\n      \"citations\": [\n        {\n          \"evidence_id\": \"E023\",\n          \"quote\": \"开发 RESTful API，打通监测平台、后端与 AI 模块\"\n        }\n      ],\n      \"gap\": \"No evidence of work specifically on a content platform.\"\n    },\n    {\n      \"requirement_id\": \"R3\",\n      \"requirement_text\": \"Requires relevant degree study\",\n      \"label\": \"Partial\",\n      \"citations\": [\n        {\n          \"evidence_id\": \"E001\",\n          \"quote\": \"企业人工智能硕士（MSc in Enterprise AI） 2026.08 – 2027.06（在读）\"\n        }\n      ],\n      \"gap\": \"Degree is in progress, not completed.\"\n    },\n    {\n      \"requirement_id\": \"R4\",\n      \"requirement_text\": \"a backend language\",\n      \"label\": \"Strong\",\n      \"citations\": [\n        {\n          \"evidence_id\": \"E026\",\n          \"quote\": \"Python\"\n        }\n      ],\n      \"gap\": \"\"\n    },\n    {\n      \"requirement_id\": \"R5\",\n      \"requirement_text\": \"strong computing fundamentals\",\n      \"label\": \"Partial\",\n      \"citations\": [\n        {\n          \"evidence_id\": \"E027\",\n          \"quote\": \"线性代数、多元微积分、概率论\"\n        }\n      ],\n      \"gap\": \"No direct evidence of computing fundamentals beyond mathematics.\"\n    },\n    {\n      \"requirement_id\": \"R6\",\n      \"requirement_text\": \"Go, databases, caching, messaging, Linux and real-time or recommendation projects are helpful\",\n      \"label\": \"Partial\",\n      \"citations\": [\n        {\n          \"evidence_id\": \"E026\",\n          \"quote\": \"Linux\"\n        },\n        {\n          \"evidence_id\": \"E023\",\n          \"quote\": \"传感器数据实时处理\"\n        }\n      ],\n      \"gap\": \"No evidence of Go, databases, caching, messaging, or recommendation projects.\"\n    },\n    {\n      \"requirement_id\": \"R7\",\n      \"requirement_text\": \"Work includes technical design, rapid prototyping and debugging\",\n      \"label\": \"Partial\",\n      \"citations\": [\n        {\n          \"evidence_id\": \"E022\",\n          \"quote\": \"设计并集成异常检测工作流与自动化处理逻辑\"\n        },\n        {\n          \"evidence_id\": \"E024\",\n          \"quote\": \"完成部署、调试与性能调优\"\n        }\n      ],\n      \"gap\": \"No evidence of rapid prototyping.\"\n    }\n  ],\n  \"bullets\": [\n    {\n      \"claim_id\": \"B1\",\n      \"text\": \"Developed RESTful APIs to integrate monitoring platform, backend, and AI modules.\",\n      \"citations\": [\n        {\n          \"evidence_id\": \"E023\",\n          \"quote\": \"开发 RESTful API，打通监测平台、后端与 AI 模块\"\n        }\n      ]\n    },\n    {\n      \"claim_id\": \"B2\",\n      \"text\": \"Participated in backend development for AI industrial monitoring systems, designing anomaly detection workflows.\",\n      \"citations\": [\n        {\n          \"evidence_id\": \"E022\",\n          \"quote\": \"参与 AI 工业监测系统后端开发，设计并集成异常检测工作流\"\n        }\n      ]\n    },\n    {\n      \"claim_id\": \"B3\",\n      \"text\": \"Assisted in modular backend architecture design and system integration, performing deployment and debugging in a Linux environment.\",\n      \"citations\": [\n        {\n          \"evidence_id\": \"E024\",\n          \"quote\": \"协助模块化后端架构设计与系统集成；在 Linux 环境下基于 Git 协作完成部署、调试\"\n        }\n      ]\n    }\n  ],\n  \"abstain\": false,\n  \"abstention_reason\": \"\",\n  \"scope_note\": \"Requirements related to specific technologies like Go, databases, caching, and messaging are partially supported or missing. The degree is in progress, which is a gap for completed degree requirements. No evidence of availability for Summer 2027 or specific content platform experience.\"\n}",
+  "finish_reason": "stop",
+  "output": {
+    "requirements": [
+      {
+        "requirement_id": "R1",
+        "requirement_text": "Summer 2027 backend internship",
+        "label": "Missing",
+        "citations": [],
+        "gap": "No evidence of availability for Summer 2027."
+      },
+      {
+        "requirement_id": "R2",
+        "requirement_text": "building services and APIs for a content platform",
+        "label": "Partial",
+        "citations": [
+          {
+            "evidence_id": "E023",
+            "quote": "开发 RESTful API，打通监测平台、后端与 AI 模块"
+          }
+        ],
+        "gap": "No evidence of work specifically on a content platform."
+      },
+      {
+        "requirement_id": "R3",
+        "requirement_text": "Requires relevant degree study",
+        "label": "Partial",
+        "citations": [
+          {
+            "evidence_id": "E001",
+            "quote": "企业人工智能硕士（MSc in Enterprise AI） 2026.08 – 2027.06（在读）"
+          }
+        ],
+        "gap": "Degree is in progress, not completed."
+      },
+      {
+        "requirement_id": "R4",
+        "requirement_text": "a backend language",
+        "label": "Strong",
+        "citations": [
+          {
+            "evidence_id": "E026",
+            "quote": "Python"
+          }
+        ],
+        "gap": ""
+      },
+      {
+        "requirement_id": "R5",
+        "requirement_text": "strong computing fundamentals",
+        "label": "Partial",
+        "citations": [
+          {
+            "evidence_id": "E027",
+            "quote": "线性代数、多元微积分、概率论"
+          }
+        ],
+        "gap": "No direct evidence of computing fundamentals beyond mathematics."
+      },
+      {
+        "requirement_id": "R6",
+        "requirement_text": "Go, databases, caching, messaging, Linux and real-time or recommendation projects are helpful",
+        "label": "Partial",
+        "citations": [
+          {
+            "evidence_id": "E026",
+            "quote": "Linux"
+          },
+          {
+            "evidence_id": "E023",
+            "quote": "传感器数据实时处理"
+          }
+        ],
+        "gap": "No evidence of Go, databases, caching, messaging, or recommendation projects."
+      },
+      {
+        "requirement_id": "R7",
+        "requirement_text": "Work includes technical design, rapid prototyping and debugging",
+        "label": "Partial",
+        "citations": [
+          {
+            "evidence_id": "E022",
+            "quote": "设计并集成异常检测工作流与自动化处理逻辑"
+          },
+          {
+            "evidence_id": "E024",
+            "quote": "完成部署、调试与性能调优"
+          }
+        ],
+        "gap": "No evidence of rapid prototyping."
+      }
+    ],
+    "bullets": [
+      {
+        "claim_id": "B1",
+        "text": "Developed RESTful APIs to integrate monitoring platform, backend, and AI modules.",
+        "citations": [
+          {
+            "evidence_id": "E023",
+            "quote": "开发 RESTful API，打通监测平台、后端与 AI 模块"
+          }
+        ]
+      },
+      {
+        "claim_id": "B2",
+        "text": "Participated in backend development for AI industrial monitoring systems, designing anomaly detection workflows.",
+        "citations": [
+          {
+            "evidence_id": "E022",
+            "quote": "参与 AI 工业监测系统后端开发，设计并集成异常检测工作流"
+          }
+        ]
+      },
+      {
+        "claim_id": "B3",
+        "text": "Assisted in modular backend architecture design and system integration, performing deployment and debugging in a Linux environment.",
+        "citations": [
+          {
+            "evidence_id": "E024",
+            "quote": "协助模块化后端架构设计与系统集成；在 Linux 环境下基于 Git 协作完成部署、调试"
+          }
+        ]
+      }
+    ],
+    "abstain": false,
+    "abstention_reason": "",
+    "scope_note": "Requirements related to specific technologies like Go, databases, caching, and messaging are partially supported or missing. The degree is in progress, which is a gap for completed degree requirements. No evidence of availability for Summer 2027 or specific content platform experience."
+  },
+  "validation": {
+    "ok": false,
+    "issues": [
+      "requirements[5]:quote_not_verbatim"
+    ],
+    "bullet_errors": {
+      "B1": [],
+      "B2": [],
+      "B3": []
+    },
+    "bullet_warnings": {
+      "B1": [],
+      "B2": [],
+      "B3": []
+    },
+    "requirement_warnings": {
+      "R4": [
+        "strong_from_skills_list_only"
+      ]
+    }
+  },
+  "llm_coverage_label": null,
+  "model_disagreement": null
+}

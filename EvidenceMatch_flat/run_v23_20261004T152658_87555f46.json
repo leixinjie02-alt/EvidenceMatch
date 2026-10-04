@@ -1,0 +1,240 @@
+{
+  "run_id": "20261004T152658_87555f46",
+  "run_label": "dev_regression",
+  "runner": "browser",
+  "jd_id": "JD19",
+  "cohort": "additional30",
+  "representation": "assistant_paraphrase_of_real_posting",
+  "job_hash": "4209a2f96518477a19a0b061cd0dfd4f866dd035b3cf4f98cd72d42dc1fb782d",
+  "evidence_hash": "dc44b17b5058b8add86d1d5a91e5b3bac2ae822de94caa738dcf67d557028256",
+  "prompt_version": "evidencematch-v2.3",
+  "prompt_hash": "e2ab2d2593987f1fc353154c02f92e933fad69af9496967efa42dc2b9591e9fa",
+  "requested_model": "openai/gpt-4o",
+  "baseline": {
+    "label": "Missing",
+    "lexical_coverage": 0.09090909090909091,
+    "retrieved_ids": [
+      "E023",
+      "E026",
+      "E001",
+      "E002",
+      "E007"
+    ],
+    "note": "Lexical baseline; cross-language mismatch and negation are known weaknesses."
+  },
+  "context_strategy": "full_confirmed_resume_small_corpus",
+  "started_at_utc": "2026-10-04T14:59:20.740Z",
+  "status": "ready_for_human_review",
+  "requires_human_review": true,
+  "latency_seconds": null,
+  "time_to_response_headers_seconds": 0.8195,
+  "response_id": "gen-1791125962-TtZw8obelLVFVhOfs0Rj",
+  "actual_model": "openai/gpt-4o",
+  "usage": {
+    "prompt_tokens": 3223,
+    "completion_tokens": 1197,
+    "total_tokens": 4420,
+    "cost": 0.0200275,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0200275,
+      "upstream_inference_prompt_cost": 0.0080575,
+      "upstream_inference_completions_cost": 0.01197
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "pricing": {
+    "prompt": "0.0000025",
+    "completion": "0.00001"
+  },
+  "cost_reported_usd": 0.0200275,
+  "cost_estimate_usd": 0.020027500000000004,
+  "raw_response": "{\n  \"requirements\": [\n    {\n      \"requirement_id\": \"1\",\n      \"requirement_text\": \"Graduate role accepting zero to three years of AI experience.\",\n      \"label\": \"Strong\",\n      \"citations\": [\n        {\n          \"evidence_id\": \"E021\",\n          \"quote\": \"AI 软件开发工程师 2026.03 – 2026.07\"\n        }\n      ],\n      \"gap\": \"\"\n    },\n    {\n      \"requirement_id\": \"2\",\n      \"requirement_text\": \"Develop Python ML systems\",\n      \"label\": \"Partial\",\n      \"citations\": [\n        {\n          \"evidence_id\": \"E022\",\n          \"quote\": \"参与 AI 工业监测系统后端开发\"\n        },\n        {\n          \"evidence_id\": \"E023\",\n          \"quote\": \"用 Python 实现传感器数据实时处理\"\n        }\n      ],\n      \"gap\": \"ML systems development not explicitly confirmed\"\n    },\n    {\n      \"requirement_id\": \"3\",\n      \"requirement_text\": \"experiment with LLMs and retrieval\",\n      \"label\": \"Strong\",\n      \"citations\": [\n        {\n          \"evidence_id\": \"E010\",\n          \"quote\": \"直播电商智能复盘 Agent Coze Workflow · Prompt Engineering\"\n        },\n        {\n          \"evidence_id\": \"E014\",\n          \"quote\": \"乌龙航空招聘助手（PE6203） Prompt Engineering · RAG\"\n        }\n      ],\n      \"gap\": \"\"\n    },\n    {\n      \"requirement_id\": \"4\",\n      \"requirement_text\": \"prepare data\",\n      \"label\": \"Partial\",\n      \"citations\": [\n        {\n          \"evidence_id\": \"E019\",\n          \"quote\": \"为转诊协调场景构建 30 条自包含、带标签的评测用例\"\n        }\n      ],\n      \"gap\": \"General data preparation not fully detailed\"\n    },\n    {\n      \"requirement_id\": \"5\",\n      \"requirement_text\": \"evaluate models\",\n      \"label\": \"Strong\",\n      \"citations\": [\n        {\n          \"evidence_id\": \"E020\",\n          \"quote\": \"评测集用于衡量 V1→V2 提示改写效果\"\n        }\n      ],\n      \"gap\": \"\"\n    },\n    {\n      \"requirement_id\": \"6\",\n      \"requirement_text\": \"assist deployment\",\n      \"label\": \"Strong\",\n      \"citations\": [\n        {\n          \"evidence_id\": \"E024\",\n          \"quote\": \"协助模块化后端架构设计与系统集成\"\n        }\n      ],\n      \"gap\": \"\"\n    },\n    {\n      \"requirement_id\": \"7\",\n      \"requirement_text\": \"Relevant computing degree\",\n      \"label\": \"Partial\",\n      \"citations\": [\n        {\n          \"evidence_id\": \"E001\",\n          \"quote\": \"企业人工智能硕士（MSc in Enterprise AI） 2026.08 – 2027.06（在读）\"\n        }\n      ],\n      \"gap\": \"Degree in progress\"\n    },\n    {\n      \"requirement_id\": \"8\",\n      \"requirement_text\": \"ML fundamentals are expected\",\n      \"label\": \"Partial\",\n      \"citations\": [\n        {\n          \"evidence_id\": \"E002\",\n          \"quote\": \"核心课程：Emerging AI Technologies、Generative AI & Agentic AI\"\n        }\n      ],\n      \"gap\": \"Fundamentals not explicitly confirmed\"\n    },\n    {\n      \"requirement_id\": \"9\",\n      \"requirement_text\": \"Git, REST APIs and cloud familiarity are helpful.\",\n      \"label\": \"Strong\",\n      \"citations\": [\n        {\n          \"evidence_id\": \"E023\",\n          \"quote\": \"开发 RESTful API\"\n        },\n        {\n          \"evidence_id\": \"E024\",\n          \"quote\": \"基于 Git 协作完成部署\"\n        }\n      ],\n      \"gap\": \"\"\n    }\n  ],\n  \"bullets\": [\n    {\n      \"claim_id\": \"1\",\n      \"text\": \"Participated in backend development of an AI industrial monitoring system, designing anomaly detection workflows and integrating automated processing logic.\",\n      \"citations\": [\n        {\n          \"evidence_id\": \"E022\",\n          \"quote\": \"参与 AI 工业监测系统后端开发，设计并集成异常检测工作流与自动化处理逻辑\"\n        }\n      ]\n    },\n    {\n      \"claim_id\": \"2\",\n      \"text\": \"Developed RESTful APIs for real-time sensor data processing and communication services using Python.\",\n      \"citations\": [\n        {\n          \"evidence_id\": \"E023\",\n          \"quote\": \"用 Python 实现传感器数据实时处理、任务调度与通信服务；开发 RESTful API\"\n        }\n      ]\n    },\n    {\n      \"claim_id\": \"3\",\n      \"text\": \"Assisted in modular backend architecture design and system integration, collaborating on deployment and performance tuning in a Linux environment using Git.\",\n      \"citations\": [\n        {\n          \"evidence_id\": \"E024\",\n          \"quote\": \"协助模块化后端架构设计与系统集成；在 Linux 环境下基于 Git 协作完成部署、调试与性能调优\"\n        }\n      ]\n    }\n  ],\n  \"abstain\": false,\n  \"abstention_reason\": \"\",\n  \"scope_note\": \"Requirements related to specific cloud platform experience and full ML systems development are partially supported. The degree is in progress, which is noted as a gap for a completed degree requirement.\"\n}",
+  "finish_reason": "stop",
+  "output": {
+    "requirements": [
+      {
+        "requirement_id": "1",
+        "requirement_text": "Graduate role accepting zero to three years of AI experience.",
+        "label": "Strong",
+        "citations": [
+          {
+            "evidence_id": "E021",
+            "quote": "AI 软件开发工程师 2026.03 – 2026.07"
+          }
+        ],
+        "gap": ""
+      },
+      {
+        "requirement_id": "2",
+        "requirement_text": "Develop Python ML systems",
+        "label": "Partial",
+        "citations": [
+          {
+            "evidence_id": "E022",
+            "quote": "参与 AI 工业监测系统后端开发"
+          },
+          {
+            "evidence_id": "E023",
+            "quote": "用 Python 实现传感器数据实时处理"
+          }
+        ],
+        "gap": "ML systems development not explicitly confirmed"
+      },
+      {
+        "requirement_id": "3",
+        "requirement_text": "experiment with LLMs and retrieval",
+        "label": "Strong",
+        "citations": [
+          {
+            "evidence_id": "E010",
+            "quote": "直播电商智能复盘 Agent Coze Workflow · Prompt Engineering"
+          },
+          {
+            "evidence_id": "E014",
+            "quote": "乌龙航空招聘助手（PE6203） Prompt Engineering · RAG"
+          }
+        ],
+        "gap": ""
+      },
+      {
+        "requirement_id": "4",
+        "requirement_text": "prepare data",
+        "label": "Partial",
+        "citations": [
+          {
+            "evidence_id": "E019",
+            "quote": "为转诊协调场景构建 30 条自包含、带标签的评测用例"
+          }
+        ],
+        "gap": "General data preparation not fully detailed"
+      },
+      {
+        "requirement_id": "5",
+        "requirement_text": "evaluate models",
+        "label": "Strong",
+        "citations": [
+          {
+            "evidence_id": "E020",
+            "quote": "评测集用于衡量 V1→V2 提示改写效果"
+          }
+        ],
+        "gap": ""
+      },
+      {
+        "requirement_id": "6",
+        "requirement_text": "assist deployment",
+        "label": "Strong",
+        "citations": [
+          {
+            "evidence_id": "E024",
+            "quote": "协助模块化后端架构设计与系统集成"
+          }
+        ],
+        "gap": ""
+      },
+      {
+        "requirement_id": "7",
+        "requirement_text": "Relevant computing degree",
+        "label": "Partial",
+        "citations": [
+          {
+            "evidence_id": "E001",
+            "quote": "企业人工智能硕士（MSc in Enterprise AI） 2026.08 – 2027.06（在读）"
+          }
+        ],
+        "gap": "Degree in progress"
+      },
+      {
+        "requirement_id": "8",
+        "requirement_text": "ML fundamentals are expected",
+        "label": "Partial",
+        "citations": [
+          {
+            "evidence_id": "E002",
+            "quote": "核心课程：Emerging AI Technologies、Generative AI & Agentic AI"
+          }
+        ],
+        "gap": "Fundamentals not explicitly confirmed"
+      },
+      {
+        "requirement_id": "9",
+        "requirement_text": "Git, REST APIs and cloud familiarity are helpful.",
+        "label": "Strong",
+        "citations": [
+          {
+            "evidence_id": "E023",
+            "quote": "开发 RESTful API"
+          },
+          {
+            "evidence_id": "E024",
+            "quote": "基于 Git 协作完成部署"
+          }
+        ],
+        "gap": ""
+      }
+    ],
+    "bullets": [
+      {
+        "claim_id": "1",
+        "text": "Participated in backend development of an AI industrial monitoring system, designing anomaly detection workflows and integrating automated processing logic.",
+        "citations": [
+          {
+            "evidence_id": "E022",
+            "quote": "参与 AI 工业监测系统后端开发，设计并集成异常检测工作流与自动化处理逻辑"
+          }
+        ]
+      },
+      {
+        "claim_id": "2",
+        "text": "Developed RESTful APIs for real-time sensor data processing and communication services using Python.",
+        "citations": [
+          {
+            "evidence_id": "E023",
+            "quote": "用 Python 实现传感器数据实时处理、任务调度与通信服务；开发 RESTful API"
+          }
+        ]
+      },
+      {
+        "claim_id": "3",
+        "text": "Assisted in modular backend architecture design and system integration, collaborating on deployment and performance tuning in a Linux environment using Git.",
+        "citations": [
+          {
+            "evidence_id": "E024",
+            "quote": "协助模块化后端架构设计与系统集成；在 Linux 环境下基于 Git 协作完成部署、调试与性能调优"
+          }
+        ]
+      }
+    ],
+    "abstain": false,
+    "abstention_reason": "",
+    "scope_note": "Requirements related to specific cloud platform experience and full ML systems development are partially supported. The degree is in progress, which is noted as a gap for a completed degree requirement."
+  },
+  "validation": {
+    "ok": true,
+    "issues": [],
+    "bullet_errors": {
+      "1": [],
+      "2": [],
+      "3": []
+    },
+    "bullet_warnings": {
+      "1": [],
+      "2": [],
+      "3": []
+    },
+    "requirement_warnings": {}
+  },
+  "llm_coverage_label": "Partial",
+  "model_disagreement": true
+}

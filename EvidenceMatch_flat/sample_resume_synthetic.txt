@@ -1,0 +1,19 @@
+Alex Tan
+alex.tan@example.com | +65 9123 4567
+
+Education
+Example University | BSc Information Systems 2022.08 – 2026.05
+• Coursework: databases, statistics, introduction to machine learning
+
+Projects
+Course FAQ chatbot (group coursework) Python · Flask
+• Wrote the Flask endpoint that returns answers from a 40-question FAQ file
+• Assisted two teammates with testing; wrote 12 unit tests
+
+Internship
+Example Logistics Pte Ltd | Data intern 2025.05 – 2025.08
+• Cleaned weekly delivery spreadsheets with pandas and built one SQL report
+• Supported the team's dashboard migration by checking figures against the old report
+
+Skills
+• Python, SQL, Flask, Git

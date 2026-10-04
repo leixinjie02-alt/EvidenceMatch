@@ -1,0 +1,231 @@
+{
+  "run_id": "20261004T152658_30645017",
+  "run_label": "heldout",
+  "runner": "browser",
+  "jd_id": "JD26",
+  "cohort": "additional30",
+  "representation": "assistant_paraphrase_of_real_posting",
+  "job_hash": "f7eb2e76eae2675830576f13db5b0509450fe77f54314850c72758bad2e82523",
+  "evidence_hash": "dc44b17b5058b8add86d1d5a91e5b3bac2ae822de94caa738dcf67d557028256",
+  "prompt_version": "evidencematch-v2.3",
+  "prompt_hash": "e2ab2d2593987f1fc353154c02f92e933fad69af9496967efa42dc2b9591e9fa",
+  "requested_model": "openai/gpt-4o",
+  "baseline": {
+    "label": "Missing",
+    "lexical_coverage": 0.12121212121212122,
+    "retrieved_ids": [
+      "E025",
+      "E010",
+      "E001",
+      "E002",
+      "E006"
+    ],
+    "note": "Lexical baseline; cross-language mismatch and negation are known weaknesses."
+  },
+  "context_strategy": "full_confirmed_resume_small_corpus",
+  "started_at_utc": "2026-10-04T15:00:03.264Z",
+  "status": "blocked_validation",
+  "requires_human_review": true,
+  "latency_seconds": null,
+  "time_to_response_headers_seconds": 1.1248000000000467,
+  "response_id": "gen-1791126004-dLRJJlQXpNHZybwR5low",
+  "actual_model": "openai/gpt-4o",
+  "usage": {
+    "prompt_tokens": 3228,
+    "completion_tokens": 1120,
+    "total_tokens": 4348,
+    "cost": 0.01927,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.01927,
+      "upstream_inference_prompt_cost": 0.00807,
+      "upstream_inference_completions_cost": 0.0112
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "pricing": {
+    "prompt": "0.0000025",
+    "completion": "0.00001"
+  },
+  "cost_reported_usd": 0.01927,
+  "cost_estimate_usd": 0.019270000000000002,
+  "raw_response": "{\n  \"requirements\": [\n    {\n      \"requirement_id\": \"R1\",\n      \"requirement_text\": \"Client-facing AI engineering role\",\n      \"label\": \"Missing\",\n      \"citations\": [],\n      \"gap\": \"No evidence of client-facing experience.\"\n    },\n    {\n      \"requirement_id\": \"R2\",\n      \"requirement_text\": \"at least three years of relevant work\",\n      \"label\": \"Missing\",\n      \"citations\": [],\n      \"gap\": \"No evidence of three years of relevant work experience.\"\n    },\n    {\n      \"requirement_id\": \"R3\",\n      \"requirement_text\": \"a delivered AI project\",\n      \"label\": \"Strong\",\n      \"citations\": [\n        {\n          \"evidence_id\": \"E005\",\n          \"quote\": \"dataAnalyzeAgent2：多智能体自主数据分析系统\"\n        },\n        {\n          \"evidence_id\": \"E010\",\n          \"quote\": \"LiveStream-AI-Copilot：直播电商智能复盘 Agent\"\n        }\n      ],\n      \"gap\": \"\"\n    },\n    {\n      \"requirement_id\": \"R4\",\n      \"requirement_text\": \"three years implementing software delivery infrastructure\",\n      \"label\": \"Missing\",\n      \"citations\": [],\n      \"gap\": \"No evidence of three years in software delivery infrastructure.\"\n    },\n    {\n      \"requirement_id\": \"R5\",\n      \"requirement_text\": \"Cloud exposure is expected\",\n      \"label\": \"Missing\",\n      \"citations\": [],\n      \"gap\": \"No evidence of cloud exposure.\"\n    },\n    {\n      \"requirement_id\": \"R6\",\n      \"requirement_text\": \"specialize in LLM/agent applications\",\n      \"label\": \"Strong\",\n      \"citations\": [\n        {\n          \"evidence_id\": \"E005\",\n          \"quote\": \"dataAnalyzeAgent2：多智能体自主数据分析系统\"\n        },\n        {\n          \"evidence_id\": \"E010\",\n          \"quote\": \"LiveStream-AI-Copilot：直播电商智能复盘 Agent\"\n        }\n      ],\n      \"gap\": \"\"\n    },\n    {\n      \"requirement_id\": \"R7\",\n      \"requirement_text\": \"specialize in MLOps\",\n      \"label\": \"Missing\",\n      \"citations\": [],\n      \"gap\": \"No evidence of specialization in MLOps.\"\n    },\n    {\n      \"requirement_id\": \"R8\",\n      \"requirement_text\": \"skills in responsible evaluation\",\n      \"label\": \"Partial\",\n      \"citations\": [\n        {\n          \"evidence_id\": \"E020\",\n          \"quote\": \"评估与对比：评测集用于衡量 V1→V2 提示改写效果\"\n        }\n      ],\n      \"gap\": \"Responsible evaluation not explicitly mentioned.\"\n    },\n    {\n      \"requirement_id\": \"R9\",\n      \"requirement_text\": \"skills in model tooling\",\n      \"label\": \"Partial\",\n      \"citations\": [\n        {\n          \"evidence_id\": \"E022\",\n          \"quote\": \"设计并集成异常检测工作流与自动化处理逻辑\"\n        }\n      ],\n      \"gap\": \"Model tooling not explicitly mentioned.\"\n    },\n    {\n      \"requirement_id\": \"R10\",\n      \"requirement_text\": \"skills in deployment workflows\",\n      \"label\": \"Partial\",\n      \"citations\": [\n        {\n          \"evidence_id\": \"E009\",\n          \"quote\": \"FastAPI + Next.js 全栈部署\"\n        }\n      ],\n      \"gap\": \"Deployment workflows not fully detailed.\"\n    }\n  ],\n  \"bullets\": [\n    {\n      \"claim_id\": \"B1\",\n      \"text\": \"Developed a multi-agent autonomous data analysis system using LangGraph, FastAPI, and OpenAI API, achieving a 30% improvement in intent recognition accuracy.\",\n      \"citations\": [\n        {\n          \"evidence_id\": \"E005\",\n          \"quote\": \"dataAnalyzeAgent2：多智能体自主数据分析系统\"\n        },\n        {\n          \"evidence_id\": \"E009\",\n          \"quote\": \"意图识别准确率提升约 30%\"\n        }\n      ]\n    },\n    {\n      \"claim_id\": \"B2\",\n      \"text\": \"Designed and integrated anomaly detection workflows and automated processing logic for an AI industrial monitoring system.\",\n      \"citations\": [\n        {\n          \"evidence_id\": \"E022\",\n          \"quote\": \"设计并集成异常检测工作流与自动化处理逻辑\"\n        }\n      ]\n    },\n    {\n      \"claim_id\": \"B3\",\n      \"text\": \"Implemented real-time sensor data processing and communication services using Python and RESTful APIs.\",\n      \"citations\": [\n        {\n          \"evidence_id\": \"E023\",\n          \"quote\": \"用 Python 实现传感器数据实时处理、任务调度与通信服务\"\n        }\n      ]\n    }\n  ],\n  \"abstain\": false,\n  \"abstention_reason\": \"\",\n  \"scope_note\": \"Requirements related to client-facing experience, three years of relevant work, software delivery infrastructure, and cloud exposure are missing. Partial evidence for responsible evaluation, model tooling, and deployment workflows is noted, but specific details are lacking.\"\n}",
+  "finish_reason": "stop",
+  "output": {
+    "requirements": [
+      {
+        "requirement_id": "R1",
+        "requirement_text": "Client-facing AI engineering role",
+        "label": "Missing",
+        "citations": [],
+        "gap": "No evidence of client-facing experience."
+      },
+      {
+        "requirement_id": "R2",
+        "requirement_text": "at least three years of relevant work",
+        "label": "Missing",
+        "citations": [],
+        "gap": "No evidence of three years of relevant work experience."
+      },
+      {
+        "requirement_id": "R3",
+        "requirement_text": "a delivered AI project",
+        "label": "Strong",
+        "citations": [
+          {
+            "evidence_id": "E005",
+            "quote": "dataAnalyzeAgent2：多智能体自主数据分析系统"
+          },
+          {
+            "evidence_id": "E010",
+            "quote": "LiveStream-AI-Copilot：直播电商智能复盘 Agent"
+          }
+        ],
+        "gap": ""
+      },
+      {
+        "requirement_id": "R4",
+        "requirement_text": "three years implementing software delivery infrastructure",
+        "label": "Missing",
+        "citations": [],
+        "gap": "No evidence of three years in software delivery infrastructure."
+      },
+      {
+        "requirement_id": "R5",
+        "requirement_text": "Cloud exposure is expected",
+        "label": "Missing",
+        "citations": [],
+        "gap": "No evidence of cloud exposure."
+      },
+      {
+        "requirement_id": "R6",
+        "requirement_text": "specialize in LLM/agent applications",
+        "label": "Strong",
+        "citations": [
+          {
+            "evidence_id": "E005",
+            "quote": "dataAnalyzeAgent2：多智能体自主数据分析系统"
+          },
+          {
+            "evidence_id": "E010",
+            "quote": "LiveStream-AI-Copilot：直播电商智能复盘 Agent"
+          }
+        ],
+        "gap": ""
+      },
+      {
+        "requirement_id": "R7",
+        "requirement_text": "specialize in MLOps",
+        "label": "Missing",
+        "citations": [],
+        "gap": "No evidence of specialization in MLOps."
+      },
+      {
+        "requirement_id": "R8",
+        "requirement_text": "skills in responsible evaluation",
+        "label": "Partial",
+        "citations": [
+          {
+            "evidence_id": "E020",
+            "quote": "评估与对比：评测集用于衡量 V1→V2 提示改写效果"
+          }
+        ],
+        "gap": "Responsible evaluation not explicitly mentioned."
+      },
+      {
+        "requirement_id": "R9",
+        "requirement_text": "skills in model tooling",
+        "label": "Partial",
+        "citations": [
+          {
+            "evidence_id": "E022",
+            "quote": "设计并集成异常检测工作流与自动化处理逻辑"
+          }
+        ],
+        "gap": "Model tooling not explicitly mentioned."
+      },
+      {
+        "requirement_id": "R10",
+        "requirement_text": "skills in deployment workflows",
+        "label": "Partial",
+        "citations": [
+          {
+            "evidence_id": "E009",
+            "quote": "FastAPI + Next.js 全栈部署"
+          }
+        ],
+        "gap": "Deployment workflows not fully detailed."
+      }
+    ],
+    "bullets": [
+      {
+        "claim_id": "B1",
+        "text": "Developed a multi-agent autonomous data analysis system using LangGraph, FastAPI, and OpenAI API, achieving a 30% improvement in intent recognition accuracy.",
+        "citations": [
+          {
+            "evidence_id": "E005",
+            "quote": "dataAnalyzeAgent2：多智能体自主数据分析系统"
+          },
+          {
+            "evidence_id": "E009",
+            "quote": "意图识别准确率提升约 30%"
+          }
+        ]
+      },
+      {
+        "claim_id": "B2",
+        "text": "Designed and integrated anomaly detection workflows and automated processing logic for an AI industrial monitoring system.",
+        "citations": [
+          {
+            "evidence_id": "E022",
+            "quote": "设计并集成异常检测工作流与自动化处理逻辑"
+          }
+        ]
+      },
+      {
+        "claim_id": "B3",
+        "text": "Implemented real-time sensor data processing and communication services using Python and RESTful APIs.",
+        "citations": [
+          {
+            "evidence_id": "E023",
+            "quote": "用 Python 实现传感器数据实时处理、任务调度与通信服务"
+          }
+        ]
+      }
+    ],
+    "abstain": false,
+    "abstention_reason": "",
+    "scope_note": "Requirements related to client-facing experience, three years of relevant work, software delivery infrastructure, and cloud exposure are missing. Partial evidence for responsible evaluation, model tooling, and deployment workflows is noted, but specific details are lacking."
+  },
+  "validation": {
+    "ok": false,
+    "issues": [
+      "requirements[6]:requirement_not_from_jd",
+      "requirements[8]:requirement_not_from_jd",
+      "requirements[9]:requirement_not_from_jd"
+    ],
+    "bullet_errors": {
+      "B1": [],
+      "B2": [],
+      "B3": []
+    },
+    "bullet_warnings": {
+      "B1": [],
+      "B2": [],
+      "B3": []
+    },
+    "requirement_warnings": {}
+  },
+  "llm_coverage_label": null,
+  "model_disagreement": null
+}

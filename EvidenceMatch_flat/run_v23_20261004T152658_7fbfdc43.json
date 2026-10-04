@@ -1,0 +1,213 @@
+{
+  "run_id": "20261004T152658_7fbfdc43",
+  "run_label": "heldout",
+  "runner": "browser",
+  "jd_id": "JD42",
+  "cohort": "additional30",
+  "representation": "assistant_paraphrase_of_real_posting",
+  "job_hash": "c3c63ca5fe99e657180cc24517ddda7d69649e2b470c35cab038507e36387993",
+  "evidence_hash": "dc44b17b5058b8add86d1d5a91e5b3bac2ae822de94caa738dcf67d557028256",
+  "prompt_version": "evidencematch-v2.3",
+  "prompt_hash": "e2ab2d2593987f1fc353154c02f92e933fad69af9496967efa42dc2b9591e9fa",
+  "requested_model": "openai/gpt-4o",
+  "baseline": {
+    "label": "Missing",
+    "lexical_coverage": 0.125,
+    "retrieved_ids": [
+      "E010",
+      "E025",
+      "E001",
+      "E002",
+      "E006"
+    ],
+    "note": "Lexical baseline; cross-language mismatch and negation are known weaknesses."
+  },
+  "context_strategy": "full_confirmed_resume_small_corpus",
+  "started_at_utc": "2026-10-04T15:00:19.026Z",
+  "status": "ready_for_human_review",
+  "requires_human_review": true,
+  "latency_seconds": null,
+  "time_to_response_headers_seconds": 1.228,
+  "response_id": "gen-1791126020-G8q3ATJnpfASYQ6Y1I0m",
+  "actual_model": "openai/gpt-4o",
+  "usage": {
+    "prompt_tokens": 3228,
+    "completion_tokens": 1055,
+    "total_tokens": 4283,
+    "cost": 0.01862,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.01862,
+      "upstream_inference_prompt_cost": 0.00807,
+      "upstream_inference_completions_cost": 0.01055
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "pricing": {
+    "prompt": "0.0000025",
+    "completion": "0.00001"
+  },
+  "cost_reported_usd": 0.01862,
+  "cost_estimate_usd": 0.01862,
+  "raw_response": "{\n  \"requirements\": [\n    {\n      \"requirement_id\": \"R1\",\n      \"requirement_text\": \"Architect an enterprise agent platform for software delivery\",\n      \"label\": \"Partial\",\n      \"citations\": [\n        {\n          \"evidence_id\": \"E005\",\n          \"quote\": \"dataAnalyzeAgent2：多智能体自主数据分析系统\"\n        },\n        {\n          \"evidence_id\": \"E010\",\n          \"quote\": \"LiveStream-AI-Copilot：直播电商智能复盘 Agent\"\n        }\n      ],\n      \"gap\": \"Specific experience in architecting an enterprise agent platform for software delivery is not fully demonstrated.\"\n    },\n    {\n      \"requirement_id\": \"R2\",\n      \"requirement_text\": \"Requires a relevant degree\",\n      \"label\": \"Partial\",\n      \"citations\": [\n        {\n          \"evidence_id\": \"E001\",\n          \"quote\": \"企业人工智能硕士（MSc in Enterprise AI） 2026.08 – 2027.06（在读）\"\n        }\n      ],\n      \"gap\": \"The MSc in Enterprise AI is in progress and not yet completed.\"\n    },\n    {\n      \"requirement_id\": \"R3\",\n      \"requirement_text\": \"six or more years in backend/platform/infrastructure engineering\",\n      \"label\": \"Missing\",\n      \"citations\": [],\n      \"gap\": \"No evidence of six or more years of experience in backend/platform/infrastructure engineering.\"\n    },\n    {\n      \"requirement_id\": \"R4\",\n      \"requirement_text\": \"Java or Python\",\n      \"label\": \"Strong\",\n      \"citations\": [\n        {\n          \"evidence_id\": \"E023\",\n          \"quote\": \"用 Python 实现传感器数据实时处理\"\n        },\n        {\n          \"evidence_id\": \"E026\",\n          \"quote\": \"Python\"\n        }\n      ],\n      \"gap\": \"\"\n    },\n    {\n      \"requirement_id\": \"R5\",\n      \"requirement_text\": \"agent frameworks\",\n      \"label\": \"Strong\",\n      \"citations\": [\n        {\n          \"evidence_id\": \"E025\",\n          \"quote\": \"LangGraph、Coze Workflow\"\n        }\n      ],\n      \"gap\": \"\"\n    },\n    {\n      \"requirement_id\": \"R6\",\n      \"requirement_text\": \"enterprise retrieval\",\n      \"label\": \"Partial\",\n      \"citations\": [\n        {\n          \"evidence_id\": \"E015\",\n          \"quote\": \"简历–JD 匹配与 RAG 政策问答\"\n        }\n      ],\n      \"gap\": \"Specific experience in enterprise retrieval systems is not fully demonstrated.\"\n    },\n    {\n      \"requirement_id\": \"R7\",\n      \"requirement_text\": \"cloud delivery practices\",\n      \"label\": \"Missing\",\n      \"citations\": [],\n      \"gap\": \"No evidence of cloud delivery practices.\"\n    },\n    {\n      \"requirement_id\": \"R8\",\n      \"requirement_text\": \"Governance, permissions and cost control\",\n      \"label\": \"Missing\",\n      \"citations\": [],\n      \"gap\": \"No evidence of experience with governance, permissions, and cost control.\"\n    }\n  ],\n  \"bullets\": [\n    {\n      \"claim_id\": \"B1\",\n      \"text\": \"Developed a multi-agent autonomous data analysis system using LangGraph, enabling multi-step reasoning and dynamic task decomposition.\",\n      \"citations\": [\n        {\n          \"evidence_id\": \"E006\",\n          \"quote\": \"基于 LangGraph 构建带条件边与检查点状态持久化的循环状态图，实现多步推理、动态任务拆解\"\n        }\n      ]\n    },\n    {\n      \"claim_id\": \"B2\",\n      \"text\": \"Designed a Smart Router to convert natural language queries into sandboxed Python scripts, facilitating autonomous error recovery.\",\n      \"citations\": [\n        {\n          \"evidence_id\": \"E007\",\n          \"quote\": \"设计 Smart Router，将自然语言查询转为沙箱化 Python 脚本；解析运行时 traceback，自动修订执行计划并重试，实现自主错误恢复\"\n        }\n      ]\n    },\n    {\n      \"claim_id\": \"B3\",\n      \"text\": \"Implemented backend development for an AI industrial monitoring system, integrating anomaly detection workflows and automated processing logic.\",\n      \"citations\": [\n        {\n          \"evidence_id\": \"E022\",\n          \"quote\": \"参与 AI 工业监测系统后端开发，设计并集成异常检测工作流与自动化处理逻辑\"\n        }\n      ]\n    }\n  ],\n  \"abstain\": false,\n  \"abstention_reason\": \"\",\n  \"scope_note\": \"The job description requires six or more years of experience, which is not evidenced. The MSc in Enterprise AI is in progress, not completed. No evidence of cloud delivery practices or governance, permissions, and cost control experience. The candidate's experience with enterprise retrieval is partial.\"\n}",
+  "finish_reason": "stop",
+  "output": {
+    "requirements": [
+      {
+        "requirement_id": "R1",
+        "requirement_text": "Architect an enterprise agent platform for software delivery",
+        "label": "Partial",
+        "citations": [
+          {
+            "evidence_id": "E005",
+            "quote": "dataAnalyzeAgent2：多智能体自主数据分析系统"
+          },
+          {
+            "evidence_id": "E010",
+            "quote": "LiveStream-AI-Copilot：直播电商智能复盘 Agent"
+          }
+        ],
+        "gap": "Specific experience in architecting an enterprise agent platform for software delivery is not fully demonstrated."
+      },
+      {
+        "requirement_id": "R2",
+        "requirement_text": "Requires a relevant degree",
+        "label": "Partial",
+        "citations": [
+          {
+            "evidence_id": "E001",
+            "quote": "企业人工智能硕士（MSc in Enterprise AI） 2026.08 – 2027.06（在读）"
+          }
+        ],
+        "gap": "The MSc in Enterprise AI is in progress and not yet completed."
+      },
+      {
+        "requirement_id": "R3",
+        "requirement_text": "six or more years in backend/platform/infrastructure engineering",
+        "label": "Missing",
+        "citations": [],
+        "gap": "No evidence of six or more years of experience in backend/platform/infrastructure engineering."
+      },
+      {
+        "requirement_id": "R4",
+        "requirement_text": "Java or Python",
+        "label": "Strong",
+        "citations": [
+          {
+            "evidence_id": "E023",
+            "quote": "用 Python 实现传感器数据实时处理"
+          },
+          {
+            "evidence_id": "E026",
+            "quote": "Python"
+          }
+        ],
+        "gap": ""
+      },
+      {
+        "requirement_id": "R5",
+        "requirement_text": "agent frameworks",
+        "label": "Strong",
+        "citations": [
+          {
+            "evidence_id": "E025",
+            "quote": "LangGraph、Coze Workflow"
+          }
+        ],
+        "gap": ""
+      },
+      {
+        "requirement_id": "R6",
+        "requirement_text": "enterprise retrieval",
+        "label": "Partial",
+        "citations": [
+          {
+            "evidence_id": "E015",
+            "quote": "简历–JD 匹配与 RAG 政策问答"
+          }
+        ],
+        "gap": "Specific experience in enterprise retrieval systems is not fully demonstrated."
+      },
+      {
+        "requirement_id": "R7",
+        "requirement_text": "cloud delivery practices",
+        "label": "Missing",
+        "citations": [],
+        "gap": "No evidence of cloud delivery practices."
+      },
+      {
+        "requirement_id": "R8",
+        "requirement_text": "Governance, permissions and cost control",
+        "label": "Missing",
+        "citations": [],
+        "gap": "No evidence of experience with governance, permissions, and cost control."
+      }
+    ],
+    "bullets": [
+      {
+        "claim_id": "B1",
+        "text": "Developed a multi-agent autonomous data analysis system using LangGraph, enabling multi-step reasoning and dynamic task decomposition.",
+        "citations": [
+          {
+            "evidence_id": "E006",
+            "quote": "基于 LangGraph 构建带条件边与检查点状态持久化的循环状态图，实现多步推理、动态任务拆解"
+          }
+        ]
+      },
+      {
+        "claim_id": "B2",
+        "text": "Designed a Smart Router to convert natural language queries into sandboxed Python scripts, facilitating autonomous error recovery.",
+        "citations": [
+          {
+            "evidence_id": "E007",
+            "quote": "设计 Smart Router，将自然语言查询转为沙箱化 Python 脚本；解析运行时 traceback，自动修订执行计划并重试，实现自主错误恢复"
+          }
+        ]
+      },
+      {
+        "claim_id": "B3",
+        "text": "Implemented backend development for an AI industrial monitoring system, integrating anomaly detection workflows and automated processing logic.",
+        "citations": [
+          {
+            "evidence_id": "E022",
+            "quote": "参与 AI 工业监测系统后端开发，设计并集成异常检测工作流与自动化处理逻辑"
+          }
+        ]
+      }
+    ],
+    "abstain": false,
+    "abstention_reason": "",
+    "scope_note": "The job description requires six or more years of experience, which is not evidenced. The MSc in Enterprise AI is in progress, not completed. No evidence of cloud delivery practices or governance, permissions, and cost control experience. The candidate's experience with enterprise retrieval is partial."
+  },
+  "validation": {
+    "ok": true,
+    "issues": [],
+    "bullet_errors": {
+      "B1": [],
+      "B2": [],
+      "B3": []
+    },
+    "bullet_warnings": {
+      "B1": [],
+      "B2": [],
+      "B3": []
+    },
+    "requirement_warnings": {
+      "R5": [
+        "strong_from_skills_list_only"
+      ]
+    }
+  },
+  "llm_coverage_label": "Partial",
+  "model_disagreement": true
+}

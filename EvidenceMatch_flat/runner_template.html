@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>EvidenceMatch 运行与审核</title>
+<style>
+body{font:16px/1.6 -apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;margin:0;background:#f4f5f7;color:#1c2330}
+main{max-width:860px;margin:0 auto;padding:20px 16px 80px}
+h1{font-size:22px;margin:8px 0}h2{font-size:18px;margin:0 0 10px}
+section{background:#fff;border:1px solid #d9dde3;border-radius:10px;padding:18px;margin:16px 0}
+section.locked{opacity:.45;pointer-events:none}
+button{font:inherit;padding:9px 16px;border-radius:8px;border:1px solid #2b5fd9;background:#2b5fd9;color:#fff;cursor:pointer;margin:4px 6px 4px 0}
+button.alt{background:#fff;color:#2b5fd9}button.pick{background:#fff;color:#1c2330;border-color:#9aa3b2}
+button.pick.on{background:#1c2330;color:#fff;border-color:#1c2330}button:disabled{opacity:.4;cursor:not-allowed}
+input[type=password],input[type=text],input[type=number],select{font:inherit;padding:8px;border:1px solid #9aa3b2;border-radius:8px;width:100%;box-sizing:border-box;margin:4px 0}
+.unit{border-left:3px solid #c5ccd8;padding:2px 10px;margin:8px 0;font-size:14px}.unit b{font-size:12px;color:#5a6474}
+.jd{background:#f4f5f7;border-radius:8px;padding:10px;font-size:14px;white-space:pre-wrap;max-height:220px;overflow:auto}
+.q{font-size:18px;font-weight:600;margin:12px 0}.cite{font-size:14px;background:#fff8e6;border-radius:6px;padding:6px 10px;margin:6px 0}
+.reveal{border-top:1px dashed #c5ccd8;margin-top:12px;padding-top:10px}
+.log{font:13px/1.5 ui-monospace,Consolas,monospace;white-space:pre-wrap;background:#10151e;color:#d6e2f5;border-radius:8px;padding:10px;max-height:240px;overflow:auto}
+.warn{color:#a23a00}.ok{color:#0a7a3d}.small{font-size:13px;color:#5a6474}
+.bar{height:8px;background:#e3e7ee;border-radius:4px;overflow:hidden}.bar i{display:block;height:100%;background:#2b5fd9}
+</style></head><body><main>
+<h1>EvidenceMatch v2.3 · 运行与人工审核</h1>
+<p class="small">这个页面只在你自己的浏览器里运行。API key 只保存在本页内存中，不会写入任何文件，也不会出现在导出的结果里。进度会自动保存在本浏览器，关掉页面再打开可以继续（需要重新填 key 才能继续调用模型）。</p>
+
+<section id="s1"><h2>第 1 步　确认简历内容</h2>
+<p>下面是从你的简历 PDF 提取的证据单元，电话和邮箱所在的行已删除。这些文字会发送给 OpenRouter 的 GPT-4o。</p>
+<details><summary>展开查看全部 <span id="nunits"></span> 条</summary><div id="units"></div></details>
+<p><label><input type="checkbox" id="confirm"> 以上内容属实、不含联系方式，我同意发送</label></p></section>
+
+<section id="s2" class="locked"><h2>第 2 步　填写 API key 并运行</h2>
+<p>粘贴你自己的 OpenRouter API key（输入内容不显示）：</p>
+<input type="password" id="key" autocomplete="off" placeholder="sk-or-...">
+<p><button id="run">开始运行（共 <span id="njobs"></span> 次 GPT-4o 调用）</button> <span class="small">上次单次约 0.015 美元，实际以返回为准。失败会自动停下，不会重复扣费。</span></p>
+<div class="bar"><i id="runbar" style="width:0"></i></div><div class="log" id="log"></div></section>
+
+<section id="s3" class="locked"><h2>第 3 步　人工审核</h2>
+<p class="small">只依据简历上写了什么来判断，不要按“我其实会”。Strong=简历有直接证据完整支持；Partial=有相关证据但有明确缺口；Missing=简历里没有可用证据。模型的判断会直接显示，请不要因为它先出现就默认同意。</p>
+<div class="bar"><i id="audbar" style="width:0"></i></div><p class="small" id="audpos"></p>
+<div id="card"></div><p><button class="alt" id="back">返回上一条重做</button></p></section>
+
+<section id="s4"><h2>第 4 步　下载结果并发回聊天</h2>
+<p id="dlstate" class="small"></p><button id="dl" disabled>下载结果文件</button>
+<p class="small">文件名 EvidenceMatch_browser_run.json，包含模型原始返回和你的审核结论，不包含 API key。把它拖进聊天窗口即可。</p></section>
+</main><script>
+const DATA=/*__DATA__*/null;
+const API='https://openrouter.ai/api/v1';
+const KEY='em23_'+DATA.evidence_hash.slice(0,16);
+let S={runs:{},attempts:[],req:[],bul:[],job:[]};
+try{const t=localStorage.getItem(KEY);if(t)S=JSON.parse(t)}catch(e){}
+const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}};
+const $=id=>document.getElementById(id);
+const esc=s=>String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const U={};DATA.evidence.forEach(e=>U[e.evidence_id]=e);
+$('nunits').textContent=DATA.evidence.length;$('njobs').textContent=DATA.jobs.length;
+$('units').innerHTML=DATA.evidence.map(e=>`<div class="unit"><b>${esc(e.evidence_id)} · ${esc(e.section)} · ${esc(e.entry).slice(0,40)}</b><br>${esc(e.text)}</div>`).join('');
+const log=m=>{$('log').textContent+=m+'\n';$('log').scrollTop=1e9};
+function parse(raw){let s=(raw||'').trim();if(s.startsWith('```'))s=s.replace(/^```(?:json)?\s*/,'').replace(/\s*```$/,'');try{const o=JSON.parse(s);return o&&typeof o==='object'&&!Array.isArray(o)?o:null}catch(e){return null}}
+function output(jd){const r=S.runs[jd];if(!r||!r.response)return null;try{return parse(r.response.choices[0].message.content)}catch(e){return null}}
+const arr=x=>Array.isArray(x)?x.filter(i=>i&&typeof i==='object'):[];
+
+function items(){const bul=[],rest=[];for(const j of DATA.jobs){const o=output(j.jd_id);if(!o)continue;
+  arr(o.bullets).forEach(b=>bul.push({t:'bul',jd:j.jd_id,id:String(b.claim_id),b}));
+  arr(o.requirements).forEach(r=>rest.push({t:'req',jd:j.jd_id,id:String(r.requirement_id),r}));
+  rest.push({t:'job',jd:j.jd_id,id:'job'});}return bul.concat(rest)}   // generated bullets are reviewed first: they carry the headline metric
+const done=it=>(it.t==='req'?S.req:it.t==='bul'?S.bul:S.job).some(a=>a.jd_id===it.jd&&(it.t==='job'||(a.requirement_id||a.claim_id)===it.id));
+const allRun=()=>DATA.jobs.every(j=>S.runs[j.jd_id]);
+
+function refresh(){
+  $('s2').classList.toggle('locked',!$('confirm').checked&&!Object.keys(S.runs).length);
+  const nrun=Object.keys(S.runs).length;$('runbar').style.width=(100*nrun/DATA.jobs.length)+'%';
+  $('run').textContent=allRun()?'全部运行完成':nrun?`继续运行（还剩 ${DATA.jobs.length-nrun} 次）`:`开始运行（共 ${DATA.jobs.length} 次 GPT-4o 调用）`;$('run').disabled=allRun();
+  $('s3').classList.toggle('locked',!allRun());
+  const its=items(),nd=its.filter(done).length;$('audbar').style.width=(its.length?100*nd/its.length:0)+'%';
+  $('audpos').textContent=allRun()?`已完成 ${nd} / ${its.length} 项`:'模型全部运行完成后开始审核。';
+  $('dl').disabled=!nrun;$('back').disabled=!(S.req.length+S.bul.length+S.job.length);
+  $('dlstate').innerHTML=!nrun?'还没有运行结果。':(allRun()&&nd===its.length&&its.length)?'<span class="ok">运行和审核都已完成，可以下载。</span>':`<span class="warn">尚未全部完成（已运行 ${nrun}/${DATA.jobs.length}，已审核 ${nd}/${its.length}）。现在下载也可以，但未审核的部分不会计入指标。</span>`;
+  if(allRun())card(its.find(i=>!done(i)));
+}
+$('confirm').onchange=refresh;
+
+$('run').onclick=async()=>{
+  const key=$('key').value.trim();if(!key){log('请先粘贴 API key。');return}
+  $('run').disabled=true;
+  try{const r=await fetch(API+'/key',{headers:{Authorization:'Bearer '+key}});
+    if(!r.ok){log(`key 检查失败（HTTP ${r.status}）。请确认 key 是否正确、账户是否有余额。`);$('run').disabled=false;return}
+    const d=(await r.json()).data||{};log(`key 有效。已用 ${d.usage} 美元，额度 ${d.limit==null?'无上限':d.limit}。`)}
+  catch(e){log('无法连接 OpenRouter：'+e.message+'\n请确认网络可以访问 openrouter.ai，并且是用 Chrome 或 Edge 直接打开本文件。');$('run').disabled=false;return}
+  for(const j of DATA.jobs){if(S.runs[j.jd_id])continue;
+    log(`${j.jd_id} 请求中……`);const started=new Date().toISOString(),t0=performance.now();let rec={jd_id:j.jd_id,started_at_utc:started};
+    try{const r=await fetch(API+'/chat/completions',{method:'POST',headers:{Authorization:'Bearer '+key,'Content-Type':'application/json'},body:JSON.stringify(j.payload)});
+      rec.latency_seconds=(performance.now()-t0)/1000;rec.http_status=r.status;const body=await r.json().catch(()=>null);rec.latency_total_seconds=(performance.now()-t0)/1000;
+      if(!r.ok||!body||!body.choices){rec.error=`HTTP ${r.status} `+String(body&&body.error&&body.error.message||'').slice(0,200).split(key).join('[REDACTED]');S.attempts.push(rec);save();log(`  失败：${rec.error}\n已停止。解决后再点一次按钮会从这一条继续。`);refresh();return}
+      rec.response=body;S.runs[j.jd_id]=rec;S.attempts.push({jd_id:j.jd_id,started_at_utc:started,ok:true});save();
+      log(`  完成，${rec.latency_total_seconds.toFixed(1)} 秒，费用 ${body.usage&&body.usage.cost} 美元${output(j.jd_id)?'':'（返回内容不是合法 JSON，将记为失败）'}`);refresh();
+    }catch(e){rec.latency_seconds=(performance.now()-t0)/1000;rec.error='network: '+String(e.message).slice(0,160);S.attempts.push(rec);save();log('  网络错误：'+e.message+'\n已停止。再点一次按钮会从这一条继续。');refresh();return}}
+  $('key').value='';log('全部运行完成。key 已从页面清除。请向下进行第 3 步。');refresh();
+};
+
+function cites(list){return arr(list).map(c=>{const u=U[c.evidence_id];return `<div class="cite"><b>${esc(c.evidence_id)}</b>${u?' · '+esc(u.kind)+' · '+esc(u.entry).slice(0,36):' · <span class="warn">不存在的证据编号</span>'}<br>引用：“${esc(c.quote)}”${u&&u.text!==c.quote?'<br><span class="small">该证据全文：'+esc(u.text)+'</span>':''}</div>`}).join('')}
+function picks(name,opts){return opts.map(([v,l])=>`<button class="pick" data-g="${name}" data-v="${v}">${l}</button>`).join('')}
+function card(it){const c=$('card');if(!it){c.innerHTML='<p class="ok">全部审核完成。请到第 4 步下载结果文件。</p>';return}
+  if(c.dataset.cur===it.t+it.jd+it.id)return;c.dataset.cur=it.t+it.jd+it.id;
+  const job=DATA.jobs.find(j=>j.jd_id===it.jd),ans={};
+  let h=`<p class="small">岗位 ${esc(it.jd)}${job.title?' · '+esc(job.title):''}</p><div class="jd">${esc(job.text)}</div>`;
+  if(it.t==='req'){h+=`<p class="small">岗位要求：</p><div class="q">${esc(it.r.requirement_text)}</div><p>模型判断：<b>${esc(it.r.label)}</b>${it.r.gap?'　缺口：'+esc(it.r.gap):''}</p>${cites(it.r.citations)}<p>你的判断（同意模型就点同一个）：</p>${picks('mine',[['Strong','Strong 完整支持'],['Partial','Partial 有缺口'],['Missing','Missing 无证据']])}<div class="reveal" id="rv" hidden></div>`}
+  else if(it.t==='bul'){h+=`<p class="small">模型生成的英文简历描述：</p><div class="q">${esc(it.b.text)}</div>${cites(it.b.citations)}<p>这句话的每个分句都被上面的引用支持吗？</p>${picks('verdict',[['supported','完全支持'],['unsupported','有夸大或无依据'],['unclear','不确定']])}<div class="reveal" id="rv" hidden></div>`}
+  else{h+=`<p>对照上面的岗位全文：模型漏掉了几条重要要求？（0 = 没有）</p><input type="number" id="missed" min="0" max="20"><input type="text" id="note" placeholder="漏掉了什么 / 其他观察（可不填）"><p><button id="next">保存并继续</button></p>`}
+  c.innerHTML=h;
+  const next=()=>{c.dataset.cur='';save();refresh();window.scrollTo({top:$('s3').offsetTop-10})};
+  c.querySelectorAll('button.pick').forEach(b=>b.onclick=()=>{const g=b.dataset.g;
+    c.querySelectorAll(`button.pick[data-g=${g}]`).forEach(x=>x.classList.toggle('on',x===b));ans[g]=b.dataset.v;stage()});
+  function stage(){const rv=$('rv');
+    if(it.t==='req'&&ans.mine&&rv.hidden){rv.hidden=false;const cs=arr(it.r.citations);ans.hasC=cs.length>0;
+      rv.innerHTML=`${cs.length?'<p>这些引用确实对应这条要求吗？</p><span id="relp"></span>':''}<input type="text" id="note" placeholder="备注（可不填；与模型判断不同时建议写一句原因）"><p><button id="next">保存并继续</button></p>`;
+      if(cs.length){$('relp').innerHTML=picks('rel',[['1','是'],['0','否']]);rv.querySelectorAll('button.pick').forEach(b=>b.onclick=()=>{rv.querySelectorAll('button.pick').forEach(x=>x.classList.toggle('on',x===b));ans.rel=b.dataset.v})}
+      $('next').onclick=()=>{if(ans.hasC&&ans.rel==null){alertMsg('请先选择引用是否对应。');return}
+        S.req.push({jd_id:it.jd,requirement_id:it.id,requirement_text:it.r.requirement_text,human_label:ans.mine,model_label:it.r.label,citation_relevant:ans.hasC?ans.rel==='1':null,model_label_visible:true,notes:$('note').value.trim()});next()}}
+    if(it.t==='bul'&&ans.verdict){rv.hidden=false;const bad=ans.verdict!=='supported';
+      rv.innerHTML=`${bad?'<p>问题类型：</p><select id="ft"><option value="">请选择</option><option value="ownership_or_seniority_inflated">职责或主导程度被抬高</option><option value="outcome_or_number_not_in_evidence">结果或数字没有出处</option><option value="tool_or_skill_not_in_evidence">工具或技能没有出处</option><option value="merges_separate_projects">把不同项目合并成一件事</option><option value="vague_or_unattributable">空泛、无法归因到我本人</option><option value="other">其他</option></select>':''}<input type="text" id="note" placeholder="审核理由（一句话${bad?'，必填':'，可不填'}）"><p><button id="next">保存并继续</button></p>`;
+      $('next').onclick=()=>{const ft=bad?$('ft').value:null,note=$('note').value.trim();if(bad&&(!ft||!note)){alertMsg('请选择问题类型并写一句理由。');return}
+        S.bul.push({jd_id:it.jd,claim_id:it.id,verdict:ans.verdict,failure_type:ft,notes:note});next()}}}
+  if(it.t==='job')$('next').onclick=()=>{const v=$('missed').value;if(v===''||+v<0){alertMsg('请输入漏掉的条数（没有就填 0）。');return}
+    S.job.push({jd_id:it.jd,missed_requirements:+v,notes:$('note').value.trim()});next()};
+}
+function alertMsg(m){let e=$('amsg');if(!e){e=document.createElement('p');e.id='amsg';e.className='warn';$('card').appendChild(e)}e.textContent=m}
+$('back').onclick=()=>{const its=items();let last=-1;its.forEach((it,i)=>{if(done(it))last=i});if(last<0)return;const it=its[last];
+  if(it.t==='req')S.req=S.req.filter(a=>!(a.jd_id===it.jd&&a.requirement_id===it.id));else if(it.t==='bul')S.bul=S.bul.filter(a=>!(a.jd_id===it.jd&&a.claim_id===it.id));else S.job=S.job.filter(a=>a.jd_id!==it.jd);
+  $('card').dataset.cur='';save();refresh()};
+$('dl').onclick=()=>{const out={format:'evidencematch-browser-run-1',prompt_version:DATA.prompt_version,evidence_hash:DATA.evidence_hash,exported_at_utc:new Date().toISOString(),
+  runs:DATA.jobs.filter(j=>S.runs[j.jd_id]).map(j=>S.runs[j.jd_id]),failed_attempts:S.attempts.filter(a=>!a.ok),requirement_audit:S.req,bullet_audit:S.bul,job_audit:S.job};
+  const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify(out,null,1)],{type:'application/json'}));a.download='EvidenceMatch_browser_run.json';a.click()};
+if(Object.keys(S.runs).length){$('confirm').checked=true;log('已恢复之前的进度。')}
+refresh();
+</script></body></html>

@@ -1,0 +1,22 @@
+{
+  "attempted_runs": 1,
+  "valid_runs": 1,
+  "failed_or_blocked_runs": 0,
+  "total_generated_bullets": 3,
+  "reviewed_bullets": 3,
+  "pending_bullets": 0,
+  "unsupported_or_unclear": 1,
+  "ucr_reviewed_only": 0.3333333333333333,
+  "ucr_complete": 0.3333333333333333,
+  "abstention_rate_valid_runs": 0.0,
+  "validator_precision_against_review": null,
+  "validator_recall_against_review": 0.0,
+  "reported_cost_sum_usd": 0.0154775,
+  "runs_with_reported_cost": 1,
+  "estimated_cost_sum_usd": 0.015477500000000002,
+  "supported_count": 2,
+  "definitely_unsupported_count": 0,
+  "unclear_count": 1,
+  "scope": "One development pilot, 3 bullets; not held-out evaluation. UCR conservatively counts unclear as unsupported.",
+  "prompt_revision_evaluated": false
+}

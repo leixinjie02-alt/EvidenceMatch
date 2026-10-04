@@ -1,0 +1,146 @@
+[
+  {
+    "jd_id": "JD01",
+    "text": "AI Engineer, 成都, 15-25K, 经验不限, 本科要求。基于业务场景构建建模与算法管线,开发涵盖传统机器学习、深度学习及大语言模型的应用;运用提示词工程技术优化模型交互;深入理解客户场景设计智能体或检索增强生成解决方案;掌握大模型训练、微调及测试技术;运用强化学习技术(RLHF/RLAIF)进行模型微调;负责大模型部署、版本发布及安全监控。要求精通Python,熟悉PyTorch/TensorFlow/MindSpore/PaddlePaddle,熟悉GPT/千问/DeepSeek/LLaMA等主流大模型,掌握Docker、Flask等部署工具,熟悉Dify/LangGraph/Milvus等工具链。",
+    "data_type": "student_supplied_job_posting",
+    "source_platform": "LinkedIn/Boss直聘 (as stated in Problem Statement; per-record provenance unavailable)",
+    "source_url": null,
+    "collection_date": null
+  },
+  {
+    "jd_id": "JD02",
+    "text": "AI Engineer(应用方向), 上海, 80-110K·13薪, 3-5年经验, 本科要求。设计并实现可落地的AI Agent用于流程执行与业务协作;基于LLM构建具备Memory、Tool Calling和多步任务规划能力的Agent系统;集成LangChain/LangGraph/OpenAI API等框架;构建稳定的Agent工作流(Prompt、Tool、RAG、Evaluation、Monitoring)。要求熟练Python工程开发,有LLM应用开发经验(Prompt、RAG、Function Calling、Fine-tuning),熟悉LangChain、LangGraph、OpenAI API、Hugging Face至少一种框架,有Agent/Workflow开发经验(AutoGPT、CrewAI、ReAct),2年以上AI/后端经验,至少1年LLM或Agent应用落地经验。",
+    "data_type": "student_supplied_job_posting",
+    "source_platform": "LinkedIn/Boss直聘 (as stated in Problem Statement; per-record provenance unavailable)",
+    "source_url": null,
+    "collection_date": null
+  },
+  {
+    "jd_id": "JD03",
+    "text": "AI Engineer - 模型部署, 合肥, 20-30K, 3-5年经验, 本科要求。负责智能座舱的CV模型和LLM部署,确保算法在车载环境下稳定运行;分析优化算法Pipeline性能(推理速度、内存占用);与算法团队紧密合作完成部署移植;解决部署过程中的精度损失、兼容性、稳定性等技术难题。要求计算机/软件工程/自动化/电子信息本科以上,3年以上C++开发经验,深入理解操作系统原理、线程调度、内存管理,熟练掌握C++11/14标准及Python,了解LLM和CV算法工程化落地,熟练Git、CMake、GDB。",
+    "data_type": "student_supplied_job_posting",
+    "source_platform": "LinkedIn/Boss直聘 (as stated in Problem Statement; per-record provenance unavailable)",
+    "source_url": null,
+    "collection_date": null
+  },
+  {
+    "jd_id": "JD04",
+    "text": "AI Engineer, 深圳(医疗器械/消费健康方向), 25-30K, 3-5年经验, 本科要求。为个人健康产品构思、研究、原型设计并实现CV和LLM相关功能;维持PyTorch、TensorFlow、Hugging Face、OpenCV、ONNX等前沿工具的实操经验;设计实验用真实数据和用户反馈验证AI概念可行性;与供应商、固件、嵌入式工程师、UX设计师合作将AI模型集成到边缘或云端设备;负责数据质量、标注策略及模型全生命周期管理;必要时优化设备端推理(模型压缩、量化、剪枝);处理医疗健康类产品的合规、安全、隐私要求。",
+    "data_type": "student_supplied_job_posting",
+    "source_platform": "LinkedIn/Boss直聘 (as stated in Problem Statement; per-record provenance unavailable)",
+    "source_url": null,
+    "collection_date": null
+  },
+  {
+    "jd_id": "JD05",
+    "text": "后端开发实习生, 西安, 450-650元/天, 4天/周共3个月, 本科要求。负责后端服务与系统的设计、开发与维护工作;使用Java、Golang、Python、C/C++等相关技术栈进行核心业务逻辑与模块开发;参与系统架构设计,优化服务性能,保障系统的高并发、高可用、稳定性。要求计算机、电子科学与技术、信息与通信工程、数学、人工智能等相关专业,具备基本编程能力(C/C++/Rust/Java/Python/JS/HTML5中一种或数种),具备独立工作和解决问题能力,热衷新技术,有团队协作精神。",
+    "data_type": "student_supplied_job_posting",
+    "source_platform": "LinkedIn/Boss直聘 (as stated in Problem Statement; per-record provenance unavailable)",
+    "source_url": null,
+    "collection_date": null
+  },
+  {
+    "jd_id": "JD06",
+    "text": "芯片后端设计工程师, 西安, 35-65K, 3-5年经验, 本科要求。负责CPU/ASIC芯片从Netlist到GDSII的工作,包括APR以及PV/STA/IR等Signoff工作;作为接口人参与芯片的流片、量产、封测、质量管控等工作;负责潜在项目的早期评估、规划和立项准备。要求本科以上,微电子/计算机等相关专业毕业,超过2年芯片后端项目经验,具备熟练脚本技能(TCL、Perl、Python等),熟练使用主流后端工具并掌握基本后端概念,具备先进工艺项目经历(16nm/12nm/7nm),良好团队合作精神,英语读写顺畅。",
+    "data_type": "student_supplied_job_posting",
+    "source_platform": "LinkedIn/Boss直聘 (as stated in Problem Statement; per-record provenance unavailable)",
+    "source_url": null,
+    "collection_date": null
+  },
+  {
+    "jd_id": "JD07",
+    "text": "数字后端工程师, 西安, 40-70K, 1-3年经验, 本科要求。负责芯片从netlist到GDSII的全流程设计;负责顶层、子系统或模块的后端P&R设计,包括floorplan、placement、CTS、routing、timing closure、EMIR closure、PV clean等;协同前端部门进行设计的迭代和优化。要求本科以上,微电子、电子工程、计算机、通信等相关专业,1年以上相关工作经验,熟练使用Innovus、Fusion Compiler/ICC2等工具,熟练Tcl、Perl、Python、Shell等脚本语言,具有clock mesh设计、PCIe、DDR和D2D(HSS)相关经验者优先,具有SOC timing signoff经验者优先。",
+    "data_type": "student_supplied_job_posting",
+    "source_platform": "LinkedIn/Boss直聘 (as stated in Problem Statement; per-record provenance unavailable)",
+    "source_url": null,
+    "collection_date": null
+  },
+  {
+    "jd_id": "JD08",
+    "text": "算法工程师(六险一金 双休 年终奖), 深圳, 18-35K·16薪, 经验不限, 本科要求。负责设计、开发和优化各类算法,包括但不限于机器学习、深度学习、数据挖掘等;对现有算法进行性能分析和调优,提升算法在实际业务中的效果;与产品、数据、研发等团队紧密合作,将算法能力转化为产品功能;关注行业算法发展趋势,持续学习和研究。要求统招全日制本科及以上学历(2026届已拿到毕业证也可),双证齐全,熟练掌握至少一种编程语言(Python、C++等),对机器学习、深度学习等算法有深入理解并有实际项目经验,具备良好的数据分析和问题解决能力,优秀的沟通能力和团队合作精神。",
+    "data_type": "student_supplied_job_posting",
+    "source_platform": "LinkedIn/Boss直聘 (as stated in Problem Statement; per-record provenance unavailable)",
+    "source_url": null,
+    "collection_date": null
+  },
+  {
+    "jd_id": "JD09",
+    "text": "运动控制算法工程师, 深圳, 80-110K, 经验不限, 本科要求。开发运动控制(逆运动学/轨迹规划/碰撞检测/柔顺控制);基于模仿学习(BC/RL)生成丰富动作库;优化双足/多关节平衡与防倾倒控制;设计情绪到肢体语言的映射(点头/耸肩/兴奋抖动);进行MuJoCo/Isaac Sim仿真与Sim2Real迁移。要求精通运动学、动力学、MPC/WBC控制,熟悉MuJoCo/Isaac Sim/Unity3D,有双足/四足/机械臂或游戏动画经验,掌握ROS与C++实时控制。",
+    "data_type": "student_supplied_job_posting",
+    "source_platform": "LinkedIn/Boss直聘 (as stated in Problem Statement; per-record provenance unavailable)",
+    "source_url": null,
+    "collection_date": null
+  },
+  {
+    "jd_id": "JD10",
+    "text": "算法岗位-具身智能, 深圳, 50-80K·15薪, 5-10年经验, 硕士要求。围绕多指灵巧手开展抓取、物体旋拧、物品排布、工具操作等灵巧操作算法研发;基于SAC、PPO、TD3、DDPG等强化学习算法,解决接触式操作稳定性、控制精度、长时序执行等问题;落地VLA视觉语言动作大模型、基础策略模型(π0、RT-2、OpenVLA、ACT、Diffusion Policy),探索VLA+强化学习分层控制架构;设计奖励函数、状态与动作空间,攻克稀疏奖励、多接触扰动等算法难点;融合视觉、触觉、力觉、本体感知多模态信息,在MuJoCo/Isaac Gym等仿真平台完成大规模训练,推进Sim2Real虚实迁移落地。",
+    "data_type": "student_supplied_job_posting",
+    "source_platform": "LinkedIn/Boss直聘 (as stated in Problem Statement; per-record provenance unavailable)",
+    "source_url": null,
+    "collection_date": null
+  },
+  {
+    "jd_id": "JD11",
+    "text": "AI Engineer(金融科技方向), 深圳, 30-50K, 3-5年经验, 本科要求。要求本科以上,计算机、人工智能、软件工程等相关专业,3年以上Python开发经验,3-4年AI应用开发经验,具备至少1个Agent或LLM应用项目落地经验,熟练使用Python进行后端开发,具备良好工程化开发能力,具备Agent开发相关经验,熟悉Agent核心能力模块(Prompt、Memory、Tool Calling、Workflow、Planning、RAG等机制),熟悉主流Agent开发框架(至少熟练掌握LangGraph、LangChain、LlamaIndex其中一种),熟悉LLM应用开发(Prompt Engineering、RAG、Function Calling、MCP等相关实践经验者优先),熟悉OpenAI API、Azure OpenAI、DeepSeek、Claude、Gemini等至少一种大模型平台的开发及集成,熟悉RESTful API开发,掌握SQL及常见数据库,了解Redis、向量数据库(Milvus、PGVector、Chroma、FAISS等)优先,了解Docker、Linux等部署环境,有云平台(Azure、AWS、GCP)使用经验者优先,有企业知识库、智能客服、办公助手、Copilot、流程自动化等AI应用开发经验者优先,有金融科技相关项目经验更佳,英语可作为工作语言。",
+    "data_type": "student_supplied_job_posting",
+    "source_platform": "LinkedIn/Boss直聘 (as stated in Problem Statement; per-record provenance unavailable)",
+    "source_url": null,
+    "collection_date": null
+  },
+  {
+    "jd_id": "JD12",
+    "text": "AI Engineer(外籍全资控股/医疗器械方向), 深圳, 30-50K·15薪, 5-10年经验, 本科要求。全球医疗与设备科技公司,与国际品牌合作。开发和优化AI/ML算法用于医疗、健康和美容科技设备;与硬件和软件工程团队紧密合作将AI模型部署到嵌入式系统;分析复杂数据以提升设备准确度、用户体验和治疗效果;跟踪AI在医疗器械行业的最新趋势并落地创新方案。要求出色的英语能力(能与国际团队讨论技术细节),扎实的计算机科学、AI、机器学习或相关领域背景,精通Python和Java,具备大语言模型、AI Agent和主流ML框架(TensorFlow、PyTorch等)的实操经验,有计算机视觉、图像处理或数据科学经验者优先。",
+    "data_type": "student_supplied_job_posting",
+    "source_platform": "LinkedIn/Boss直聘 (as stated in Problem Statement; per-record provenance unavailable)",
+    "source_url": null,
+    "collection_date": null
+  },
+  {
+    "jd_id": "JD13",
+    "text": "【27届可转正】AI Agent研发质量实习, 深圳, 500-510元/天, 4天/周共4个月, 本科要求。参与通用质量工具、评测脚本与效率平台建设,提升团队在复杂业务和AI场景下的验证效率。要求2027届本科及以上学历在读,计算机、软件工程、人工智能、自动化等相关专业优先,熟练使用至少一种AI编程工具(包含但不限于Claude、Codex、TRAE等),能够将AI能力应用于自动化验证、评测脚本开发、问题分析与质量效率优化等场景,具备基础的编程能力(至少熟悉一门常用开发语言,包括但不限于Python、Golang、Java、C/C++等),具备扎实的计算机基础知识(了解TCP/IP、HTTP等常见协议),对AI产品质量、自动化验证、评测体系或工程效率方向有兴趣,了解常见的自动化方法、数据驱动验证思路或持续集成流程,了解常见算法评测方法与客观评估指标(大模型、搜索、NLP、语音、多模态等相关评测经验者优先)。",
+    "data_type": "student_supplied_job_posting",
+    "source_platform": "LinkedIn/Boss直聘 (as stated in Problem Statement; per-record provenance unavailable)",
+    "source_url": null,
+    "collection_date": null
+  },
+  {
+    "jd_id": "JD14",
+    "text": "AI Agent应用开发工程师, 深圳, 40-70K, 3-5年经验, 本科要求。搭建具备任务处理、工具调用、记忆管理等核心能力的智能体(AI Agent)系统;设计并开发模块化、可组合的Agent架构,支持子模块的灵活调度与协作;集成外部工具(如网页操作、接口调用、搜索引擎等),提升Agent的任务执行效率与适应性;应用RAG(检索增强生成)等技术手段,提升回答的准确率与信息完整性;优化系统性能,确保在高并发场景下的稳定性与响应速度。要求本科及以上学历,计算机、软件工程或相关专业背景,熟练掌握至少一门编程语言(如Python、Java),具备良好的编程实践能力,熟悉云服务平台和容器化部署工具,理解大语言模型的调用机制,具备良好的prompt编写能力,了解主流AI Agent框架的设计理念,具备良好的系统设计能力,代码结构清晰逻辑严谨便于维护与扩展,有多智能体协作(Multi-Agent)、外部工具链调用(Tool Use)、记忆模块设计与实现等相关经验者优先。加分项:对AI Agent类产品有研究,有自己的思考总结;有成长心态,对模糊有一定的包容性;有海外工作、学习经历,对欧美主流的AI Agent产品有深入研究。",
+    "data_type": "student_supplied_job_posting",
+    "source_platform": "LinkedIn/Boss直聘 (as stated in Problem Statement; per-record provenance unavailable)",
+    "source_url": null,
+    "collection_date": null
+  },
+  {
+    "jd_id": "JD15",
+    "text": "AI agent开发, 深圳, 20-40K, 3-5年经验, 本科要求。要求计算机相关专业本科及以上学历,2-3年后端开发经验,具有良好的开发习惯与工程素养;扎实的后端基本功是前提,熟练掌握至少一门主流语言(Python/Java/Go/C++/Node.js,Python优先),熟悉FastAPI/Flask或Spring Boot/MVC/MyBatis等框架,以及Redis、消息队列(MQ/Kafka)等中间件,熟练使用MySQL,有良好的SQL编码习惯;对AI工程有真实理解与好奇心,用过OpenAI/Anthropic Claude等大模型API,理解Prompt、Tool Calling、上下文管理等基本概念,能把大模型当作系统的一个不确定组件去做工程约束,而不只是调个接口;具备把不确定系统做稳的意识,认同Agent这类系统需要靠工程手段(如评测、回放、监控)保证质量,愿意投入到相关体系建设中;拥有真正AI native经验与思考方式者优先,不只是把AI当工具用,而是习惯用AI重构工作流、以Agent视角思考问题边界与协作方式;较强的问题解决能力,有激情、有责任心、能抗压,具备良好的沟通与团队协作能力。加分项:熟悉LangChain/LangGraph、LlamaIndex等Agent/编排框架,或独立搭建过Agent运行时/Agent Harness;有B2B营销/获客相关经验;熟悉RAG、向量检索(Milvus/pgvector/Pinecone)、可观测性(LangSmith/Tracing)等实践;了解AI工程链路(模型推理服务部署、Serverless、Docker/K8s等云原生技术栈)。",
+    "data_type": "student_supplied_job_posting",
+    "source_platform": "LinkedIn/Boss直聘 (as stated in Problem Statement; per-record provenance unavailable)",
+    "source_url": null,
+    "collection_date": null
+  },
+  {
+    "jd_id": "JD16",
+    "text": "Prompt Engineer, 深圳, 15-30K·15薪, 1-3年经验, 本科要求。负责设计和优化输入文本,以引导AI语言模型生成符合预期的输出;负责Prompt生产过程的制定及自动化优化,对Prompt进行调优及效果分析(重新定义场景和目标等)。要求本科以上学历,能直接写英文prompt,熟练使用大模型产品;系统性地掌握Prompt工程的相关技术,能够基于用户场景需求完成Prompt的设计工作;AI虚拟陪伴类产品提示词调优经验丰富,且有不错的成果展示;具备出色的解决问题和分析能力。加分项:有互联网、人工智能行业经验。",
+    "data_type": "student_supplied_job_posting",
+    "source_platform": "LinkedIn/Boss直聘 (as stated in Problem Statement; per-record provenance unavailable)",
+    "source_url": null,
+    "collection_date": null
+  },
+  {
+    "jd_id": "JD17",
+    "text": "【实习】产品经理-客服系统, 深圳, 290-300元/天, 5天/周共3个月, 本科要求。需求调研与分析:深入客服场景,通过体验走查、竞品调研等方式,挖掘客服机器人与人工客服在服务过程中存在的信息孤岛问题,分析并定义核心痛点;产品方案设计:围绕客服机器人、网络电话、表单等渠道,开展客服渠道建设与体验优化,提升用户自助解决率与满意度;跨团队协同推进:与运营、设计、研发等团队协作,推动产品方案从需求评审到上线验收的全流程落地,确保体验优化有效实施;需求文档撰写:撰写清晰、完整的PRD,准确描述业务背景、用户场景、功能清单及数据字段定义。要求本科及以上在校生,计算机、软件工程、信息管理等相关专业优先,学习能力强,逻辑清晰,具备良好的沟通能力与推动意识,可使用英语进行基础沟通,有AI、IM即时通讯工具、客服系统相关实习或实际应用经验优先。",
+    "data_type": "student_supplied_job_posting",
+    "source_platform": "LinkedIn/Boss直聘 (as stated in Problem Statement; per-record provenance unavailable)",
+    "source_url": null,
+    "collection_date": null
+  },
+  {
+    "jd_id": "JD18",
+    "text": "直播运营实习生(家电类/高客单), 深圳, 200-220元/天, 5天/周共3个月, 本科要求。协助主播完成直播前中后期的全流程支持工作,包括直播平台软件设置、硬件设备准备、商品链接信息核对、直播氛围配合等;实时监控直播数据变化,协助调整直播节奏,确保直播流程顺畅;配合团队完成直播间的互动维护、订单跟进及突发情况响应;直播结束后整理每场直播相关运营数据,参与复盘并提出优化建议。要求对直播运营工作有较高热情,熟悉抖音直播基本流程和操作逻辑;具备良好的沟通协调能力、逻辑思维能力,能与主播及运营团队高效配合;工作细致认真,具备较强的应变能力和多任务处理能力;具备基础的数据理解能力,能通过直播反馈持续优化执行细节;性格积极乐观,适应快节奏工作环境,乐于学习新知识;需要熟练使用抖音直播伴侣、obs等软件,懂相机、灯光等设备的操作;本科及以上学历,27届优先,有抖音中控经验或抖音运营助理经验的同学优先。",
+    "data_type": "student_supplied_job_posting",
+    "source_platform": "LinkedIn/Boss直聘 (as stated in Problem Statement; per-record provenance unavailable)",
+    "source_url": null,
+    "collection_date": null
+  }
+]

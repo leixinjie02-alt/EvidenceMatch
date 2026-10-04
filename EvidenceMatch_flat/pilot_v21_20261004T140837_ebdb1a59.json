@@ -1,0 +1,219 @@
+{
+  "run_id": "20261004T140837_ebdb1a59",
+  "run_label": "single",
+  "jd_id": "JD19",
+  "cohort": "additional30",
+  "representation": "assistant_paraphrase_of_real_posting",
+  "job_hash": "4209a2f96518477a19a0b061cd0dfd4f866dd035b3cf4f98cd72d42dc1fb782d",
+  "evidence_hash": "ef0345549c2138c31e09ca9584d728a37e814976451ced372f306cf39dda35bb",
+  "prompt_version": "evidencematch-v2.1",
+  "prompt_hash": "4c408687bdd7caccb80c5cd3991c8e5256be1197e87d9bdc7f48f2d72fd46c21",
+  "requested_model": "openai/gpt-4o",
+  "baseline": {
+    "label": "Missing",
+    "lexical_coverage": 0.09090909090909091,
+    "retrieved_ids": [
+      "E003",
+      "E001",
+      "E002"
+    ],
+    "note": "Lexical baseline; cross-language mismatch and negation are known weaknesses."
+  },
+  "context_strategy": "full_confirmed_resume_small_corpus",
+  "started_at_utc": "2026-10-04T14:08:37.289810+00:00",
+  "status": "ready_for_human_review",
+  "requires_human_review": true,
+  "latency_seconds": 9.352751559999888,
+  "response_id": "gen-1791122917-uRHmaDtlUHSyJCODuzqb",
+  "actual_model": "openai/gpt-4o",
+  "usage": {
+    "prompt_tokens": 1719,
+    "completion_tokens": 1118,
+    "total_tokens": 2837,
+    "cost": 0.0154775,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0154775,
+      "upstream_inference_prompt_cost": 0.0042975,
+      "upstream_inference_completions_cost": 0.01118
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "pricing": {
+    "prompt": "0.0000025",
+    "completion": "0.00001",
+    "input_cache_read": "0.00000125"
+  },
+  "cost_reported_usd": 0.0154775,
+  "cost_estimate_usd": 0.015477500000000002,
+  "raw_response": "{\n  \"requirements\": [\n    {\n      \"requirement_id\": \"1\",\n      \"requirement_text\": \"Graduate role accepting zero to three years of AI experience.\",\n      \"label\": \"Strong\",\n      \"citations\": [\n        {\n          \"evidence_id\": \"E002\",\n          \"quote\": \"实习经历 西安思坦仪器有限公司 AI 软件开发工程师 2026.03 – 2026.07\"\n        }\n      ],\n      \"gap\": \"\"\n    },\n    {\n      \"requirement_id\": \"2\",\n      \"requirement_text\": \"Develop Python ML systems\",\n      \"label\": \"Strong\",\n      \"citations\": [\n        {\n          \"evidence_id\": \"E003\",\n          \"quote\": \"用 Python 实现传感器数据实时处理、任务调度与通信服务\"\n        }\n      ],\n      \"gap\": \"\"\n    },\n    {\n      \"requirement_id\": \"3\",\n      \"requirement_text\": \"experiment with LLMs and retrieval\",\n      \"label\": \"Strong\",\n      \"citations\": [\n        {\n          \"evidence_id\": \"E003\",\n          \"quote\": \"Agent / LLM：LangGraph、Coze Workflow、Prompt Engineering、RAG\"\n        }\n      ],\n      \"gap\": \"\"\n    },\n    {\n      \"requirement_id\": \"4\",\n      \"requirement_text\": \"prepare data\",\n      \"label\": \"Partial\",\n      \"citations\": [\n        {\n          \"evidence_id\": \"E002\",\n          \"quote\": \"评测集构建：为转诊协调场景构建 30 条自包含、带标签的评测用例\"\n        }\n      ],\n      \"gap\": \"Specific data preparation tasks for ML systems not detailed.\"\n    },\n    {\n      \"requirement_id\": \"5\",\n      \"requirement_text\": \"evaluate models\",\n      \"label\": \"Strong\",\n      \"citations\": [\n        {\n          \"evidence_id\": \"E002\",\n          \"quote\": \"评估与对比：评测集用于衡量 V1→V2 提示改写效果\"\n        }\n      ],\n      \"gap\": \"\"\n    },\n    {\n      \"requirement_id\": \"6\",\n      \"requirement_text\": \"assist deployment\",\n      \"label\": \"Strong\",\n      \"citations\": [\n        {\n          \"evidence_id\": \"E003\",\n          \"quote\": \"协助模块化后端架构设计与系统集成；在 Linux 环境下基于 Git 协作完成部署\"\n        }\n      ],\n      \"gap\": \"\"\n    },\n    {\n      \"requirement_id\": \"7\",\n      \"requirement_text\": \"Relevant computing degree\",\n      \"label\": \"Strong\",\n      \"citations\": [\n        {\n          \"evidence_id\": \"E001\",\n          \"quote\": \"南洋理工大学（NTU）｜ 企业人工智能硕士（MSc in Enterprise AI）\"\n        }\n      ],\n      \"gap\": \"\"\n    },\n    {\n      \"requirement_id\": \"8\",\n      \"requirement_text\": \"ML fundamentals are expected\",\n      \"label\": \"Strong\",\n      \"citations\": [\n        {\n          \"evidence_id\": \"E003\",\n          \"quote\": \"Coursera（Imperial College 机器学习数学、DeepLearning.AI Agentic AI 等）\"\n        }\n      ],\n      \"gap\": \"\"\n    },\n    {\n      \"requirement_id\": \"9\",\n      \"requirement_text\": \"Git, REST APIs and cloud familiarity are helpful.\",\n      \"label\": \"Strong\",\n      \"citations\": [\n        {\n          \"evidence_id\": \"E003\",\n          \"quote\": \"RESTful API、Git、Linux\"\n        }\n      ],\n      \"gap\": \"\"\n    }\n  ],\n  \"bullets\": [\n    {\n      \"claim_id\": \"1\",\n      \"text\": \"Developed and deployed Python-based AI monitoring systems, integrating RESTful APIs for real-time data processing.\",\n      \"citations\": [\n        {\n          \"evidence_id\": \"E003\",\n          \"quote\": \"用 Python 实现传感器数据实时处理、任务调度与通信服务；开发 RESTful API\"\n        }\n      ]\n    },\n    {\n      \"claim_id\": \"2\",\n      \"text\": \"Conducted model evaluation and iterative testing, achieving significant improvements in AI system performance.\",\n      \"citations\": [\n        {\n          \"evidence_id\": \"E002\",\n          \"quote\": \"评估与对比：评测集用于衡量 V1→V2 提示改写效果\"\n        }\n      ]\n    },\n    {\n      \"claim_id\": \"3\",\n      \"text\": \"Experimented with LLMs and retrieval techniques using LangGraph and Coze Workflow for advanced AI applications.\",\n      \"citations\": [\n        {\n          \"evidence_id\": \"E003\",\n          \"quote\": \"Agent / LLM：LangGraph、Coze Workflow、Prompt Engineering、RAG\"\n        }\n      ]\n    }\n  ],\n  \"abstain\": false,\n  \"abstention_reason\": \"\",\n  \"scope_note\": \"The extraction focuses on major technical and educational requirements. Specifics on data preparation tasks are less detailed, and no explicit mention of cloud platforms was found, though Linux and Git usage implies some familiarity.\"\n}",
+  "finish_reason": "stop",
+  "output": {
+    "requirements": [
+      {
+        "requirement_id": "1",
+        "requirement_text": "Graduate role accepting zero to three years of AI experience.",
+        "label": "Strong",
+        "citations": [
+          {
+            "evidence_id": "E002",
+            "quote": "实习经历 西安思坦仪器有限公司 AI 软件开发工程师 2026.03 – 2026.07"
+          }
+        ],
+        "gap": ""
+      },
+      {
+        "requirement_id": "2",
+        "requirement_text": "Develop Python ML systems",
+        "label": "Strong",
+        "citations": [
+          {
+            "evidence_id": "E003",
+            "quote": "用 Python 实现传感器数据实时处理、任务调度与通信服务"
+          }
+        ],
+        "gap": ""
+      },
+      {
+        "requirement_id": "3",
+        "requirement_text": "experiment with LLMs and retrieval",
+        "label": "Strong",
+        "citations": [
+          {
+            "evidence_id": "E003",
+            "quote": "Agent / LLM：LangGraph、Coze Workflow、Prompt Engineering、RAG"
+          }
+        ],
+        "gap": ""
+      },
+      {
+        "requirement_id": "4",
+        "requirement_text": "prepare data",
+        "label": "Partial",
+        "citations": [
+          {
+            "evidence_id": "E002",
+            "quote": "评测集构建：为转诊协调场景构建 30 条自包含、带标签的评测用例"
+          }
+        ],
+        "gap": "Specific data preparation tasks for ML systems not detailed."
+      },
+      {
+        "requirement_id": "5",
+        "requirement_text": "evaluate models",
+        "label": "Strong",
+        "citations": [
+          {
+            "evidence_id": "E002",
+            "quote": "评估与对比：评测集用于衡量 V1→V2 提示改写效果"
+          }
+        ],
+        "gap": ""
+      },
+      {
+        "requirement_id": "6",
+        "requirement_text": "assist deployment",
+        "label": "Strong",
+        "citations": [
+          {
+            "evidence_id": "E003",
+            "quote": "协助模块化后端架构设计与系统集成；在 Linux 环境下基于 Git 协作完成部署"
+          }
+        ],
+        "gap": ""
+      },
+      {
+        "requirement_id": "7",
+        "requirement_text": "Relevant computing degree",
+        "label": "Strong",
+        "citations": [
+          {
+            "evidence_id": "E001",
+            "quote": "南洋理工大学（NTU）｜ 企业人工智能硕士（MSc in Enterprise AI）"
+          }
+        ],
+        "gap": ""
+      },
+      {
+        "requirement_id": "8",
+        "requirement_text": "ML fundamentals are expected",
+        "label": "Strong",
+        "citations": [
+          {
+            "evidence_id": "E003",
+            "quote": "Coursera（Imperial College 机器学习数学、DeepLearning.AI Agentic AI 等）"
+          }
+        ],
+        "gap": ""
+      },
+      {
+        "requirement_id": "9",
+        "requirement_text": "Git, REST APIs and cloud familiarity are helpful.",
+        "label": "Strong",
+        "citations": [
+          {
+            "evidence_id": "E003",
+            "quote": "RESTful API、Git、Linux"
+          }
+        ],
+        "gap": ""
+      }
+    ],
+    "bullets": [
+      {
+        "claim_id": "1",
+        "text": "Developed and deployed Python-based AI monitoring systems, integrating RESTful APIs for real-time data processing.",
+        "citations": [
+          {
+            "evidence_id": "E003",
+            "quote": "用 Python 实现传感器数据实时处理、任务调度与通信服务；开发 RESTful API"
+          }
+        ]
+      },
+      {
+        "claim_id": "2",
+        "text": "Conducted model evaluation and iterative testing, achieving significant improvements in AI system performance.",
+        "citations": [
+          {
+            "evidence_id": "E002",
+            "quote": "评估与对比：评测集用于衡量 V1→V2 提示改写效果"
+          }
+        ]
+      },
+      {
+        "claim_id": "3",
+        "text": "Experimented with LLMs and retrieval techniques using LangGraph and Coze Workflow for advanced AI applications.",
+        "citations": [
+          {
+            "evidence_id": "E003",
+            "quote": "Agent / LLM：LangGraph、Coze Workflow、Prompt Engineering、RAG"
+          }
+        ]
+      }
+    ],
+    "abstain": false,
+    "abstention_reason": "",
+    "scope_note": "The extraction focuses on major technical and educational requirements. Specifics on data preparation tasks are less detailed, and no explicit mention of cloud platforms was found, though Linux and Git usage implies some familiarity."
+  },
+  "validation": {
+    "ok": true,
+    "issues": [],
+    "bullet_errors": {
+      "1": [],
+      "2": [],
+      "3": []
+    }
+  },
+  "llm_coverage_label": "Partial",
+  "model_disagreement": true
+}

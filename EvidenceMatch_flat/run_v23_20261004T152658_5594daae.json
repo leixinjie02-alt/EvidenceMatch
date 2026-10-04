@@ -1,0 +1,220 @@
+{
+  "run_id": "20261004T152658_5594daae",
+  "run_label": "heldout",
+  "runner": "browser",
+  "jd_id": "JD08",
+  "cohort": "original18",
+  "representation": "student_supplied_jd_text",
+  "job_hash": "4f191018c9630bb33b70f85b7883eb678fc51047301067a3dac4009434196795",
+  "evidence_hash": "dc44b17b5058b8add86d1d5a91e5b3bac2ae822de94caa738dcf67d557028256",
+  "prompt_version": "evidencematch-v2.3",
+  "prompt_hash": "e2ab2d2593987f1fc353154c02f92e933fad69af9496967efa42dc2b9591e9fa",
+  "requested_model": "openai/gpt-4o",
+  "baseline": {
+    "label": "Missing",
+    "lexical_coverage": 0.12574850299401197,
+    "retrieved_ids": [
+      "E009",
+      "E015",
+      "E027",
+      "E005",
+      "E007"
+    ],
+    "note": "Lexical baseline; cross-language mismatch and negation are known weaknesses."
+  },
+  "context_strategy": "full_confirmed_resume_small_corpus",
+  "started_at_utc": "2026-10-04T14:59:40.790Z",
+  "status": "blocked_validation",
+  "requires_human_review": true,
+  "latency_seconds": null,
+  "time_to_response_headers_seconds": 1.096100000000093,
+  "response_id": "gen-1791125982-L3JWqukdZ5kCItpskFqa",
+  "actual_model": "openai/gpt-4o",
+  "usage": {
+    "prompt_tokens": 3366,
+    "completion_tokens": 1082,
+    "total_tokens": 4448,
+    "cost": 0.019235,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.019235,
+      "upstream_inference_prompt_cost": 0.008415,
+      "upstream_inference_completions_cost": 0.01082
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "pricing": {
+    "prompt": "0.0000025",
+    "completion": "0.00001"
+  },
+  "cost_reported_usd": 0.019235,
+  "cost_estimate_usd": 0.019235000000000002,
+  "raw_response": "{\n    \"requirements\": [\n        {\n            \"requirement_id\": \"R1\",\n            \"requirement_text\": \"负责设计、开发和优化各类算法\",\n            \"label\": \"Partial\",\n            \"citations\": [\n                {\n                    \"evidence_id\": \"E022\",\n                    \"quote\": \"参与 AI 工业监测系统后端开发，设计并集成异常检测工作流与自动化处理逻辑\"\n                }\n            ],\n            \"gap\": \"No direct evidence of algorithm optimization.\"\n        },\n        {\n            \"requirement_id\": \"R2\",\n            \"requirement_text\": \"包括但不限于机器学习、深度学习、数据挖掘等\",\n            \"label\": \"Partial\",\n            \"citations\": [\n                {\n                    \"evidence_id\": \"E026\",\n                    \"quote\": \"Python\"\n                },\n                {\n                    \"evidence_id\": \"E027\",\n                    \"quote\": \"DeepLearning.AI Agentic AI\"\n                }\n            ],\n            \"gap\": \"No specific project evidence for machine learning or deep learning.\"\n        },\n        {\n            \"requirement_id\": \"R3\",\n            \"requirement_text\": \"对现有算法进行性能分析和调优\",\n            \"label\": \"Partial\",\n            \"citations\": [\n                {\n                    \"evidence_id\": \"E024\",\n                    \"quote\": \"完成部署、调试与性能调优\"\n                }\n            ],\n            \"gap\": \"No specific mention of algorithm performance analysis.\"\n        },\n        {\n            \"requirement_id\": \"R4\",\n            \"requirement_text\": \"与产品、数据、研发等团队紧密合作\",\n            \"label\": \"Missing\",\n            \"citations\": [],\n            \"gap\": \"No evidence of team collaboration provided.\"\n        },\n        {\n            \"requirement_id\": \"R5\",\n            \"requirement_text\": \"将算法能力转化为产品功能\",\n            \"label\": \"Partial\",\n            \"citations\": [\n                {\n                    \"evidence_id\": \"E022\",\n                    \"quote\": \"设计并集成异常检测工作流与自动化处理逻辑\"\n                }\n            ],\n            \"gap\": \"No direct evidence of transforming algorithm capabilities into product features.\"\n        },\n        {\n            \"requirement_id\": \"R6\",\n            \"requirement_text\": \"关注行业算法发展趋势，持续学习和研究\",\n            \"label\": \"Partial\",\n            \"citations\": [\n                {\n                    \"evidence_id\": \"E002\",\n                    \"quote\": \"Emerging AI Technologies\"\n                }\n            ],\n            \"gap\": \"No specific evidence of industry trend monitoring.\"\n        },\n        {\n            \"requirement_id\": \"R7\",\n            \"requirement_text\": \"统招全日制本科及以上学历\",\n            \"label\": \"Strong\",\n            \"citations\": [\n                {\n                    \"evidence_id\": \"E003\",\n                    \"quote\": \"中央民族大学（985）｜ 哲学学士\"\n                }\n            ],\n            \"gap\": \"\"\n        },\n        {\n            \"requirement_id\": \"R8\",\n            \"requirement_text\": \"双证齐全\",\n            \"label\": \"Missing\",\n            \"citations\": [],\n            \"gap\": \"No evidence of dual certification provided.\"\n        },\n        {\n            \"requirement_id\": \"R9\",\n            \"requirement_text\": \"熟练掌握至少一种编程语言(Python、C++等)\",\n            \"label\": \"Strong\",\n            \"citations\": [\n                {\n                    \"evidence_id\": \"E026\",\n                    \"quote\": \"Python\"\n                }\n            ],\n            \"gap\": \"\"\n        },\n        {\n            \"requirement_id\": \"R10\",\n            \"requirement_text\": \"对机器学习、深度学习等算法有深入理解并有实际项目经验\",\n            \"label\": \"Partial\",\n            \"citations\": [\n                {\n                    \"evidence_id\": \"E027\",\n                    \"quote\": \"DeepLearning.AI Agentic AI\"\n                }\n            ],\n            \"gap\": \"No specific project evidence for machine learning or deep learning.\"\n        },\n        {\n            \"requirement_id\": \"R11\",\n            \"requirement_text\": \"具备良好的数据分析和问题解决能力\",\n            \"label\": \"Partial\",\n            \"citations\": [\n                {\n                    \"evidence_id\": \"E022\",\n                    \"quote\": \"设计并集成异常检测工作流与自动化处理逻辑\"\n                }\n            ],\n            \"gap\": \"No specific evidence of data analysis.\"\n        },\n        {\n            \"requirement_id\": \"R12\",\n            \"requirement_text\": \"优秀的沟通能力和团队合作精神\",\n            \"label\": \"Missing\",\n            \"citations\": [],\n            \"gap\": \"No evidence of communication skills or teamwork provided.\"\n        }\n    ],\n    \"bullets\": [],\n    \"abstain\": true,\n    \"abstention_reason\": \"Insufficient evidence to create defensible resume bullets.\",\n    \"scope_note\": \"Requirements related to specific algorithm optimization, team collaboration, and dual certification are missing or partially supported. No evidence of communication skills or teamwork provided.\"\n}",
+  "finish_reason": "stop",
+  "output": {
+    "requirements": [
+      {
+        "requirement_id": "R1",
+        "requirement_text": "负责设计、开发和优化各类算法",
+        "label": "Partial",
+        "citations": [
+          {
+            "evidence_id": "E022",
+            "quote": "参与 AI 工业监测系统后端开发，设计并集成异常检测工作流与自动化处理逻辑"
+          }
+        ],
+        "gap": "No direct evidence of algorithm optimization."
+      },
+      {
+        "requirement_id": "R2",
+        "requirement_text": "包括但不限于机器学习、深度学习、数据挖掘等",
+        "label": "Partial",
+        "citations": [
+          {
+            "evidence_id": "E026",
+            "quote": "Python"
+          },
+          {
+            "evidence_id": "E027",
+            "quote": "DeepLearning.AI Agentic AI"
+          }
+        ],
+        "gap": "No specific project evidence for machine learning or deep learning."
+      },
+      {
+        "requirement_id": "R3",
+        "requirement_text": "对现有算法进行性能分析和调优",
+        "label": "Partial",
+        "citations": [
+          {
+            "evidence_id": "E024",
+            "quote": "完成部署、调试与性能调优"
+          }
+        ],
+        "gap": "No specific mention of algorithm performance analysis."
+      },
+      {
+        "requirement_id": "R4",
+        "requirement_text": "与产品、数据、研发等团队紧密合作",
+        "label": "Missing",
+        "citations": [],
+        "gap": "No evidence of team collaboration provided."
+      },
+      {
+        "requirement_id": "R5",
+        "requirement_text": "将算法能力转化为产品功能",
+        "label": "Partial",
+        "citations": [
+          {
+            "evidence_id": "E022",
+            "quote": "设计并集成异常检测工作流与自动化处理逻辑"
+          }
+        ],
+        "gap": "No direct evidence of transforming algorithm capabilities into product features."
+      },
+      {
+        "requirement_id": "R6",
+        "requirement_text": "关注行业算法发展趋势，持续学习和研究",
+        "label": "Partial",
+        "citations": [
+          {
+            "evidence_id": "E002",
+            "quote": "Emerging AI Technologies"
+          }
+        ],
+        "gap": "No specific evidence of industry trend monitoring."
+      },
+      {
+        "requirement_id": "R7",
+        "requirement_text": "统招全日制本科及以上学历",
+        "label": "Strong",
+        "citations": [
+          {
+            "evidence_id": "E003",
+            "quote": "中央民族大学（985）｜ 哲学学士"
+          }
+        ],
+        "gap": ""
+      },
+      {
+        "requirement_id": "R8",
+        "requirement_text": "双证齐全",
+        "label": "Missing",
+        "citations": [],
+        "gap": "No evidence of dual certification provided."
+      },
+      {
+        "requirement_id": "R9",
+        "requirement_text": "熟练掌握至少一种编程语言(Python、C++等)",
+        "label": "Strong",
+        "citations": [
+          {
+            "evidence_id": "E026",
+            "quote": "Python"
+          }
+        ],
+        "gap": ""
+      },
+      {
+        "requirement_id": "R10",
+        "requirement_text": "对机器学习、深度学习等算法有深入理解并有实际项目经验",
+        "label": "Partial",
+        "citations": [
+          {
+            "evidence_id": "E027",
+            "quote": "DeepLearning.AI Agentic AI"
+          }
+        ],
+        "gap": "No specific project evidence for machine learning or deep learning."
+      },
+      {
+        "requirement_id": "R11",
+        "requirement_text": "具备良好的数据分析和问题解决能力",
+        "label": "Partial",
+        "citations": [
+          {
+            "evidence_id": "E022",
+            "quote": "设计并集成异常检测工作流与自动化处理逻辑"
+          }
+        ],
+        "gap": "No specific evidence of data analysis."
+      },
+      {
+        "requirement_id": "R12",
+        "requirement_text": "优秀的沟通能力和团队合作精神",
+        "label": "Missing",
+        "citations": [],
+        "gap": "No evidence of communication skills or teamwork provided."
+      }
+    ],
+    "bullets": [],
+    "abstain": true,
+    "abstention_reason": "Insufficient evidence to create defensible resume bullets.",
+    "scope_note": "Requirements related to specific algorithm optimization, team collaboration, and dual certification are missing or partially supported. No evidence of communication skills or teamwork provided."
+  },
+  "validation": {
+    "ok": false,
+    "issues": [
+      "requirements[5]:requirement_not_from_jd"
+    ],
+    "bullet_errors": {},
+    "bullet_warnings": {},
+    "requirement_warnings": {
+      "R9": [
+        "strong_from_skills_list_only"
+      ]
+    }
+  },
+  "llm_coverage_label": null,
+  "model_disagreement": null
+}

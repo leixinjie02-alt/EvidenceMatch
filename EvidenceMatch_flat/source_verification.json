@@ -1,0 +1,302 @@
+[
+  {
+    "jd_id": "JD19",
+    "source_url": "https://job-boards.greenhouse.io/simplifynext/jobs/4996764007",
+    "checked_at_utc": "2026-10-04T13:27:46.658270+00:00",
+    "http_status": 200,
+    "job_id_matches": true,
+    "nonempty_description": true,
+    "content_hash_matches": true,
+    "verified": true
+  },
+  {
+    "jd_id": "JD20",
+    "source_url": "https://job-boards.greenhouse.io/simplifynext/jobs/5019281007",
+    "checked_at_utc": "2026-10-04T13:27:46.658795+00:00",
+    "http_status": 200,
+    "job_id_matches": true,
+    "nonempty_description": true,
+    "content_hash_matches": true,
+    "verified": true
+  },
+  {
+    "jd_id": "JD21",
+    "source_url": "https://job-boards.greenhouse.io/simplifynext/jobs/5233120007",
+    "checked_at_utc": "2026-10-04T13:27:46.659270+00:00",
+    "http_status": 200,
+    "job_id_matches": true,
+    "nonempty_description": true,
+    "content_hash_matches": true,
+    "verified": true
+  },
+  {
+    "jd_id": "JD22",
+    "source_url": "https://job-boards.greenhouse.io/simplifynext/jobs/5090470007",
+    "checked_at_utc": "2026-10-04T13:27:46.659824+00:00",
+    "http_status": 200,
+    "job_id_matches": true,
+    "nonempty_description": true,
+    "content_hash_matches": true,
+    "verified": true
+  },
+  {
+    "jd_id": "JD23",
+    "source_url": "https://job-boards.greenhouse.io/simplifynext/jobs/5031317007",
+    "checked_at_utc": "2026-10-04T13:27:46.660228+00:00",
+    "http_status": 200,
+    "job_id_matches": true,
+    "nonempty_description": true,
+    "content_hash_matches": true,
+    "verified": true
+  },
+  {
+    "jd_id": "JD24",
+    "source_url": "https://job-boards.greenhouse.io/simplifynext/jobs/4075990007",
+    "checked_at_utc": "2026-10-04T13:27:46.918829+00:00",
+    "http_status": 200,
+    "job_id_matches": true,
+    "nonempty_description": true,
+    "content_hash_matches": true,
+    "verified": true
+  },
+  {
+    "jd_id": "JD25",
+    "source_url": "https://job-boards.greenhouse.io/temus/jobs/5169522008",
+    "checked_at_utc": "2026-10-04T13:27:46.982659+00:00",
+    "http_status": 200,
+    "job_id_matches": true,
+    "nonempty_description": true,
+    "content_hash_matches": true,
+    "verified": true
+  },
+  {
+    "jd_id": "JD26",
+    "source_url": "https://job-boards.greenhouse.io/temus/jobs/5233697008",
+    "checked_at_utc": "2026-10-04T13:27:46.984317+00:00",
+    "http_status": 200,
+    "job_id_matches": true,
+    "nonempty_description": true,
+    "content_hash_matches": true,
+    "verified": true
+  },
+  {
+    "jd_id": "JD27",
+    "source_url": "https://job-boards.greenhouse.io/temus/jobs/5429826008",
+    "checked_at_utc": "2026-10-04T13:27:47.044601+00:00",
+    "http_status": 200,
+    "job_id_matches": true,
+    "nonempty_description": true,
+    "content_hash_matches": true,
+    "verified": true
+  },
+  {
+    "jd_id": "JD28",
+    "source_url": "https://job-boards.greenhouse.io/temus/jobs/5435921008",
+    "checked_at_utc": "2026-10-04T13:27:47.110642+00:00",
+    "http_status": 200,
+    "job_id_matches": true,
+    "nonempty_description": true,
+    "content_hash_matches": true,
+    "verified": true
+  },
+  {
+    "jd_id": "JD29",
+    "source_url": "https://job-boards.greenhouse.io/temus/jobs/5211840008",
+    "checked_at_utc": "2026-10-04T13:27:47.247218+00:00",
+    "http_status": 200,
+    "job_id_matches": true,
+    "nonempty_description": true,
+    "content_hash_matches": true,
+    "verified": true
+  },
+  {
+    "jd_id": "JD30",
+    "source_url": "https://job-boards.greenhouse.io/temus/jobs/5268937008",
+    "checked_at_utc": "2026-10-04T13:27:47.308671+00:00",
+    "http_status": 200,
+    "job_id_matches": true,
+    "nonempty_description": true,
+    "content_hash_matches": true,
+    "verified": true
+  },
+  {
+    "jd_id": "JD31",
+    "source_url": "https://job-boards.greenhouse.io/temus/jobs/5439381008",
+    "checked_at_utc": "2026-10-04T13:27:47.372036+00:00",
+    "http_status": 200,
+    "job_id_matches": true,
+    "nonempty_description": true,
+    "content_hash_matches": true,
+    "verified": true
+  },
+  {
+    "jd_id": "JD32",
+    "source_url": "https://job-boards.greenhouse.io/temus/jobs/5233700008",
+    "checked_at_utc": "2026-10-04T13:27:47.448604+00:00",
+    "http_status": 200,
+    "job_id_matches": true,
+    "nonempty_description": true,
+    "content_hash_matches": true,
+    "verified": true
+  },
+  {
+    "jd_id": "JD33",
+    "source_url": "https://job-boards.greenhouse.io/temus/jobs/5233699008",
+    "checked_at_utc": "2026-10-04T13:27:47.483536+00:00",
+    "http_status": 200,
+    "job_id_matches": true,
+    "nonempty_description": true,
+    "content_hash_matches": true,
+    "verified": true
+  },
+  {
+    "jd_id": "JD34",
+    "source_url": "https://job-boards.greenhouse.io/temus/jobs/5413431008",
+    "checked_at_utc": "2026-10-04T13:27:47.518493+00:00",
+    "http_status": 200,
+    "job_id_matches": true,
+    "nonempty_description": true,
+    "content_hash_matches": true,
+    "verified": true
+  },
+  {
+    "jd_id": "JD35",
+    "source_url": "https://job-boards.greenhouse.io/okx/jobs/7780897003",
+    "checked_at_utc": "2026-10-04T13:27:47.573341+00:00",
+    "http_status": 200,
+    "job_id_matches": true,
+    "nonempty_description": true,
+    "content_hash_matches": true,
+    "verified": true
+  },
+  {
+    "jd_id": "JD36",
+    "source_url": "https://job-boards.greenhouse.io/okx/jobs/6690158003",
+    "checked_at_utc": "2026-10-04T13:27:47.638060+00:00",
+    "http_status": 200,
+    "job_id_matches": true,
+    "nonempty_description": true,
+    "content_hash_matches": true,
+    "verified": true
+  },
+  {
+    "jd_id": "JD37",
+    "source_url": "https://job-boards.greenhouse.io/okx/jobs/7648781003",
+    "checked_at_utc": "2026-10-04T13:27:47.686522+00:00",
+    "http_status": 200,
+    "job_id_matches": true,
+    "nonempty_description": true,
+    "content_hash_matches": true,
+    "verified": true
+  },
+  {
+    "jd_id": "JD38",
+    "source_url": "https://job-boards.greenhouse.io/okx/jobs/7648794003",
+    "checked_at_utc": "2026-10-04T13:27:47.716997+00:00",
+    "http_status": 200,
+    "job_id_matches": true,
+    "nonempty_description": true,
+    "content_hash_matches": true,
+    "verified": true
+  },
+  {
+    "jd_id": "JD39",
+    "source_url": "https://job-boards.greenhouse.io/okx/jobs/7601723003",
+    "checked_at_utc": "2026-10-04T13:27:47.751420+00:00",
+    "http_status": 200,
+    "job_id_matches": true,
+    "nonempty_description": true,
+    "content_hash_matches": true,
+    "verified": true
+  },
+  {
+    "jd_id": "JD40",
+    "source_url": "https://job-boards.greenhouse.io/okx/jobs/7575853003",
+    "checked_at_utc": "2026-10-04T13:27:47.819987+00:00",
+    "http_status": 200,
+    "job_id_matches": true,
+    "nonempty_description": true,
+    "content_hash_matches": true,
+    "verified": true
+  },
+  {
+    "jd_id": "JD41",
+    "source_url": "https://job-boards.greenhouse.io/okx/jobs/7675050003",
+    "checked_at_utc": "2026-10-04T13:27:47.868232+00:00",
+    "http_status": 200,
+    "job_id_matches": true,
+    "nonempty_description": true,
+    "content_hash_matches": true,
+    "verified": true
+  },
+  {
+    "jd_id": "JD42",
+    "source_url": "https://job-boards.greenhouse.io/okx/jobs/7699598003",
+    "checked_at_utc": "2026-10-04T13:27:47.934477+00:00",
+    "http_status": 200,
+    "job_id_matches": true,
+    "nonempty_description": true,
+    "content_hash_matches": true,
+    "verified": true
+  },
+  {
+    "jd_id": "JD43",
+    "source_url": "https://boards.greenhouse.io/applovin/jobs/4713038006?gh_jid=4713038006",
+    "checked_at_utc": "2026-10-04T13:27:47.938108+00:00",
+    "http_status": 200,
+    "job_id_matches": true,
+    "nonempty_description": true,
+    "content_hash_matches": true,
+    "verified": true
+  },
+  {
+    "jd_id": "JD44",
+    "source_url": "https://boards.greenhouse.io/applovin/jobs/4708449006?gh_jid=4708449006",
+    "checked_at_utc": "2026-10-04T13:27:48.002961+00:00",
+    "http_status": 200,
+    "job_id_matches": true,
+    "nonempty_description": true,
+    "content_hash_matches": true,
+    "verified": true
+  },
+  {
+    "jd_id": "JD45",
+    "source_url": "https://boards.greenhouse.io/applovin/jobs/4713039006?gh_jid=4713039006",
+    "checked_at_utc": "2026-10-04T13:27:48.072273+00:00",
+    "http_status": 200,
+    "job_id_matches": true,
+    "nonempty_description": true,
+    "content_hash_matches": true,
+    "verified": true
+  },
+  {
+    "jd_id": "JD46",
+    "source_url": "https://boards.greenhouse.io/applovin/jobs/4660600006?gh_jid=4660600006",
+    "checked_at_utc": "2026-10-04T13:27:48.128504+00:00",
+    "http_status": 200,
+    "job_id_matches": true,
+    "nonempty_description": true,
+    "content_hash_matches": true,
+    "verified": true
+  },
+  {
+    "jd_id": "JD47",
+    "source_url": "https://boards.greenhouse.io/intrinsicrobotics/jobs/5991885004?gh_jid=5991885004",
+    "checked_at_utc": "2026-10-04T13:27:48.191894+00:00",
+    "http_status": 200,
+    "job_id_matches": true,
+    "nonempty_description": true,
+    "content_hash_matches": true,
+    "verified": true
+  },
+  {
+    "jd_id": "JD48",
+    "source_url": "https://boards.greenhouse.io/intrinsicrobotics/jobs/6118944004?gh_jid=6118944004",
+    "checked_at_utc": "2026-10-04T13:27:48.195120+00:00",
+    "http_status": 200,
+    "job_id_matches": true,
+    "nonempty_description": true,
+    "content_hash_matches": true,
+    "verified": true
+  }
+]

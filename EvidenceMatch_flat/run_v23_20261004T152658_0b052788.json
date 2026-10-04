@@ -1,0 +1,144 @@
+{
+  "run_id": "20261004T152658_0b052788",
+  "run_label": "heldout",
+  "runner": "browser",
+  "jd_id": "JD41",
+  "cohort": "additional30",
+  "representation": "assistant_paraphrase_of_real_posting",
+  "job_hash": "5d9a108ca171383bd3dece6e35fc216448336d4ac88c016415eb37f4a32e3719",
+  "evidence_hash": "dc44b17b5058b8add86d1d5a91e5b3bac2ae822de94caa738dcf67d557028256",
+  "prompt_version": "evidencematch-v2.3",
+  "prompt_hash": "e2ab2d2593987f1fc353154c02f92e933fad69af9496967efa42dc2b9591e9fa",
+  "requested_model": "openai/gpt-4o",
+  "baseline": {
+    "label": "Missing",
+    "lexical_coverage": 0.027777777777777776,
+    "retrieved_ids": [
+      "E001",
+      "E002",
+      "E018",
+      "E021",
+      "E022"
+    ],
+    "note": "Lexical baseline; cross-language mismatch and negation are known weaknesses."
+  },
+  "context_strategy": "full_confirmed_resume_small_corpus",
+  "started_at_utc": "2026-10-04T15:00:14.112Z",
+  "status": "ready_for_human_review",
+  "requires_human_review": true,
+  "latency_seconds": null,
+  "time_to_response_headers_seconds": 0.6941000000000931,
+  "response_id": "gen-1791126015-uVmpCCX3x2j7QI4fEkXR",
+  "actual_model": "openai/gpt-4o",
+  "usage": {
+    "prompt_tokens": 3229,
+    "completion_tokens": 624,
+    "total_tokens": 3853,
+    "cost": 0.0143125,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0143125,
+      "upstream_inference_prompt_cost": 0.0080725,
+      "upstream_inference_completions_cost": 0.00624
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "pricing": {
+    "prompt": "0.0000025",
+    "completion": "0.00001"
+  },
+  "cost_reported_usd": 0.0143125,
+  "cost_estimate_usd": 0.0143125,
+  "raw_response": "{\n  \"requirements\": [\n    {\n      \"requirement_id\": \"R1\",\n      \"requirement_text\": \"Lead security AI covering identity documents, biometric verification, liveness, multimodal risk and agents.\",\n      \"label\": \"Missing\",\n      \"citations\": [],\n      \"gap\": \"No evidence of experience in security AI or related domains.\"\n    },\n    {\n      \"requirement_id\": \"R2\",\n      \"requirement_text\": \"Requires at least eight years building AI/ML systems\",\n      \"label\": \"Missing\",\n      \"citations\": [],\n      \"gap\": \"No evidence of eight years of experience in AI/ML systems.\"\n    },\n    {\n      \"requirement_id\": \"R3\",\n      \"requirement_text\": \"production delivery\",\n      \"label\": \"Partial\",\n      \"citations\": [\n        {\n          \"evidence_id\": \"E009\",\n          \"quote\": \"FastAPI + Next.js 全栈部署，异步 token 流式输出，推理过程实时可见\"\n        }\n      ],\n      \"gap\": \"Evidence of production deployment but not full delivery lifecycle.\"\n    },\n    {\n      \"requirement_id\": \"R4\",\n      \"requirement_text\": \"strong deep-learning and coding ability\",\n      \"label\": \"Partial\",\n      \"citations\": [\n        {\n          \"evidence_id\": \"E022\",\n          \"quote\": \"参与 AI 工业监测系统后端开发，设计并集成异常检测工作流\"\n        },\n        {\n          \"evidence_id\": \"E026\",\n          \"quote\": \"Python、SQL、Flask、FastAPI、MySQL、RESTful API\"\n        }\n      ],\n      \"gap\": \"Coding ability demonstrated, but no specific evidence of deep-learning expertise.\"\n    },\n    {\n      \"requirement_id\": \"R5\",\n      \"requirement_text\": \"technical leadership\",\n      \"label\": \"Missing\",\n      \"citations\": [],\n      \"gap\": \"No evidence of technical leadership roles or responsibilities.\"\n    },\n    {\n      \"requirement_id\": \"R6\",\n      \"requirement_text\": \"Mentoring experienced engineers\",\n      \"label\": \"Missing\",\n      \"citations\": [],\n      \"gap\": \"No evidence of mentoring experience.\"\n    },\n    {\n      \"requirement_id\": \"R7\",\n      \"requirement_text\": \"coordinating across risk and product teams\",\n      \"label\": \"Missing\",\n      \"citations\": [],\n      \"gap\": \"No evidence of coordination across teams.\"\n    }\n  ],\n  \"bullets\": [],\n  \"abstain\": true,\n  \"abstention_reason\": \"Insufficient evidence to support any defensible resume bullets.\",\n  \"scope_note\": \"The extraction focused on major requirements related to AI/ML experience, production delivery, and leadership. No evidence was found for security AI, eight years of experience, or leadership roles. The candidate's ongoing MSc in Enterprise AI was noted but does not fulfill degree completion requirements.\"\n}",
+  "finish_reason": "stop",
+  "output": {
+    "requirements": [
+      {
+        "requirement_id": "R1",
+        "requirement_text": "Lead security AI covering identity documents, biometric verification, liveness, multimodal risk and agents.",
+        "label": "Missing",
+        "citations": [],
+        "gap": "No evidence of experience in security AI or related domains."
+      },
+      {
+        "requirement_id": "R2",
+        "requirement_text": "Requires at least eight years building AI/ML systems",
+        "label": "Missing",
+        "citations": [],
+        "gap": "No evidence of eight years of experience in AI/ML systems."
+      },
+      {
+        "requirement_id": "R3",
+        "requirement_text": "production delivery",
+        "label": "Partial",
+        "citations": [
+          {
+            "evidence_id": "E009",
+            "quote": "FastAPI + Next.js 全栈部署，异步 token 流式输出，推理过程实时可见"
+          }
+        ],
+        "gap": "Evidence of production deployment but not full delivery lifecycle."
+      },
+      {
+        "requirement_id": "R4",
+        "requirement_text": "strong deep-learning and coding ability",
+        "label": "Partial",
+        "citations": [
+          {
+            "evidence_id": "E022",
+            "quote": "参与 AI 工业监测系统后端开发，设计并集成异常检测工作流"
+          },
+          {
+            "evidence_id": "E026",
+            "quote": "Python、SQL、Flask、FastAPI、MySQL、RESTful API"
+          }
+        ],
+        "gap": "Coding ability demonstrated, but no specific evidence of deep-learning expertise."
+      },
+      {
+        "requirement_id": "R5",
+        "requirement_text": "technical leadership",
+        "label": "Missing",
+        "citations": [],
+        "gap": "No evidence of technical leadership roles or responsibilities."
+      },
+      {
+        "requirement_id": "R6",
+        "requirement_text": "Mentoring experienced engineers",
+        "label": "Missing",
+        "citations": [],
+        "gap": "No evidence of mentoring experience."
+      },
+      {
+        "requirement_id": "R7",
+        "requirement_text": "coordinating across risk and product teams",
+        "label": "Missing",
+        "citations": [],
+        "gap": "No evidence of coordination across teams."
+      }
+    ],
+    "bullets": [],
+    "abstain": true,
+    "abstention_reason": "Insufficient evidence to support any defensible resume bullets.",
+    "scope_note": "The extraction focused on major requirements related to AI/ML experience, production delivery, and leadership. No evidence was found for security AI, eight years of experience, or leadership roles. The candidate's ongoing MSc in Enterprise AI was noted but does not fulfill degree completion requirements."
+  },
+  "validation": {
+    "ok": true,
+    "issues": [],
+    "bullet_errors": {},
+    "bullet_warnings": {},
+    "requirement_warnings": {}
+  },
+  "llm_coverage_label": "Partial",
+  "model_disagreement": true
+}

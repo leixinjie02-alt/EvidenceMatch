@@ -1,0 +1,188 @@
+{
+  "run_id": "20261004T152658_e2ef00e4",
+  "run_label": "heldout",
+  "runner": "browser",
+  "jd_id": "JD23",
+  "cohort": "additional30",
+  "representation": "assistant_paraphrase_of_real_posting",
+  "job_hash": "e3169ea218982ad1cc6e6aef1c23efb26a25caa018d6e862beda7e22a28bd948",
+  "evidence_hash": "dc44b17b5058b8add86d1d5a91e5b3bac2ae822de94caa738dcf67d557028256",
+  "prompt_version": "evidencematch-v2.3",
+  "prompt_hash": "e2ab2d2593987f1fc353154c02f92e933fad69af9496967efa42dc2b9591e9fa",
+  "requested_model": "openai/gpt-4o",
+  "baseline": {
+    "label": "Missing",
+    "lexical_coverage": 0.0,
+    "retrieved_ids": [],
+    "note": "Lexical baseline; cross-language mismatch and negation are known weaknesses."
+  },
+  "context_strategy": "full_confirmed_resume_small_corpus",
+  "started_at_utc": "2026-10-04T14:59:56.683Z",
+  "status": "ready_for_human_review",
+  "requires_human_review": true,
+  "latency_seconds": null,
+  "time_to_response_headers_seconds": 0.7347000000001863,
+  "response_id": "gen-1791125998-1uAyKRMnueiHIxIhINtR",
+  "actual_model": "openai/gpt-4o",
+  "usage": {
+    "prompt_tokens": 3226,
+    "completion_tokens": 1004,
+    "total_tokens": 4230,
+    "cost": 0.018105,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.018105,
+      "upstream_inference_prompt_cost": 0.008065,
+      "upstream_inference_completions_cost": 0.01004
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "pricing": {
+    "prompt": "0.0000025",
+    "completion": "0.00001"
+  },
+  "cost_reported_usd": 0.018105,
+  "cost_estimate_usd": 0.018105000000000003,
+  "raw_response": "{\n  \"requirements\": [\n    {\n      \"requirement_id\": \"1\",\n      \"requirement_text\": \"requirements discovery\",\n      \"label\": \"Partial\",\n      \"citations\": [\n        {\n          \"evidence_id\": \"E011\",\n          \"quote\": \"将“提升复盘有效性”的模糊需求拆解为 热度判定 → 策略分流 → 防御性校验 → 指令生成 四步 Agent 链路\"\n        }\n      ],\n      \"gap\": \"Specific experience in requirements discovery for consulting projects is not documented.\"\n    },\n    {\n      \"requirement_id\": \"2\",\n      \"requirement_text\": \"solution implementation\",\n      \"label\": \"Strong\",\n      \"citations\": [\n        {\n          \"evidence_id\": \"E022\",\n          \"quote\": \"参与 AI 工业监测系统后端开发，设计并集成异常检测工作流与自动化处理逻辑\"\n        }\n      ],\n      \"gap\": \"\"\n    },\n    {\n      \"requirement_id\": \"3\",\n      \"requirement_text\": \"acceptance testing\",\n      \"label\": \"Partial\",\n      \"citations\": [\n        {\n          \"evidence_id\": \"E020\",\n          \"quote\": \"评测集用于衡量 V1→V2 提示改写效果（同模型通过率约 40%→80%）及 5 个模型的对比评测\"\n        }\n      ],\n      \"gap\": \"Direct involvement in acceptance testing for consulting projects is not documented.\"\n    },\n    {\n      \"requirement_id\": \"4\",\n      \"requirement_text\": \"post-release support\",\n      \"label\": \"Missing\",\n      \"citations\": [],\n      \"gap\": \"No evidence of post-release support activities is provided.\"\n    },\n    {\n      \"requirement_id\": \"5\",\n      \"requirement_text\": \"A relevant diploma or degree\",\n      \"label\": \"Partial\",\n      \"citations\": [\n        {\n          \"evidence_id\": \"E001\",\n          \"quote\": \"企业人工智能硕士（MSc in Enterprise AI） 2026.08 – 2027.06（在读）\"\n        }\n      ],\n      \"gap\": \"The MSc in Enterprise AI is in progress and not yet completed.\"\n    },\n    {\n      \"requirement_id\": \"6\",\n      \"requirement_text\": \"effective communication\",\n      \"label\": \"Partial\",\n      \"citations\": [\n        {\n          \"evidence_id\": \"E027\",\n          \"quote\": \"IELTS 7.0\"\n        }\n      ],\n      \"gap\": \"No direct evidence of effective communication in a professional setting is provided.\"\n    },\n    {\n      \"requirement_id\": \"7\",\n      \"requirement_text\": \"eligibility to Singapore citizens or permanent residents\",\n      \"label\": \"Missing\",\n      \"citations\": [],\n      \"gap\": \"No evidence of Singapore citizenship or permanent residency is provided.\"\n    }\n  ],\n  \"bullets\": [\n    {\n      \"claim_id\": \"1\",\n      \"text\": \"Participated in backend development of an AI industrial monitoring system, designing and integrating anomaly detection workflows and automated processing logic.\",\n      \"citations\": [\n        {\n          \"evidence_id\": \"E022\",\n          \"quote\": \"参与 AI 工业监测系统后端开发，设计并集成异常检测工作流与自动化处理逻辑\"\n        }\n      ]\n    },\n    {\n      \"claim_id\": \"2\",\n      \"text\": \"Developed RESTful APIs for real-time sensor data processing and communication services, connecting monitoring platforms, backend, and AI modules.\",\n      \"citations\": [\n        {\n          \"evidence_id\": \"E023\",\n          \"quote\": \"用 Python 实现传感器数据实时处理、任务调度与通信服务；开发 RESTful API，打通监测平台、后端与 AI 模块\"\n        }\n      ]\n    },\n    {\n      \"claim_id\": \"3\",\n      \"text\": \"Assisted in modular backend architecture design and system integration, completing deployment and performance tuning in a Linux environment using Git.\",\n      \"citations\": [\n        {\n          \"evidence_id\": \"E024\",\n          \"quote\": \"协助模块化后端架构设计与系统集成；在 Linux 环境下基于 Git 协作完成部署、调试与性能调优\"\n        }\n      ]\n    }\n  ],\n  \"abstain\": false,\n  \"abstention_reason\": \"\",\n  \"scope_note\": \"The job description's requirement for Singapore citizenship or permanent residency is not addressed in the evidence. The MSc in Enterprise AI is in progress, which is noted as a gap for the degree requirement. No evidence of post-release support activities is provided.\"\n}",
+  "finish_reason": "stop",
+  "output": {
+    "requirements": [
+      {
+        "requirement_id": "1",
+        "requirement_text": "requirements discovery",
+        "label": "Partial",
+        "citations": [
+          {
+            "evidence_id": "E011",
+            "quote": "将“提升复盘有效性”的模糊需求拆解为 热度判定 → 策略分流 → 防御性校验 → 指令生成 四步 Agent 链路"
+          }
+        ],
+        "gap": "Specific experience in requirements discovery for consulting projects is not documented."
+      },
+      {
+        "requirement_id": "2",
+        "requirement_text": "solution implementation",
+        "label": "Strong",
+        "citations": [
+          {
+            "evidence_id": "E022",
+            "quote": "参与 AI 工业监测系统后端开发，设计并集成异常检测工作流与自动化处理逻辑"
+          }
+        ],
+        "gap": ""
+      },
+      {
+        "requirement_id": "3",
+        "requirement_text": "acceptance testing",
+        "label": "Partial",
+        "citations": [
+          {
+            "evidence_id": "E020",
+            "quote": "评测集用于衡量 V1→V2 提示改写效果（同模型通过率约 40%→80%）及 5 个模型的对比评测"
+          }
+        ],
+        "gap": "Direct involvement in acceptance testing for consulting projects is not documented."
+      },
+      {
+        "requirement_id": "4",
+        "requirement_text": "post-release support",
+        "label": "Missing",
+        "citations": [],
+        "gap": "No evidence of post-release support activities is provided."
+      },
+      {
+        "requirement_id": "5",
+        "requirement_text": "A relevant diploma or degree",
+        "label": "Partial",
+        "citations": [
+          {
+            "evidence_id": "E001",
+            "quote": "企业人工智能硕士（MSc in Enterprise AI） 2026.08 – 2027.06（在读）"
+          }
+        ],
+        "gap": "The MSc in Enterprise AI is in progress and not yet completed."
+      },
+      {
+        "requirement_id": "6",
+        "requirement_text": "effective communication",
+        "label": "Partial",
+        "citations": [
+          {
+            "evidence_id": "E027",
+            "quote": "IELTS 7.0"
+          }
+        ],
+        "gap": "No direct evidence of effective communication in a professional setting is provided."
+      },
+      {
+        "requirement_id": "7",
+        "requirement_text": "eligibility to Singapore citizens or permanent residents",
+        "label": "Missing",
+        "citations": [],
+        "gap": "No evidence of Singapore citizenship or permanent residency is provided."
+      }
+    ],
+    "bullets": [
+      {
+        "claim_id": "1",
+        "text": "Participated in backend development of an AI industrial monitoring system, designing and integrating anomaly detection workflows and automated processing logic.",
+        "citations": [
+          {
+            "evidence_id": "E022",
+            "quote": "参与 AI 工业监测系统后端开发，设计并集成异常检测工作流与自动化处理逻辑"
+          }
+        ]
+      },
+      {
+        "claim_id": "2",
+        "text": "Developed RESTful APIs for real-time sensor data processing and communication services, connecting monitoring platforms, backend, and AI modules.",
+        "citations": [
+          {
+            "evidence_id": "E023",
+            "quote": "用 Python 实现传感器数据实时处理、任务调度与通信服务；开发 RESTful API，打通监测平台、后端与 AI 模块"
+          }
+        ]
+      },
+      {
+        "claim_id": "3",
+        "text": "Assisted in modular backend architecture design and system integration, completing deployment and performance tuning in a Linux environment using Git.",
+        "citations": [
+          {
+            "evidence_id": "E024",
+            "quote": "协助模块化后端架构设计与系统集成；在 Linux 环境下基于 Git 协作完成部署、调试与性能调优"
+          }
+        ]
+      }
+    ],
+    "abstain": false,
+    "abstention_reason": "",
+    "scope_note": "The job description's requirement for Singapore citizenship or permanent residency is not addressed in the evidence. The MSc in Enterprise AI is in progress, which is noted as a gap for the degree requirement. No evidence of post-release support activities is provided."
+  },
+  "validation": {
+    "ok": true,
+    "issues": [],
+    "bullet_errors": {
+      "1": [],
+      "2": [],
+      "3": []
+    },
+    "bullet_warnings": {
+      "1": [],
+      "2": [],
+      "3": []
+    },
+    "requirement_warnings": {}
+  },
+  "llm_coverage_label": "Partial",
+  "model_disagreement": true
+}

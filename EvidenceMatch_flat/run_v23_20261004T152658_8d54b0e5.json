@@ -1,0 +1,153 @@
+{
+  "run_id": "20261004T152658_8d54b0e5",
+  "run_label": "heldout",
+  "runner": "browser",
+  "jd_id": "JD29",
+  "cohort": "additional30",
+  "representation": "assistant_paraphrase_of_real_posting",
+  "job_hash": "f968ab5fe99e94dc3d16e4b0ba4d0e5a2c1f1bfa421649808c5adffd06d63530",
+  "evidence_hash": "dc44b17b5058b8add86d1d5a91e5b3bac2ae822de94caa738dcf67d557028256",
+  "prompt_version": "evidencematch-v2.3",
+  "prompt_hash": "e2ab2d2593987f1fc353154c02f92e933fad69af9496967efa42dc2b9591e9fa",
+  "requested_model": "openai/gpt-4o",
+  "baseline": {
+    "label": "Missing",
+    "lexical_coverage": 0.10714285714285714,
+    "retrieved_ids": [
+      "E026",
+      "E001",
+      "E002",
+      "E007",
+      "E023"
+    ],
+    "note": "Lexical baseline; cross-language mismatch and negation are known weaknesses."
+  },
+  "context_strategy": "full_confirmed_resume_small_corpus",
+  "started_at_utc": "2026-10-04T15:00:09.281Z",
+  "status": "blocked_validation",
+  "requires_human_review": true,
+  "latency_seconds": null,
+  "time_to_response_headers_seconds": 0.8026000000000931,
+  "response_id": "gen-1791126010-ZJAyaMZjqgq6DZB5u05R",
+  "actual_model": "openai/gpt-4o",
+  "usage": {
+    "prompt_tokens": 3221,
+    "completion_tokens": 614,
+    "total_tokens": 3835,
+    "cost": 0.0141925,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0141925,
+      "upstream_inference_prompt_cost": 0.0080525,
+      "upstream_inference_completions_cost": 0.00614
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "pricing": {
+    "prompt": "0.0000025",
+    "completion": "0.00001"
+  },
+  "cost_reported_usd": 0.0141925,
+  "cost_estimate_usd": 0.0141925,
+  "raw_response": "{\n  \"requirements\": [\n    {\n      \"requirement_id\": \"1\",\n      \"requirement_text\": \"Build enterprise batch and streaming pipelines for analytics and AI.\",\n      \"label\": \"Missing\",\n      \"citations\": [],\n      \"gap\": \"No evidence of building enterprise batch and streaming pipelines.\"\n    },\n    {\n      \"requirement_id\": \"2\",\n      \"requirement_text\": \"Requires three to five years delivering data solutions\",\n      \"label\": \"Missing\",\n      \"citations\": [],\n      \"gap\": \"No evidence of three to five years of experience delivering data solutions.\"\n    },\n    {\n      \"requirement_id\": \"3\",\n      \"requirement_text\": \"practical Databricks or Snowflake administration\",\n      \"label\": \"Missing\",\n      \"citations\": [],\n      \"gap\": \"No evidence of Databricks or Snowflake administration.\"\n    },\n    {\n      \"requirement_id\": \"4\",\n      \"requirement_text\": \"AWS data services\",\n      \"label\": \"Missing\",\n      \"citations\": [],\n      \"gap\": \"No evidence of AWS data services experience.\"\n    },\n    {\n      \"requirement_id\": \"5\",\n      \"requirement_text\": \"SQL\",\n      \"label\": \"Strong\",\n      \"citations\": [\n        {\n          \"evidence_id\": \"E026\",\n          \"quote\": \"SQL\"\n        }\n      ],\n      \"gap\": \"\"\n    },\n    {\n      \"requirement_id\": \"6\",\n      \"requirement_text\": \"Python or C#\",\n      \"label\": \"Strong\",\n      \"citations\": [\n        {\n          \"evidence_id\": \"E026\",\n          \"quote\": \"Python\"\n        },\n        {\n          \"evidence_id\": \"E023\",\n          \"quote\": \"用 Python 实现传感器数据实时处理\"\n        }\n      ],\n      \"gap\": \"\"\n    },\n    {\n      \"requirement_id\": \"7\",\n      \"requirement_text\": \"Kafka knowledge is expected\",\n      \"label\": \"Missing\",\n      \"citations\": [],\n      \"gap\": \"No evidence of Kafka knowledge.\"\n    },\n    {\n      \"requirement_id\": \"8\",\n      \"requirement_text\": \"Tableau administration is an advantage\",\n      \"label\": \"Missing\",\n      \"citations\": [],\n      \"gap\": \"No evidence of Tableau administration.\"\n    }\n  ],\n  \"bullets\": [],\n  \"abstain\": true,\n  \"abstention_reason\": \"Insufficient evidence to create defensible resume bullets for the specific job requirements.\",\n  \"scope_note\": \"The extraction focused on major technical and experience requirements. No evidence was found for enterprise pipeline building, Databricks/Snowflake administration, AWS services, or Kafka knowledge. SQL and Python skills are supported, but no evidence of C# or Tableau administration. The candidate's education and project experience do not clearly demonstrate the required years of experience or specific technologies like AWS or Kafka.\"\n}",
+  "finish_reason": "stop",
+  "output": {
+    "requirements": [
+      {
+        "requirement_id": "1",
+        "requirement_text": "Build enterprise batch and streaming pipelines for analytics and AI.",
+        "label": "Missing",
+        "citations": [],
+        "gap": "No evidence of building enterprise batch and streaming pipelines."
+      },
+      {
+        "requirement_id": "2",
+        "requirement_text": "Requires three to five years delivering data solutions",
+        "label": "Missing",
+        "citations": [],
+        "gap": "No evidence of three to five years of experience delivering data solutions."
+      },
+      {
+        "requirement_id": "3",
+        "requirement_text": "practical Databricks or Snowflake administration",
+        "label": "Missing",
+        "citations": [],
+        "gap": "No evidence of Databricks or Snowflake administration."
+      },
+      {
+        "requirement_id": "4",
+        "requirement_text": "AWS data services",
+        "label": "Missing",
+        "citations": [],
+        "gap": "No evidence of AWS data services experience."
+      },
+      {
+        "requirement_id": "5",
+        "requirement_text": "SQL",
+        "label": "Strong",
+        "citations": [
+          {
+            "evidence_id": "E026",
+            "quote": "SQL"
+          }
+        ],
+        "gap": ""
+      },
+      {
+        "requirement_id": "6",
+        "requirement_text": "Python or C#",
+        "label": "Strong",
+        "citations": [
+          {
+            "evidence_id": "E026",
+            "quote": "Python"
+          },
+          {
+            "evidence_id": "E023",
+            "quote": "用 Python 实现传感器数据实时处理"
+          }
+        ],
+        "gap": ""
+      },
+      {
+        "requirement_id": "7",
+        "requirement_text": "Kafka knowledge is expected",
+        "label": "Missing",
+        "citations": [],
+        "gap": "No evidence of Kafka knowledge."
+      },
+      {
+        "requirement_id": "8",
+        "requirement_text": "Tableau administration is an advantage",
+        "label": "Missing",
+        "citations": [],
+        "gap": "No evidence of Tableau administration."
+      }
+    ],
+    "bullets": [],
+    "abstain": true,
+    "abstention_reason": "Insufficient evidence to create defensible resume bullets for the specific job requirements.",
+    "scope_note": "The extraction focused on major technical and experience requirements. No evidence was found for enterprise pipeline building, Databricks/Snowflake administration, AWS services, or Kafka knowledge. SQL and Python skills are supported, but no evidence of C# or Tableau administration. The candidate's education and project experience do not clearly demonstrate the required years of experience or specific technologies like AWS or Kafka."
+  },
+  "validation": {
+    "ok": false,
+    "issues": [
+      "requirements[4]:quote_not_verbatim"
+    ],
+    "bullet_errors": {},
+    "bullet_warnings": {},
+    "requirement_warnings": {}
+  },
+  "llm_coverage_label": null,
+  "model_disagreement": null
+}

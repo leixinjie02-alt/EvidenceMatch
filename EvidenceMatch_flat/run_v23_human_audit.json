@@ -1,0 +1,233 @@
+[
+  {
+    "run_id": "20261004T152658_87555f46",
+    "jd_id": "JD19",
+    "claim_id": "1",
+    "verdict": "supported",
+    "failure_type": null,
+    "notes": "",
+    "reviewer": "user",
+    "review_process": "user judged alone in the browser page",
+    "accepted": true
+  },
+  {
+    "run_id": "20261004T152658_87555f46",
+    "jd_id": "JD19",
+    "claim_id": "2",
+    "verdict": "supported",
+    "failure_type": null,
+    "notes": "",
+    "reviewer": "user",
+    "review_process": "user judged alone in the browser page",
+    "accepted": true
+  },
+  {
+    "run_id": "20261004T152658_87555f46",
+    "jd_id": "JD19",
+    "claim_id": "3",
+    "verdict": "supported",
+    "failure_type": null,
+    "notes": "",
+    "reviewer": "user",
+    "review_process": "user judged alone in the browser page",
+    "accepted": true
+  },
+  {
+    "run_id": "20261004T152658_279f3fbb",
+    "jd_id": "JD14",
+    "claim_id": "1",
+    "verdict": "supported",
+    "failure_type": null,
+    "notes": "",
+    "reviewer": "user",
+    "review_process": "user judged alone in the browser page",
+    "accepted": true
+  },
+  {
+    "run_id": "20261004T152658_279f3fbb",
+    "jd_id": "JD14",
+    "claim_id": "2",
+    "verdict": "supported",
+    "failure_type": null,
+    "notes": "",
+    "reviewer": "user",
+    "review_process": "user judged alone in the browser page",
+    "accepted": true
+  },
+  {
+    "run_id": "20261004T152658_279f3fbb",
+    "jd_id": "JD14",
+    "claim_id": "3",
+    "verdict": "supported",
+    "failure_type": null,
+    "notes": "",
+    "reviewer": "user",
+    "review_process": "user judged alone in the browser page",
+    "accepted": true
+  },
+  {
+    "run_id": "20261004T152658_e2ef00e4",
+    "jd_id": "JD23",
+    "claim_id": "1",
+    "verdict": "supported",
+    "failure_type": null,
+    "notes": "",
+    "reviewer": "user",
+    "review_process": "user judged alone in the browser page",
+    "accepted": true
+  },
+  {
+    "run_id": "20261004T152658_e2ef00e4",
+    "jd_id": "JD23",
+    "claim_id": "2",
+    "verdict": "supported",
+    "failure_type": null,
+    "notes": "",
+    "reviewer": "user",
+    "review_process": "user judged alone in the browser page",
+    "accepted": true
+  },
+  {
+    "run_id": "20261004T152658_e2ef00e4",
+    "jd_id": "JD23",
+    "claim_id": "3",
+    "verdict": "supported",
+    "failure_type": null,
+    "notes": "",
+    "reviewer": "user",
+    "review_process": "user judged alone in the browser page",
+    "accepted": true
+  },
+  {
+    "run_id": "20261004T152658_30645017",
+    "jd_id": "JD26",
+    "claim_id": "B1",
+    "verdict": "supported",
+    "failure_type": null,
+    "notes": "",
+    "reviewer": "user",
+    "review_process": "user judged alone in the browser page",
+    "accepted": false
+  },
+  {
+    "run_id": "20261004T152658_30645017",
+    "jd_id": "JD26",
+    "claim_id": "B2",
+    "verdict": "supported",
+    "failure_type": null,
+    "notes": "",
+    "reviewer": "user",
+    "review_process": "user judged alone in the browser page",
+    "accepted": false
+  },
+  {
+    "run_id": "20261004T152658_30645017",
+    "jd_id": "JD26",
+    "claim_id": "B3",
+    "verdict": "supported",
+    "failure_type": null,
+    "notes": "",
+    "reviewer": "user",
+    "review_process": "user judged alone in the browser page",
+    "accepted": false
+  },
+  {
+    "run_id": "20261004T152658_7fbfdc43",
+    "jd_id": "JD42",
+    "claim_id": "B1",
+    "verdict": "supported",
+    "failure_type": null,
+    "notes": "",
+    "reviewer": "user",
+    "review_process": "user judged alone in the browser page",
+    "accepted": true
+  },
+  {
+    "run_id": "20261004T152658_7fbfdc43",
+    "jd_id": "JD42",
+    "claim_id": "B2",
+    "verdict": "supported",
+    "failure_type": null,
+    "notes": "",
+    "reviewer": "user",
+    "review_process": "user judged alone in the browser page",
+    "accepted": true
+  },
+  {
+    "run_id": "20261004T152658_7fbfdc43",
+    "jd_id": "JD42",
+    "claim_id": "B3",
+    "verdict": "supported",
+    "failure_type": null,
+    "notes": "",
+    "reviewer": "user",
+    "review_process": "user judged alone in the browser page",
+    "accepted": true
+  },
+  {
+    "run_id": "20261004T152658_7efb2f4c",
+    "jd_id": "JD44",
+    "claim_id": "B1",
+    "verdict": "supported",
+    "failure_type": null,
+    "notes": "",
+    "reviewer": "user",
+    "review_process": "user judged alone in the browser page",
+    "accepted": false
+  },
+  {
+    "run_id": "20261004T152658_7efb2f4c",
+    "jd_id": "JD44",
+    "claim_id": "B2",
+    "verdict": "supported",
+    "failure_type": null,
+    "notes": "",
+    "reviewer": "user",
+    "review_process": "user judged alone in the browser page",
+    "accepted": false
+  },
+  {
+    "run_id": "20261004T152658_7efb2f4c",
+    "jd_id": "JD44",
+    "claim_id": "B3",
+    "verdict": "supported",
+    "failure_type": null,
+    "notes": "",
+    "reviewer": "user",
+    "review_process": "user judged alone in the browser page",
+    "accepted": false
+  },
+  {
+    "run_id": "20261004T152658_dad2dfa4",
+    "jd_id": "ADV01",
+    "claim_id": "1",
+    "verdict": "supported",
+    "failure_type": null,
+    "notes": "",
+    "reviewer": "user",
+    "review_process": "user judged alone in the browser page",
+    "accepted": true
+  },
+  {
+    "run_id": "20261004T152658_dad2dfa4",
+    "jd_id": "ADV01",
+    "claim_id": "2",
+    "verdict": "supported",
+    "failure_type": null,
+    "notes": "",
+    "reviewer": "user",
+    "review_process": "user judged alone in the browser page",
+    "accepted": true
+  },
+  {
+    "run_id": "20261004T152658_dad2dfa4",
+    "jd_id": "ADV01",
+    "claim_id": "3",
+    "verdict": "supported",
+    "failure_type": null,
+    "notes": "",
+    "reviewer": "user",
+    "review_process": "user judged alone in the browser page",
+    "accepted": true
+  }
+]
